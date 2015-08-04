@@ -1,0 +1,17 @@
+GRAPHICAL_MODEL applause_detector_decoding
+
+frame: 0 {
+
+    variable : state {
+        symboltable: collection("stateNames");
+	type : discrete observed 0:0 cardinality 2;
+	conditionalparents : nil using DenseCPT("concentrate_at_one");
+    }
+
+    variable : observatn {
+	type : continuous observed 0:4;
+	conditionalparents : state(0) using mixture collection("GMMs") mapping("internal:copyParent");
+    }
+}
+
+chunk 0:0;

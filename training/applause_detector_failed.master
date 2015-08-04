@@ -1,0 +1,87 @@
+NAME_COLLECTION_IN_FILE inline 2
+
+% A symboltable allows you to give symbolic names to the
+% numeric values of a discrete variable:
+%   state = 0 = "yesApplause"
+0 
+stateNames
+1 
+yesApplause
+
+
+% This collection holds the names of the Gaussian mixture
+% distributions of the observation variable. The mapping(internal:copyParent)
+% specified in the structure file is a function that maps
+% the value of state (the parent) to an integer. That integer is the
+% index into this collection of GMM names:
+%   state = 0  -> observation ~ gm0
+%   state = 1  -> observation ~ gm1
+% The GMMs (gm0 and gm1) are defined further down, built up from means, covariances,
+% Gaussian components, dense probability mass functions...
+
+1
+GMMs
+2
+gm0
+gm1
+
+
+DENSE_CPT_IN_FILE
+inline
+1
+0
+concentrate_at_one
+0
+1
+1
+
+MEAN_IN_FILE inline 2
+0 %first mean
+mean0 
+5
+1.0141    -0.4133     0.5045    -0.3681     0.2012
+
+1 %first mean
+mean1 
+5
+1.6977    -1.7337     1.5635    -0.8799     0.1928
+
+COVAR_IN_FILE inline 2
+0
+covar0
+5
+0.5247 0.7714 0.3714 0.1354 0.0188
+
+1
+covar1
+5
+0.1463  0.3633  0.2433  0.1216 0.0153
+
+MC_IN_FILE inline 2
+0 %first GC
+5 %dimension?
+0
+gc_0
+mean0 covar0
+
+1
+5
+0
+gc_1
+mean1 covar1
+
+% these are the coefficents of the Gaussian components in the GMMs
+DPMF_IN_FILE inline 2
+0 dpmf0 1 1.0 % name, # of coefficients, coefficient
+1 dpmf1 1 1.0
+
+% these are the GMMs
+% gm0 = dpmf0 \times gc_0
+% gm1 = dpmf1 \times gc_1
+% in general, the mixtures might have more than 1 component, and the
+% DPMFs (vectors) are the coefficients for each component.
+
+MX_IN_FILE inline 2
+% #  dimension=5  name=gm0  #components=1  coefficients=dpmf0  components=gc_0
+0 5 gm0 1 dpmf0 gc_0 
+1 5 gm1 1 dpmf1 gc_1

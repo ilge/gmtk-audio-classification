@@ -1,0 +1,2 @@
+json2stream 5 0 | \
+> featu2.txt
