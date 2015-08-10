@@ -1,0 +1,26 @@
+Creating Junction Tree
+DONE creating Junction Tree
+Loading accumulators from 'accumulators/acc_0_1_16comp.data'
+WARNING: covariance vector named 'covar0_cl1_cl0' had 1 variances floored, minimum variance found was 4.148837e-06.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0' had 10 variances floored, minimum variance found was 6.119475e-08.
+WARNING: covariance vector named 'covar0_cl0_cl1' had 2 variances floored, minimum variance found was 2.349006e-07.
+WARNING: Gaussian Component named 'gc_0_cl0_cl1_cl0' did not receive any accumulated probability in EM iteration. Global missed increment count is 0. Also check child mean 'mean0_cl0_cl1_cl0' and covar 'covar0_cl0_cl1_cl0'
+WARNING: Mean vec 'mean0_cl0_cl1_cl0' received only -1.000000e+17 accumulated log probability (min is -6.000000e+02) in EM iteration, using previous meansWARNING: Diag covariance vec 'covar0_cl0_cl1_cl0' received only -1.000000e+17 accumulated log probability (min is -6.000000e+02) in EM iteration, using previous values.WARNING: covariance vector named 'covar0_cl0_cl0' had 25 variances floored, minimum variance found was -4.132406e-08.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl1' had 25 variances floored, minimum variance found was -1.133437e-07.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl0' had 25 variances floored, minimum variance found was -4.552645e-08.
+WARNING: Gaussian Component named 'gc_0_cl0_cl0_cl0_cl0' did not receive any accumulated probability in EM iteration. Global missed increment count is 0. Also check child mean 'mean0_cl0_cl0_cl0_cl0' and covar 'covar0_cl0_cl0_cl0_cl0'
+WARNING: Mean vec 'mean0_cl0_cl0_cl0_cl0' received only -1.000000e+17 accumulated log probability (min is -6.000000e+02) in EM iteration, using previous meansWARNING: Diag covariance vec 'covar0_cl0_cl0_cl0_cl0' received only -1.000000e+17 accumulated log probability (min is -6.000000e+02) in EM iteration, using previous values.WARNING: covariance vector named 'covar1_cl2' had 25 variances floored, minimum variance found was -7.923391e-08.
+WARNING: Gaussian Component named 'gc_1_cl2_cl0' did not receive any accumulated probability in EM iteration. Global missed increment count is 0. Also check child mean 'mean1_cl2_cl0' and covar 'covar1_cl2_cl0'
+WARNING: Mean vec 'mean1_cl2_cl0' received only -1.000000e+17 accumulated log probability (min is -6.000000e+02) in EM iteration, using previous meansWARNING: Diag covariance vec 'covar1_cl2_cl0' received only -1.000000e+17 accumulated log probability (min is -6.000000e+02) in EM iteration, using previous values.WARNING: covariance vector named 'covar1_cl0_cl1' had 25 variances floored, minimum variance found was -2.083843e-07.
+WARNING: covariance vector named 'covar1_cl0_cl0_cl0_cl0' had 4 variances floored, minimum variance found was 5.646283e-06.
+NOTE: DPMF 'dpmf0' has 3/0 elements vanishing/splitting
+NOTE: DPMF 'dpmf1' has 3/0 elements vanishing/splitting
+NOTE: saving only 26 used means out of a total of 32
+NOTE: saving only 26 used covariances out of a total of 32
+NOTE: saving only 26 used components out of a total of 32
+NOTE: saving only 26 used means out of a total of 32
+NOTE: saving only 26 used covariances out of a total of 32
+NOTE: saving only 26 used components out of a total of 32
+Maximum number of EM iterations reached (1). Stopping
+### Final time (seconds) just for EM stage: User: 0.001418, System: 0.000443, CPU 0.001861
+____ PROGRAM ENDED SUCCESSFULLY WITH STATUS 0 AT Monday August 10 2015, 02:51:53 PDT ____

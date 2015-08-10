@@ -1,0 +1,14 @@
+========
+Segment 0
+Ptn-0 P': state(0)=noApplause,state(1)=noApplause
+Ptn-1 C': state(2)=noApplause
+Ptn-2 C': state(3)=noApplause
+Ptn-3 C': state(4)=noApplause
+Ptn-4 C': state(5)=noApplause
+Ptn-5 C': state(6)=noApplause
+Ptn-6 C': state(7)=noApplause
+Ptn-7 C': state(8)=noApplause
+Ptn-8 C': state(9)=noApplause
+Ptn-9 C': state(10)=noApplause
+Ptn-10 C': state(11)=noApplause
+Ptn-11 C': state(12)=noApplause
