@@ -168,9 +168,9 @@
     <property name="Annotation2" class="ptolemy.vergil.kernel.attributes.TextAttribute">
         <property name="textSize" class="ptolemy.data.expr.Parameter" value="24">
         </property>
-        <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Run this model with: ../afte6/decoding/applause4.sh">
+        <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Run this model with: ../afte6/decoding/applause4.sh&#10;&#10;Please update the Ptolemy tree before running. AFTEFast.java has changed.">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{770.0, -790.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[375.0, -450.0]">
         </property>
     </property>
     <entity name="ElementsToArray" class="ptolemy.actor.lib.ElementsToArray">
