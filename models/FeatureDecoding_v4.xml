@@ -4,13 +4,13 @@
 <entity name="FeatureDecoding_v4" class="ptolemy.actor.TypedCompositeActor">
     <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.devel">
     </property>
-    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={1449, 562, 1402, 878}, maximized=false}">
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={32, 22, 931, 878}, maximized=false}">
     </property>
-    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1168, 768]">
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[697, 768]">
     </property>
     <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.5304432080176285">
     </property>
-    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{753.5400390625, -48.608621073510335}">
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{309.5716812054728, -48.60862107351011}">
     </property>
     <property name="applause" class="ptolemy.data.expr.Parameter" value="false">
         <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -66,7 +66,7 @@
         </property>
         <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{170.0, -730.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{300.0, -730.0}">
         </property>
     </property>
     <property name="numChannels" class="ptolemy.data.expr.Parameter" value="5">
@@ -106,7 +106,7 @@
         </property>
         <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{305.0, -730.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{440.0, -730.0}">
         </property>
     </property>
     <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
@@ -117,6 +117,25 @@
         <property name="_location" class="ptolemy.kernel.util.Location" value="{-285.0, -710.0}">
         </property>
     </property>
+    <property name="nOverlap" class="ptolemy.data.expr.Parameter" value="fs/15">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{170.0, -730.0}">
+        </property>
+    </property>
     <entity name="IterateOverArray" class="ptolemy.actor.lib.hoc.IterateOverArray">
         <doc>Iterate a contained actor over input arrays</doc>
         <property name="_icon" class="ptolemy.vergil.icon.CopyCatIcon">
@@ -125,7 +144,7 @@
         </property>
         <property name="_tableauFactory" class="ptolemy.actor.gui.LevelSkippingTableauFactory">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{110.0, -625.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{240.0, -615.0}">
         </property>
         <port name="in" class="ptolemy.actor.lib.hoc.IterateOverArray$IteratePort">
             <property name="input"/>
@@ -412,23 +431,23 @@
     <entity name="ArrayToSequence" class="ptolemy.domains.sdf.lib.ArrayToSequence">
         <property name="arrayLength" class="ptolemy.data.expr.Parameter" value="numChannels">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{220.0, -625.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{350.0, -615.0}">
         </property>
     </entity>
     <entity name="ArrayToSequence2" class="ptolemy.domains.sdf.lib.ArrayToSequence">
         <property name="arrayLength" class="ptolemy.data.expr.Parameter" value="featuresPerChannel">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{510.0, -625.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{640.0, -615.0}">
         </property>
     </entity>
     <entity name="SequenceToArray" class="ptolemy.domains.sdf.lib.SequenceToArray">
         <property name="arrayLength" class="ptolemy.actor.parameters.PortParameter" value="numChannels*featuresPerChannel">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{810.0, -615.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{935.0, -605.0}">
         </property>
     </entity>
     <entity name="ElementsToArray" class="ptolemy.actor.lib.ElementsToArray">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{1000.0, -610.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{1130.0, -600.0}">
         </property>
     </entity>
     <entity name="AudioCapture" class="ptolemy.actor.lib.javasound.AudioCapture">
@@ -512,7 +531,7 @@
         </property>
         <property name="throttleFactor" class="ptolemy.data.expr.Parameter" value="0">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{1160.0, -610.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{1290.0, -600.0}">
         </property>
         <port name="toSend" class="ptolemy.actor.TypedIOPort">
             <property name="input"/>
@@ -550,7 +569,7 @@
         </property>
         <property name="transferSize" class="ptolemy.data.expr.Parameter" value="windowSize">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{10.0, -625.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{140.0, -615.0}">
         </property>
     </entity>
     <entity name="ApplauseScore" class="ptolemy.actor.lib.jjs.JavaScript">
@@ -562,7 +581,7 @@
                 </property>
             </property>
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{1305.0, -600.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{1445.0, -540.0}">
         </property>
         <port name="input" class="ptolemy.actor.TypedIOPort">
             <property name="input"/>
@@ -595,18 +614,18 @@
             <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
             </property>
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{1505.0, -590.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{1645.0, -530.0}">
         </property>
         <port name="in" class="ptolemy.actor.TypedIOPort">
             <property name="input"/>
         </port>
     </entity>
     <entity name="Display2" class="ptolemy.actor.lib.gui.Display">
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={941, 457, 499, 208}, maximized=false}">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={519, 550, 499, 208}, maximized=false}">
         </property>
         <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{1660.0, -590.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{1800.0, -530.0}">
         </property>
     </entity>
     <entity name="StartupFrames" class="ptolemy.actor.lib.Expression">
@@ -620,24 +639,24 @@
             <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
             </property>
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{530.0, -535.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{660.0, -535.0}">
         </property>
         <port name="in" class="ptolemy.actor.TypedIOPort">
             <property name="input"/>
         </port>
     </entity>
     <entity name="SingleEvent" class="ptolemy.actor.lib.SingleEvent">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{250.0, -535.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{380.0, -535.0}">
         </property>
     </entity>
     <entity name="Repeat" class="ptolemy.domains.sdf.lib.Repeat">
         <property name="numberOfTimes" class="ptolemy.actor.parameters.PortParameter" value="12">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{825.0, -525.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{955.0, -525.0}">
         </property>
     </entity>
     <entity name="Merge" class="ptolemy.domains.de.lib.Merge">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{925.0, -610.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{1055.0, -600.0}">
         </property>
     </entity>
     <entity name="SingleEvent2" class="ptolemy.actor.lib.SingleEvent">
@@ -646,12 +665,26 @@
         <property name="_location" class="ptolemy.kernel.util.Location" value="{-305.0, -535.0}">
         </property>
     </entity>
+    <entity name="SequenceToArray2" class="ptolemy.domains.sdf.lib.SequenceToArray">
+        <property name="arrayLength" class="ptolemy.actor.parameters.PortParameter" value="nOverlap">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{10.0, -615.0}">
+        </property>
+    </entity>
+    <entity name="Display" class="ptolemy.actor.lib.gui.Display">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={1002, 196, 389, 648}, maximized=false}">
+        </property>
+        <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{1425.0, -590.0}">
+        </property>
+    </entity>
     <relation name="relation" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ArrayToSequence.output&quot;,x=220.0,y=-625.0}, tail={id=&quot;ArrayToSequence2.input&quot;,x=510.0,y=-625.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ArrayToSequence.output&quot;,x=350.0,y=-615.0}, tail={id=&quot;ArrayToSequence2.input&quot;,x=640.0,y=-615.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation5" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ArrayToSequence2.output&quot;,x=510.0,y=-625.0}, tail={id=&quot;SequenceToArray.input&quot;,x=810.0,y=-615.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ArrayToSequence2.output&quot;,x=640.0,y=-615.0}, tail={id=&quot;SequenceToArray.input&quot;,x=935.0,y=-605.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation13" class="ptolemy.actor.TypedIORelation">
@@ -659,71 +692,75 @@
         </property>
     </relation>
     <relation name="relation3" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;IterateOverArray.out&quot;,x=110.0,y=-625.0}, tail={id=&quot;ArrayToSequence.input&quot;,x=220.0,y=-625.0}, points={} } }">
-        </property>
-    </relation>
-    <relation name="relation4" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;AudioCapture.output&quot;,x=-90.0,y=-625.0}, tail={id=&quot;AFTEFast.input&quot;,x=10.0,y=-625.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;IterateOverArray.out&quot;,x=240.0,y=-615.0}, tail={id=&quot;ArrayToSequence.input&quot;,x=350.0,y=-615.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation7" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;IterateOverArray.in&quot;,x=110.0,y=-625.0}, tail={id=&quot;AFTEFast.output&quot;,x=10.0,y=-625.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;IterateOverArray.in&quot;,x=240.0,y=-615.0}, tail={id=&quot;AFTEFast.output&quot;,x=140.0,y=-615.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation9" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Expression.output&quot;,x=1505.0,y=-590.0}, tail={id=&quot;Display2.input&quot;,x=1660.0,y=-590.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Expression.output&quot;,x=1645.0,y=-530.0}, tail={id=&quot;Display2.input&quot;,x=1800.0,y=-530.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation11" class="ptolemy.actor.TypedIORelation">
         <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
         </property>
-        <vertex name="vertex1" value="{1085.0, -610.0}">
+        <vertex name="vertex1" value="{1215.0, -600.0}">
         </vertex>
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;.WallClockTime2.trigger&quot;,x=1170.0,y=-600.0}, tail={id=&quot;relation11.vertex1&quot;,x=1105.0,y=-520.0}, points={1105.0,-600.0} },{ head={id=&quot;ElementsToArray.output&quot;,x=1000.0,y=-610.0}, tail={id=&quot;relation11.vertex1&quot;,x=1085.0,y=-610.0}, points={} },{ head={id=&quot;WebSocketClient.toSend&quot;,x=1160.0,y=-610.0}, tail={id=&quot;relation11.vertex1&quot;,x=1085.0,y=-610.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ElementsToArray.output&quot;,x=1130.0,y=-600.0}, tail={id=&quot;relation11.vertex1&quot;,x=1215.0,y=-600.0}, points={} },{ head={id=&quot;WebSocketClient.toSend&quot;,x=1290.0,y=-600.0}, tail={id=&quot;relation11.vertex1&quot;,x=1215.0,y=-600.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation12" class="ptolemy.actor.TypedIORelation">
         <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
         </property>
-        <vertex name="vertex1" value="{1370.0, -590.0}">
+        <vertex name="vertex1" value="{1510.0, -530.0}">
         </vertex>
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Expression.in&quot;,x=1505.0,y=-590.0}, tail={id=&quot;relation12.vertex1&quot;,x=1370.0,y=-590.0}, points={} },{ head={id=&quot;ApplauseScore.frame&quot;,x=1305.0,y=-600.0}, tail={id=&quot;relation12.vertex1&quot;,x=1370.0,y=-590.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Expression.in&quot;,x=1645.0,y=-530.0}, tail={id=&quot;relation12.vertex1&quot;,x=1510.0,y=-530.0}, points={} },{ head={id=&quot;ApplauseScore.frame&quot;,x=1445.0,y=-540.0}, tail={id=&quot;relation12.vertex1&quot;,x=1510.0,y=-530.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation6" class="ptolemy.actor.TypedIORelation">
         <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
         </property>
-        <vertex name="vertex1" value="{1235.0, -600.0}">
+        <vertex name="vertex1" value="{1385.0, -590.0}">
         </vertex>
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;WebSocketClient.received&quot;,x=1160.0,y=-610.0}, tail={id=&quot;relation6.vertex1&quot;,x=1235.0,y=-600.0}, points={} },{ head={id=&quot;ApplauseScore.input&quot;,x=1305.0,y=-600.0}, tail={id=&quot;relation6.vertex1&quot;,x=1235.0,y=-600.0}, points={} },{ head={id=&quot;.Display.input&quot;,x=1510.0,y=-610.0,index=2}, tail={id=&quot;relation6.vertex1&quot;,x=1325.0,y=-510.0}, points={1465.0,-615.0,1465.0,-655.0,1325.0,-655.0} },{ head={id=&quot;.WallClockTime.trigger&quot;,x=1390.0,y=-600.0}, tail={id=&quot;relation6.vertex1&quot;,x=1325.0,y=-510.0}, points={1325.0,-600.0} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;WebSocketClient.received&quot;,x=1290.0,y=-600.0}, tail={id=&quot;relation6.vertex1&quot;,x=1385.0,y=-590.0}, points={} },{ head={id=&quot;ApplauseScore.input&quot;,x=1445.0,y=-540.0}, tail={id=&quot;relation6.vertex1&quot;,x=1385.0,y=-590.0}, points={1385.0,-540.0} },{ head={id=&quot;relation6.vertex1&quot;,x=1385.0,y=-590.0}, tail={id=&quot;Display.input&quot;,x=1425.0,y=-590.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation14" class="ptolemy.actor.TypedIORelation">
         <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
         </property>
-        <vertex name="vertex1" value="{955.0, -610.0}">
+        <vertex name="vertex1" value="{1085.0, -600.0}">
         </vertex>
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Merge.output&quot;,x=925.0,y=-610.0}, tail={id=&quot;relation14.vertex1&quot;,x=955.0,y=-610.0}, points={} },{ head={id=&quot;ElementsToArray.input&quot;,x=1000.0,y=-610.0}, tail={id=&quot;relation14.vertex1&quot;,x=955.0,y=-610.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Merge.output&quot;,x=1055.0,y=-600.0}, tail={id=&quot;relation14.vertex1&quot;,x=1085.0,y=-600.0}, points={} },{ head={id=&quot;ElementsToArray.input&quot;,x=1130.0,y=-600.0}, tail={id=&quot;relation14.vertex1&quot;,x=1085.0,y=-600.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation2" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;StartupFrames.in&quot;,x=530.0,y=-535.0}, tail={id=&quot;SingleEvent.output&quot;,x=250.0,y=-535.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;StartupFrames.in&quot;,x=660.0,y=-535.0}, tail={id=&quot;SingleEvent.output&quot;,x=380.0,y=-535.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation15" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;StartupFrames.output&quot;,x=530.0,y=-535.0}, tail={id=&quot;Repeat.input&quot;,x=825.0,y=-525.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;StartupFrames.output&quot;,x=660.0,y=-535.0}, tail={id=&quot;Repeat.input&quot;,x=955.0,y=-525.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation16" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SequenceToArray.output&quot;,x=810.0,y=-615.0}, tail={id=&quot;Merge.input&quot;,x=925.0,y=-610.0,index=2}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SequenceToArray.output&quot;,x=935.0,y=-605.0}, tail={id=&quot;Merge.input&quot;,x=1055.0,y=-600.0,index=2}, points={} } }">
         </property>
     </relation>
     <relation name="relation17" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Repeat.output&quot;,x=825.0,y=-525.0}, tail={id=&quot;Merge.input&quot;,x=925.0,y=-610.0,index=2}, points={890.0,-525.0,890.0,-610.0} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Repeat.output&quot;,x=955.0,y=-525.0}, tail={id=&quot;Merge.input&quot;,x=1055.0,y=-600.0,index=2}, points={1020.0,-525.0,1020.0,-600.0} } }">
         </property>
     </relation>
     <relation name="relation18" class="ptolemy.actor.TypedIORelation">
         <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;DiscreteClock.start&quot;,x=-200.0,y=-625.0}, tail={id=&quot;SingleEvent2.output&quot;,x=-305.0,y=-535.0}, points={-210.0,-535.0} } }">
+        </property>
+    </relation>
+    <relation name="relation8" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SequenceToArray2.output&quot;,x=10.0,y=-615.0}, tail={id=&quot;AFTEFast.input&quot;,x=140.0,y=-615.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation4" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;AudioCapture.output&quot;,x=-90.0,y=-625.0}, tail={id=&quot;SequenceToArray2.input&quot;,x=10.0,y=-615.0}, points={} } }">
         </property>
     </relation>
     <link port="IterateOverArray.in" relation="relation7"/>
@@ -742,7 +779,7 @@
     <link port="WebSocketClient.received" relation="relation6"/>
     <link port="DiscreteClock.output" relation="relation13"/>
     <link port="DiscreteClock.start" relation="relation18"/>
-    <link port="AFTEFast.input" relation="relation4"/>
+    <link port="AFTEFast.input" relation="relation8"/>
     <link port="AFTEFast.output" relation="relation7"/>
     <link port="ApplauseScore.input" relation="relation6"/>
     <link port="ApplauseScore.frame" relation="relation12"/>
@@ -758,4 +795,7 @@
     <link port="Merge.input" relation="relation17"/>
     <link port="Merge.output" relation="relation14"/>
     <link port="SingleEvent2.output" relation="relation18"/>
+    <link port="SequenceToArray2.input" relation="relation4"/>
+    <link port="SequenceToArray2.output" relation="relation8"/>
+    <link port="Display.input" relation="relation6"/>
 </entity>
