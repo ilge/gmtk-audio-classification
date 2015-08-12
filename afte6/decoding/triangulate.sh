@@ -2,5 +2,5 @@
 
 for str in *.str; do
     [ -f ${str}.trifile ] && rm ${str}.trifile
-    gmtkTriangulate -strF $str $*
+    gmtkTriangulate -forceLeftRight R  -strF $str $*
 done
