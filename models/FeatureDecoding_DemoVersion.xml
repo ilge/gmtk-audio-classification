@@ -4,13 +4,13 @@
 <entity name="FeatureDecoding_DemoVersion" class="ptolemy.actor.TypedCompositeActor">
     <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.devel">
     </property>
-    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={32, 22, 704, 878}, maximized=false}">
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={32, 22, 1408, 878}, maximized=true}">
     </property>
-    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[470, 768]">
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1174, 768]">
     </property>
-    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.2065484777661333">
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.4935838930621237">
     </property>
-    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{775.5400390624999, 1097.1019658627715}">
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{841.130859375, -23.14674277813583}">
     </property>
     <property name="applause" class="ptolemy.data.expr.Parameter" value="false">
         <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -28,7 +28,7 @@
         </property>
         <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{30.0, -730.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{30.0, -780.0}">
         </property>
     </property>
     <property name="fs" class="ptolemy.data.expr.Parameter" value="48000">
@@ -47,7 +47,7 @@
         </property>
         <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-195.0, -730.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-195.0, -780.0}">
         </property>
     </property>
     <property name="windowSize" class="ptolemy.data.expr.Parameter" value="fs/3">
@@ -66,7 +66,7 @@
         </property>
         <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{295.0, -730.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{295.0, -780.0}">
         </property>
     </property>
     <property name="numChannels" class="ptolemy.data.expr.Parameter" value="3">
@@ -85,7 +85,7 @@
         </property>
         <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{160.0, -730.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{160.0, -780.0}">
         </property>
     </property>
     <property name="enableBackwardTypeInference" class="ptolemy.data.expr.Parameter" value="true">
@@ -106,7 +106,7 @@
         </property>
         <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{430.0, -730.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{430.0, -780.0}">
         </property>
     </property>
     <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
@@ -114,7 +114,7 @@
         </property>
         <property name="synchronizeToRealTime" class="ptolemy.data.expr.Parameter" value="true">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-285.0, -710.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-285.0, -760.0}">
         </property>
     </property>
     <property name="nOverlap" class="ptolemy.data.expr.Parameter" value="fs/frameRate">
@@ -133,7 +133,7 @@
         </property>
         <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{600.0, -730.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{600.0, -780.0}">
         </property>
     </property>
     <property name="frameRate" class="ptolemy.data.expr.Parameter" value="15">
@@ -152,21 +152,29 @@
         </property>
         <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-95.0, -730.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-95.0, -780.0}">
         </property>
     </property>
     <property name="Annotation" class="ptolemy.vergil.kernel.attributes.TextAttribute">
         <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Capture starts at t=3s">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.RelativeLocation" value="{-70.0, 30.0}">
+        <property name="_location" class="ptolemy.kernel.util.RelativeLocation" value="{-70.0, 25.0}">
             <property name="relativeTo" class="ptolemy.kernel.util.StringAttribute" value="SingleEvent2">
             </property>
             <property name="relativeToElementName" class="ptolemy.kernel.util.StringAttribute" value="entity">
             </property>
         </property>
     </property>
+    <property name="Annotation2" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+        <property name="textSize" class="ptolemy.data.expr.Parameter" value="24">
+        </property>
+        <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Run this model with: ../afte6/decoding/applause4.sh">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{770.0, -795.0}">
+        </property>
+    </property>
     <entity name="ElementsToArray" class="ptolemy.actor.lib.ElementsToArray">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{1200.0, -620.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{1200.0, -670.0}">
         </property>
     </entity>
     <entity name="WebSocketClient" class="org.terraswarm.accessor.JSAccessor">
@@ -216,7 +224,7 @@
         </property>
         <property name="throttleFactor" class="ptolemy.data.expr.Parameter" value="0">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{1375.0, -620.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{1350.0, -670.0}">
         </property>
         <port name="toSend" class="ptolemy.actor.TypedIOPort">
             <property name="input"/>
@@ -238,11 +246,11 @@
         <property name="period" class="ptolemy.actor.parameters.PortParameter" value="1.0/fs">
         </property>
         <doc>Create periodic timed events.</doc>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-125.0, -540.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-125.0, -595.0}">
         </property>
     </entity>
     <entity name="ApplauseScore" class="ptolemy.actor.lib.jjs.JavaScript">
-        <property name="script" class="ptolemy.actor.parameters.PortParameter" value="// Put your JavaScript program here.&#10;// Add ports and parameters.&#10;// Define JavaScript functions initialize(), fire(), and/or wrapup().&#10;// Refer to parameters in scope using dollar-sign{parameterName}.&#10;// In the fire() function, use get(parameterName, channel) to read inputs.&#10;// Send to output ports using send(value, portName, channel).&#10;exports.setup = function() {&#10;  input('input');&#10;  output('output',{'type':'string'});&#10;  output('frame',{'type':'string'});&#10;} &#10;exports.fire = function() {&#10;  var token = get('input'); &#10; &#10;  token = token[0];&#10;  decoded_state = token.MPEvalue;&#10;  var hidden = decoded_state==(&quot;yesApplause&quot;)? 1:0;&#10;  if (hidden == 1) {&#10;        send('output', parseInt(hidden));&#10;        send('frame', parseInt(token.frame)); &#10;}&#10;}">
+        <property name="script" class="ptolemy.actor.parameters.PortParameter" value="// Put your JavaScript program here.&#10;// Add ports and parameters.&#10;// Define JavaScript functions initialize(), fire(), and/or wrapup().&#10;// Refer to parameters in scope using dollar-sign{parameterName}.&#10;// In the fire() function, use get(parameterName, channel) to read inputs.&#10;// Send to output ports using send(value, portName, channel).&#10;exports.setup = function() {&#10;  input('input');&#10;  output('output',{'type':'string'});&#10;  output('frame',{'type':'string'});&#10;} &#10;exports.fire = function() {&#10;  var token = get('input'); &#10; &#10;  token = token[0];&#10;  decoded_state = token.MPEvalue;&#10;  var hidden = decoded_state==(&quot;yesApplause&quot;)? 1:0;&#10;  //if (hidden == 1) {&#10;        send('output', parseInt(hidden));&#10;        send('frame', parseInt(token.frame)); &#10;//}&#10;}">
             <property name="style" class="ptolemy.actor.gui.style.TextStyle">
                 <property name="height" class="ptolemy.data.expr.Parameter" value="16">
                 </property>
@@ -250,7 +258,7 @@
                 </property>
             </property>
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{1515.0, -610.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{1485.0, -660.0}">
         </property>
         <port name="input" class="ptolemy.actor.TypedIOPort">
             <property name="input"/>
@@ -283,36 +291,36 @@
             <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
             </property>
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{745.0, -635.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{745.0, -685.0}">
         </property>
         <port name="in" class="ptolemy.actor.TypedIOPort">
             <property name="input"/>
         </port>
     </entity>
     <entity name="SingleEvent" class="ptolemy.actor.lib.SingleEvent">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{475.0, -635.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{475.0, -685.0}">
         </property>
     </entity>
     <entity name="Repeat" class="ptolemy.domains.sdf.lib.Repeat">
         <property name="numberOfTimes" class="ptolemy.actor.parameters.PortParameter" value="12">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{1015.0, -625.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{1015.0, -675.0}">
         </property>
     </entity>
     <entity name="Merge" class="ptolemy.domains.de.lib.Merge">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{1110.0, -620.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{1110.0, -670.0}">
         </property>
     </entity>
     <entity name="SingleEvent2" class="ptolemy.actor.lib.SingleEvent">
         <property name="time" class="ptolemy.data.expr.Parameter" value="3.0">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-270.0, -430.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-270.0, -505.0}">
         </property>
     </entity>
     <entity name="SequenceToArray2" class="ptolemy.domains.sdf.lib.SequenceToArray">
         <property name="arrayLength" class="ptolemy.actor.parameters.PortParameter" value="nOverlap">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{85.0, -530.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{85.0, -585.0}">
         </property>
     </entity>
     <entity name="AudioCapture" class="ptolemy.actor.lib.javasound.AudioCapture">
@@ -346,11 +354,11 @@
                 </property>
             </property>
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-15.0, -540.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-15.0, -595.0}">
         </property>
     </entity>
-    <entity name="StartupFrames4" class="ptolemy.actor.lib.Expression">
-        <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="&quot;Applause Detected at frame &quot; + c">
+    <entity name="Applause" class="ptolemy.actor.lib.Expression">
+        <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="state ==1? &quot;Applause Detected at frame &quot; + c : &quot;&quot;">
         </property>
         <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
             <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="expression">
@@ -360,18 +368,25 @@
             <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
             </property>
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{1710.0, -600.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{1750.0, -590.0}">
         </property>
         <port name="c" class="ptolemy.actor.TypedIOPort">
             <property name="input"/>
         </port>
+        <port name="state" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+        </port>
     </entity>
     <entity name="Display" class="ptolemy.actor.lib.gui.Display">
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={450, 267, 499, 208}, maximized=false}">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={800, 315, 399, 348}, maximized=false}">
         </property>
         <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[499, 164]">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{1865.0, -600.0}">
+        <property name="suppressBlankLines" class="ptolemy.data.expr.Parameter" value="true">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{1950.0, -590.0}">
         </property>
     </entity>
     <entity name="AFTEFast2" class="org.ptolemy.machineLearning.lib.AFTEFast">
@@ -389,146 +404,173 @@
         </property>
         <property name="numberOfChannels" class="ptolemy.data.expr.Parameter" value="numChannels">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{215.0, -530.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{215.0, -585.0}">
         </property>
     </entity>
     <entity name="ArrayToSequence3" class="ptolemy.domains.sdf.lib.ArrayToSequence">
         <property name="arrayLength" class="ptolemy.data.expr.Parameter" value="numChannels">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{305.0, -530.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{305.0, -585.0}">
         </property>
     </entity>
     <entity name="ArrayToSequence4" class="ptolemy.domains.sdf.lib.ArrayToSequence">
         <property name="arrayLength" class="ptolemy.data.expr.Parameter" value="12">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{435.0, -530.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{435.0, -585.0}">
         </property>
     </entity>
     <entity name="SequenceToArray4" class="ptolemy.domains.sdf.lib.SequenceToArray">
         <property name="arrayLength" class="ptolemy.actor.parameters.PortParameter" value="36">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{725.0, -520.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{725.0, -575.0}">
         </property>
     </entity>
-    <entity name="ArrayPlotter" class="ptolemy.actor.lib.gui.ArrayPlotter">
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={796, 367, 500, 344}, maximized=false}">
+    <entity name="Score" class="ptolemy.actor.lib.Expression">
+        <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="state == 1? 1.0 : 0.0">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="expression">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+            </property>
+            <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{1665.0, -680.0}">
+        </property>
+        <port name="c" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+        </port>
+        <port name="state" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+        </port>
+    </entity>
+    <entity name="MovingAverage" class="ptolemy.actor.lib.MovingAverage">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[1830.0, -680.0]">
+        </property>
+    </entity>
+    <entity name="SequenceScope" class="ptolemy.actor.lib.gui.SequenceScope">
+        <property name="fillOnWrapup" class="ptolemy.data.expr.Parameter" value="false">
+        </property>
+        <property name="automaticRescale" class="ptolemy.data.expr.Parameter" value="false">
+        </property>
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={293, 315, 500, 344}, maximized=false}">
         </property>
         <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[500, 300]">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{1105.0, -520.0}">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="5*frameRate">
+        </property>
+        <property name="persistence" class="ptolemy.data.expr.Parameter" value="5*frameRate">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[1950.0, -680.0]">
         </property>
         <configure>
 <?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
 "http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
 <plot>
-<title>Real-time Audio Features</title>
-<xLabel>feature ID</xLabel>
-<yLabel>normalized magnitude</yLabel>
-<xRange min="0.0" max="35.0"/>
-<yRange min="0.005718453094245754" max="0.3233422332828657"/>
+<title>Applause Score</title>
+<xLabel>frames ( past 5 seconds )</xLabel>
+<yLabel>score </yLabel>
+<xRange min="0.0" max="75.0"/>
+<yRange min="0.0" max="1.0"/>
+<wrap/>
+<default marks="dots"/>
 </plot>?>
         </configure>
-    </entity>
-    <entity name="Counter" class="ptolemy.actor.lib.Counter">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[1390.0, -455.0]">
-        </property>
-    </entity>
-    <entity name="Display2" class="ptolemy.actor.lib.gui.Display">
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={907, 22, 499, 514}, maximized=false}">
-        </property>
-        <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[499, 164]">
-        </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[1600.0, -385.0]">
-        </property>
     </entity>
     <relation name="relation14" class="ptolemy.actor.TypedIORelation">
         <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
         </property>
-        <vertex name="vertex1" value="{1155.0, -620.0}">
+        <vertex name="vertex1" value="{1155.0, -670.0}">
         </vertex>
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Merge.output&quot;,x=1110.0,y=-620.0}, tail={id=&quot;relation14.vertex1&quot;,x=1155.0,y=-620.0}, points={} },{ head={id=&quot;ElementsToArray.input&quot;,x=1200.0,y=-620.0}, tail={id=&quot;relation14.vertex1&quot;,x=1155.0,y=-620.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Merge.output&quot;,x=1110.0,y=-670.0}, tail={id=&quot;relation14.vertex1&quot;,x=1155.0,y=-670.0}, points={} },{ head={id=&quot;ElementsToArray.input&quot;,x=1200.0,y=-670.0}, tail={id=&quot;relation14.vertex1&quot;,x=1155.0,y=-670.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation2" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;StartupFrames.in&quot;,x=745.0,y=-635.0}, tail={id=&quot;SingleEvent.output&quot;,x=475.0,y=-635.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;StartupFrames.in&quot;,x=745.0,y=-685.0}, tail={id=&quot;SingleEvent.output&quot;,x=475.0,y=-685.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation15" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;StartupFrames.output&quot;,x=745.0,y=-635.0}, tail={id=&quot;Repeat.input&quot;,x=1015.0,y=-625.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;StartupFrames.output&quot;,x=745.0,y=-685.0}, tail={id=&quot;Repeat.input&quot;,x=1015.0,y=-675.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation17" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Repeat.output&quot;,x=1015.0,y=-625.0}, tail={id=&quot;Merge.input&quot;,x=1110.0,y=-620.0,index=2}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Repeat.output&quot;,x=1015.0,y=-675.0}, tail={id=&quot;Merge.input&quot;,x=1110.0,y=-670.0,index=2}, points={} } }">
         </property>
     </relation>
     <relation name="relation18" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;DiscreteClock.start&quot;,x=-125.0,y=-540.0}, tail={id=&quot;SingleEvent2.output&quot;,x=-270.0,y=-430.0}, points={-135.0,-430.0} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;DiscreteClock.start&quot;,x=-125.0,y=-595.0}, tail={id=&quot;SingleEvent2.output&quot;,x=-270.0,y=-505.0}, points={-135.0,-505.0} } }">
         </property>
     </relation>
     <relation name="relation4" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;DiscreteClock.output&quot;,x=-125.0,y=-540.0}, tail={id=&quot;AudioCapture.trigger&quot;,x=-15.0,y=-540.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;DiscreteClock.output&quot;,x=-125.0,y=-595.0}, tail={id=&quot;AudioCapture.trigger&quot;,x=-15.0,y=-595.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation24" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;StartupFrames4.output&quot;,x=1710.0,y=-600.0}, tail={id=&quot;Display.input&quot;,x=1865.0,y=-600.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Applause.output&quot;,x=1750.0,y=-590.0}, tail={id=&quot;Display.input&quot;,x=1950.0,y=-590.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation27" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;AFTEFast2.output&quot;,x=215.0,y=-530.0}, tail={id=&quot;ArrayToSequence3.input&quot;,x=305.0,y=-530.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;AFTEFast2.output&quot;,x=215.0,y=-585.0}, tail={id=&quot;ArrayToSequence3.input&quot;,x=305.0,y=-585.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation28" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ArrayToSequence3.output&quot;,x=305.0,y=-530.0}, tail={id=&quot;ArrayToSequence4.input&quot;,x=435.0,y=-530.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ArrayToSequence3.output&quot;,x=305.0,y=-585.0}, tail={id=&quot;ArrayToSequence4.input&quot;,x=435.0,y=-585.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation29" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ArrayToSequence4.output&quot;,x=435.0,y=-530.0}, tail={id=&quot;SequenceToArray4.input&quot;,x=725.0,y=-520.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ArrayToSequence4.output&quot;,x=435.0,y=-585.0}, tail={id=&quot;SequenceToArray4.input&quot;,x=725.0,y=-575.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation" class="ptolemy.actor.TypedIORelation">
         <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
         </property>
-        <vertex name="vertex1" value="{1065.0, -520.0}">
+        <vertex name="vertex1" value="{1065.0, -575.0}">
         </vertex>
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Merge.input&quot;,x=1110.0,y=-620.0,index=2}, tail={id=&quot;relation.vertex1&quot;,x=1065.0,y=-520.0}, points={1065.0,-620.0} },{ head={id=&quot;ArrayPlotter.input&quot;,x=1105.0,y=-520.0}, tail={id=&quot;relation.vertex1&quot;,x=1065.0,y=-520.0}, points={} },{ head={id=&quot;SequenceToArray4.output&quot;,x=725.0,y=-520.0}, tail={id=&quot;relation.vertex1&quot;,x=1065.0,y=-520.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Merge.input&quot;,x=1110.0,y=-670.0,index=2}, tail={id=&quot;relation.vertex1&quot;,x=1065.0,y=-575.0}, points={1065.0,-670.0} },{ head={id=&quot;.ArrayPlotter.input&quot;,x=1105.0,y=-575.0}, tail={id=&quot;relation.vertex1&quot;,x=1065.0,y=-575.0}, points={} },{ head={id=&quot;SequenceToArray4.output&quot;,x=725.0,y=-575.0}, tail={id=&quot;relation.vertex1&quot;,x=1065.0,y=-575.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation3" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SequenceToArray2.output&quot;,x=85.0,y=-530.0}, tail={id=&quot;AFTEFast2.input&quot;,x=215.0,y=-530.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SequenceToArray2.output&quot;,x=85.0,y=-585.0}, tail={id=&quot;AFTEFast2.input&quot;,x=215.0,y=-585.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation8" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SequenceToArray2.input&quot;,x=85.0,y=-530.0}, tail={id=&quot;AudioCapture.output&quot;,x=-15.0,y=-540.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SequenceToArray2.input&quot;,x=85.0,y=-585.0}, tail={id=&quot;AudioCapture.output&quot;,x=-15.0,y=-595.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation6" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ApplauseScore.input&quot;,x=1515.0,y=-610.0}, tail={id=&quot;WebSocketClient.received&quot;,x=1375.0,y=-620.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;WebSocketClient.received&quot;,x=1350.0,y=-670.0}, tail={id=&quot;ApplauseScore.input&quot;,x=1485.0,y=-660.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation5" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;WebSocketClient.toSend&quot;,x=1350.0,y=-670.0}, tail={id=&quot;ElementsToArray.output&quot;,x=1200.0,y=-670.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation7" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ApplauseScore.frame&quot;,x=1485.0,y=-660.0}, tail={id=&quot;Applause.c&quot;,x=1750.0,y=-590.0}, points={1560.0,-650.0,1560.0,-600.0} } }">
         </property>
     </relation>
     <relation name="relation10" class="ptolemy.actor.TypedIORelation">
         <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
         </property>
-        <vertex name="vertex1" value="{1305.0, -620.0}">
+        <vertex name="vertex1" value="{1580.0, -670.0}">
         </vertex>
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;relation10.vertex1&quot;,x=1305.0,y=-620.0}, tail={id=&quot;.WebSocketClient2.toSend&quot;,x=1370.0,y=-535.0}, points={1305.0,-535.0} },{ head={id=&quot;ElementsToArray.output&quot;,x=1200.0,y=-620.0}, tail={id=&quot;relation10.vertex1&quot;,x=1305.0,y=-620.0}, points={} },{ head={id=&quot;WebSocketClient.toSend&quot;,x=1375.0,y=-620.0}, tail={id=&quot;relation10.vertex1&quot;,x=1305.0,y=-620.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ApplauseScore.output&quot;,x=1485.0,y=-660.0}, tail={id=&quot;relation10.vertex1&quot;,x=1580.0,y=-670.0}, points={} },{ head={id=&quot;Score.state&quot;,x=1665.0,y=-680.0}, tail={id=&quot;relation10.vertex1&quot;,x=1580.0,y=-670.0}, points={} },{ head={id=&quot;Applause.state&quot;,x=1750.0,y=-590.0}, tail={id=&quot;relation10.vertex1&quot;,x=1580.0,y=-670.0}, points={1580.0,-580.0} } }">
         </property>
-    </relation>
-    <relation name="relation7" class="ptolemy.actor.TypedIORelation">
     </relation>
     <relation name="relation9" class="ptolemy.actor.TypedIORelation">
-        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
-        </property>
-        <vertex name="vertex1" value="{1615.0, -605.0}">
-        </vertex>
+    </relation>
+    <relation name="relation11" class="ptolemy.actor.TypedIORelation">
     </relation>
     <link port="ElementsToArray.input" relation="relation14"/>
-    <link port="ElementsToArray.output" relation="relation10"/>
-    <link port="WebSocketClient.toSend" relation="relation10"/>
+    <link port="ElementsToArray.output" relation="relation5"/>
+    <link port="WebSocketClient.toSend" relation="relation5"/>
     <link port="WebSocketClient.received" relation="relation6"/>
     <link port="DiscreteClock.output" relation="relation4"/>
     <link port="DiscreteClock.start" relation="relation18"/>
     <link port="ApplauseScore.input" relation="relation6"/>
-    <link port="ApplauseScore.frame" relation="relation9"/>
+    <link port="ApplauseScore.output" relation="relation10"/>
+    <link port="ApplauseScore.frame" relation="relation7"/>
     <link port="StartupFrames.output" relation="relation15"/>
     <link port="StartupFrames.in" relation="relation2"/>
     <link port="SingleEvent.output" relation="relation2"/>
@@ -542,8 +584,9 @@
     <link port="SequenceToArray2.output" relation="relation3"/>
     <link port="AudioCapture.trigger" relation="relation4"/>
     <link port="AudioCapture.output" relation="relation8"/>
-    <link port="StartupFrames4.output" relation="relation24"/>
-    <link port="StartupFrames4.c" relation="relation9"/>
+    <link port="Applause.output" relation="relation24"/>
+    <link port="Applause.c" relation="relation7"/>
+    <link port="Applause.state" relation="relation10"/>
     <link port="Display.input" relation="relation24"/>
     <link port="AFTEFast2.input" relation="relation3"/>
     <link port="AFTEFast2.output" relation="relation27"/>
@@ -553,9 +596,9 @@
     <link port="ArrayToSequence4.output" relation="relation29"/>
     <link port="SequenceToArray4.input" relation="relation29"/>
     <link port="SequenceToArray4.output" relation="relation"/>
-    <link port="ArrayPlotter.input" relation="relation"/>
-    <link port="Counter.increment" relation="relation10"/>
-    <link port="Counter.output" relation="relation7"/>
-    <link port="Display2.input" relation="relation7"/>
-    <link port="Display2.input" relation="relation9"/>
+    <link port="Score.output" relation="relation9"/>
+    <link port="Score.state" relation="relation10"/>
+    <link port="MovingAverage.input" relation="relation9"/>
+    <link port="MovingAverage.output" relation="relation11"/>
+    <link port="SequenceScope.input" relation="relation11"/>
 </entity>
