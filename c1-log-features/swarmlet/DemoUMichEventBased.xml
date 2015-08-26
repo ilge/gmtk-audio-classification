@@ -4,13 +4,13 @@
 <entity name="DemoUMichEventBased" class="ptolemy.actor.TypedCompositeActor">
     <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.devel">
     </property>
-    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={35, 22, 1299, 634}, maximized=false}">
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={35, 152, 1299, 634}, maximized=false}">
     </property>
     <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1065, 524]">
     </property>
-    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.9115004126299956">
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.7918515783017697">
     </property>
-    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{80.7161395549773, -809.4457401243997}">
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{-206.1969037652015, -974.6771990060806}">
     </property>
     <property name="enableBackwardTypeInference" class="ptolemy.data.expr.Parameter" value="true">
     </property>
@@ -62,14 +62,14 @@
         </property>
         <property name="text" class="ptolemy.kernel.util.StringAttribute" value="fps">
         </property>
-        <property name="_location" class="ptolemy.vergil.basic.RelativeLocation" value="{-365.0, -1095.0}">
+        <property name="_location" class="ptolemy.vergil.basic.RelativeLocation" value="[-230.0, -1075.0]">
         </property>
     </property>
     <property name="LocalPreferences" class="ptolemy.actor.gui.PtolemyPreferences">
         <property name="backgroundColor" class="ptolemy.actor.gui.ColorAttribute" value="{1,1,1,1}">
             <display name="Background Color"/>
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{470.0, -1075.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-55.0, -550.0]">
         </property>
     </property>
     <property name="someApplauseThreshold" class="ptolemy.data.expr.Parameter" value="0.5">
@@ -88,7 +88,7 @@
         </property>
         <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{205.0, -1085.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-180.0, -1055.0]">
         </property>
     </property>
     <property name="maxApplauseThreshold" class="ptolemy.data.expr.Parameter" value="0.5">
@@ -107,7 +107,7 @@
         </property>
         <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-5.0, -1085.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-180.0, -1070.0]">
         </property>
     </property>
     <property name="oldState" class="ptolemy.data.expr.Parameter" value="&quot;no_applause&quot;">
@@ -1211,176 +1211,243 @@
         <link port="AudioCapture.trigger" relation="relation"/>
         <link port="AudioCapture.output" relation="relation3"/>
     </entity>
-    <entity name="MovingAverage" class="ptolemy.actor.lib.MovingAverage">
-        <property name="maxPastInputsToAverage" class="ptolemy.data.expr.Parameter" value="15">
+    <entity name="ProcessOutput" class="ptolemy.actor.TypedCompositeActor">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-5.0, -990.0]">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-25.0, -990.0}">
-        </property>
-    </entity>
-    <entity name="RefineApplauseState" class="ptolemy.actor.lib.jjs.JavaScript">
-        <property name="script" class="ptolemy.actor.parameters.PortParameter" value="// Put your JavaScript program here.&#10;// Add ports and parameters.&#10;// Define JavaScript functions initialize(), fire(), and/or wrapup().&#10;// Refer to parameters in scope using dollar-sign{parameterName}.&#10;// In the fire() function, use get(parameterName, channel) to read inputs.&#10;// Send to output ports using send(value, portName, channel).&#10;exports.setup = function() {&#10;  input('input');&#10;  parameter('someApplauseThreshold');&#10;  parameter('maxApplauseThreshold');&#10;  output('status',{'type':'string'}); &#10;}  &#10;exports.fire = function() {&#10;  var token = get('input'); &#10;  var thresh = getParameter('someApplauseThreshold');&#10;  var maxThresh = getParameter('maxApplauseThreshold');&#10;  var outputStatus = &quot;no_applause&quot;; &#10;  if ( token &gt;=  maxThresh) {&#10;  	outputStatus = &quot;some_applause&quot;;  &#10;  	sentApplauseSignal = true;&#10;  }  &#10;  &#10;  send('status', outputStatus);&#10;//  else if (token &gt;= thresh) {&#10;//  	outputStatus = &quot;SOME_APPLAUSE&quot;;&#10;//  }&#10;  &#10;}">
-            <property name="style" class="ptolemy.actor.gui.style.NoteStyle">
-                <property name="note" class="ptolemy.kernel.util.StringAttribute" value="NOTE: To see the script, invoke Open Actor">
+        <property name="_icon" class="ptolemy.vergil.icon.EditorIcon">
+            <property name="rectangle" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[0.0, 0.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="60">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="40">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0, 1.0, 1.0, 1.0}">
+                </property>
+            </property>
+            <property name="Annotation" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+                <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Café">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-18.0, -9.0]">
                 </property>
             </property>
         </property>
-        <property name="_tableauFactory" class="ptolemy.vergil.toolbox.TextEditorTableauFactory">
-            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="script">
-            </property>
-            <property name="syntaxStyle" class="ptolemy.kernel.util.StringAttribute" value="text/javascript">
-            </property>
-        </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{90.0, -990.0}">
-        </property>
-        <property name="someApplauseThreshold" class="ptolemy.data.expr.Parameter" value="someApplauseThreshold">
-        </property>
-        <property name="maxApplauseThreshold" class="ptolemy.data.expr.Parameter" value="maxApplauseThreshold">
-        </property>
-        <port name="input" class="ptolemy.actor.TypedIOPort">
-            <property name="input"/>
-            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
-            </property>
-        </port>
-        <port name="status" class="ptolemy.actor.TypedIOPort">
-            <property name="output"/>
-            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
-            </property>
-        </port>
-    </entity>
-    <entity name="MonitorValue" class="ptolemy.actor.lib.gui.MonitorValue">
-        <doc>Monitor and display values</doc>
-        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="15">
-        </property>
-        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
-            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
-            </property>
-            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
-            </property>
-        </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{280.0, -860.0}">
-        </property>
-        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-        </property>
-    </entity>
-    <entity name="Expression" class="ptolemy.actor.lib.Expression">
-        <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="sending.equals(oldState)">
-        </property>
-        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
-            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="expression">
-            </property>
-            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
-            </property>
-            <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
-            </property>
-        </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{305.0, -900.0}">
-        </property>
-        <port name="sending" class="ptolemy.actor.TypedIOPort">
+        <port name="port_5" class="ptolemy.actor.TypedIOPort">
             <property name="input"/>
         </port>
-    </entity>
-    <entity name="SetVariable" class="ptolemy.actor.lib.SetVariable">
-        <property name="variableName" class="ptolemy.kernel.util.StringAttribute" value="oldState">
-        </property>
-        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
-            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="variableName">
+        <entity name="MovingAverage" class="ptolemy.actor.lib.MovingAverage">
+            <property name="maxPastInputsToAverage" class="ptolemy.data.expr.Parameter" value="15">
             </property>
-            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="40">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{-25.0, -990.0}">
             </property>
-        </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{255.0, -805.0}">
-        </property>
-    </entity>
-    <entity name="Display" class="ptolemy.actor.lib.gui.Display">
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={470, 346, 499, 208}, maximized=false}">
-        </property>
-        <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute">
-        </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{555.0, -980.0}">
-        </property>
-    </entity>
-    <entity name="BooleanSwitch" class="ptolemy.actor.lib.BooleanSwitch">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{430.0, -990.0}">
-        </property>
-    </entity>
-    <entity name="WebSocketClient" class="org.terraswarm.accessor.JSAccessor">
-        <property name="script" class="ptolemy.actor.parameters.PortParameter" value="// Copyright (c) 2014-2015 The Regents of the University of California.&#10;// All rights reserved.&#10;&#10;// Permission is hereby granted, without written agreement and without&#10;// license or royalty fees, to use, copy, modify, and distribute this&#10;// software and its documentation for any purpose, provided that the above&#10;// copyright notice and the following two paragraphs appear in all copies&#10;// of this software.&#10;&#10;// IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY&#10;// FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES&#10;// ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF&#10;// THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF&#10;// SUCH DAMAGE.&#10;&#10;// THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,&#10;// INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF&#10;// MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE&#10;// PROVIDED HEREUNDER IS ON AN &quot;AS IS&quot; BASIS, AND THE UNIVERSITY OF&#10;// CALIFORNIA HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES,&#10;// ENHANCEMENTS, OR MODIFICATIONS.&#10;&#10;/** This accessor sends and/or receives messages from a web socket at&#10; *  the specified host and port. In `initialize()`, it&#10; *  begins connecting to the web socket server.&#10; *  Once the connection is established, a `true` boolean is sent to&#10; *  the `connected` output.&#10; *  If connection is not established immediately, the accessor will attempt to&#10; *  reconnect (numberOfRetries) times at an interval of (reconnectInterval)&#10; *&#10; *  Whenever an input is received on the `toSend`&#10; *  input, the message is sent to the socket. If the socket is not yet open,&#10; *  this accessor will, by default, queue the message to send when the socket opens,&#10; *  unless the `discardMessagesBeforeOpen` parameter is true, in which case,&#10; *  input messages that are received before the socket is opened will be&#10; *  discarded. If messages are queued and `throttleFactor` is non-zero, then&#10; *  whenever a message is queued to be later sent, the accessor will stall&#10; *  by a number of milliseconds given by the queue size times the throttleFactor.&#10; *  The longer the queue, the longer the stall. Note that this will likely block&#10; *  the host from executing, so this feature should be used with caution.&#10; *&#10; *  Whenever a message is received from the socket, that message is&#10; *  produced on the `'received'` output.&#10; *&#10; *  When `wrapup()` is invoked, this accessor closes the&#10; *  connection.&#10; *  &#10; *  If the connection is dropped midway, the client will attempt to reconnect if &#10; *  (reconnectOnClose) is true. This does not apply when the accessor wraps up. &#10; *&#10; *  The data can be any type that has a JSON representation.&#10; *  For incoming messages, this accessor assumes that the message is&#10; *  a string in UTF-8 that encodes a JSON object.&#10; *&#10; *  When a model with an instance of this accessor stops executing, there&#10; *  are two mechanisms by which data in transit can be lost. In both cases, warning&#10; *  messages or error messages will be issued to the host to be displayed or otherwise&#10; *  handled as the host sees fit.&#10; *  &#10; *  # First, there might be queued messages that were received on `toSend` but have not yet&#10; *    been sent, either because the socket has not yet been opened or because&#10; *    it was closed from the other side.&#10; *  # Second, a message might be received from the server after shutdown has commenced.&#10; *    In particular, received messages are handled asynchronously by a handler function&#10; *    that can be invoked at any time, and that handler might be invoked after it is no&#10; *    longer possible for this accessor to produce outputs (it has entered its wrapup&#10; *    phase of execution).&#10; *  &#10; *  The server might similarly lose messages by the same two mechanisms occurring&#10; *  on the server side. In that case, messages will presumably be displayed on the&#10; *  server side.&#10; *&#10; *  Accessors that extend this one can override the `toSendInputHandler` function&#10; *  to customize what is sent. See `RosPublisher.js` for an example.&#10; *&#10; *  This accessor requires the 'webSocket' module.&#10; *&#10; *  @accessor net/WebSocketClient&#10; *  @parameter {string} server The IP address or domain name of server. Defaults to 'localhost'.&#10; *  @parameter {int} port The port that the web socket listens to. Defaults to 8080.&#10; *  @parameter {int} numberOfRetries The number of times to retry if a connection fails. Defaults to 5.&#10; *  @parameter {int} timeBetweenRetries The time between retries in milliseconds. Defaults to 100.&#10; *  @parameter {boolean} reconnectOnClose The option of whether or not to reconnect when disconnected.&#10; *  @parameter {boolean} discardMessagesBeforeOpen If true, then any messages received on `toSend` before the socket is open will be discarded. This defaults to false.&#10; *  @parameter {int} throttleFactor If non-zero, specifies a time (in milliseconds) to stall when a message is queued because the socket is not yet open. The time of the stall will be the queue size (after adding the message) times the throttleFactor. This defaults to 0.&#10; *  @input toSend The data to be sent over the socket.&#10; *  @output {boolean} connected Output `true` on connected and `false` on disconnected.&#10; *  @output received The data received from the web socket server.&#10; *  @author Hokeun Kim, Marcus Pan, Edward A. Lee, Matt Weber&#10; *  @version $$Id: WebSocketClient.js 268 2015-08-21 21:58:32Z eal $$&#10; */&#10;/* These are needed by JSLint, see https://chess.eecs.berkeley.edu/ptexternal/wiki/Main/JSLint */&#10;&quot;use strict&quot;;&#10;/*global addInputHandler, error, get, getParameter, input, onClose, output, parameter, removeInputHandler, send */&#10;&#10;var WebSocket = require('webSocket');&#10;var client = null;&#10;var inputHandle = null;&#10;&#10;/** Set up the accessor by defining the parameters, inputs, and outputs. */&#10;exports.setup = function () {&#10;    parameter('server', {&#10;        type : 'string',&#10;        value : 'localhost'&#10;    });&#10;    parameter('port', {&#10;        type : 'int',&#10;        value : 8080&#10;    });&#10;    parameter('numberOfRetries', {&#10;        type : 'int',&#10;        value : 5&#10;    });&#10;    parameter('timeBetweenRetries', {&#10;        type : 'int',&#10;        value : 100&#10;    });&#10;    parameter('reconnectOnClose', {&#10;        type : 'boolean',&#10;        value : true&#10;    });&#10;    parameter('discardMessagesBeforeOpen', {&#10;        type : 'boolean',&#10;        value : false&#10;    });&#10;    parameter('throttleFactor', {&#10;        type : 'int',&#10;        value : 0&#10;    });&#10;    input('toSend');&#10;    output('connected', {&#10;        type : 'boolean'&#10;    });&#10;    output('received');&#10;};&#10;&#10;/** Initializes accessor by attaching functions to inputs. */&#10;exports.initialize = function () {&#10;&#10;    //record the object that calls it (could be a derived accessor). &#10;    var callObj = this;&#10;&#10;    client = new WebSocket.Client(&#10;        {&#10;            'host' : getParameter('server'),&#10;            'port' : getParameter('port'),&#10;            'numberOfRetries' : getParameter('numberOfRetries'),&#10;            'timeBetweenRetries' : getParameter('timeBetweenRetries'),&#10;            'discardMessagesBeforeOpen' : getParameter('discardMessagesBeforeOpen'),&#10;            'throttleFactor' : getParameter('throttleFactor')&#10;        }&#10;    );&#10;&#10;    client.on('open', this.onOpen);&#10;    client.on('message', this.onMessage);&#10;&#10;    //bind onClose() to caller's object, &#10;    //so initialize() of caller's object is called if reconnect is true.&#10;    client.on('close', onClose.bind(callObj));&#10;    client.on('error', function (message) {&#10;        error(message);&#10;    });&#10;    //only execute once, and not when trying to reconnect. &#10;    if (inputHandle === null) {&#10;        inputHandle = addInputHandler('toSend', this.toSendInputHandler);&#10;    }&#10;};&#10;&#10;/** Handles input on 'toSend'. */&#10;exports.toSendInputHandler = function () {&#10;    exports.sendToWebSocket(get('toSend'));&#10;};&#10;&#10;/** Sends JSON data to the web socket. */&#10;exports.sendToWebSocket = function (data) {&#10;    if (client !== null) {&#10;        client.send(data);&#10;        console.log(&quot;Sending to web socket: &quot; + JSON.stringify(data));&#10;    } else {&#10;        console.log(&quot;Client is null. Could not send message: &quot;&#10;                    + JSON.stringify(data));&#10;    }&#10;};&#10;&#10;/** Executes once  web socket establishes a connection.&#10; *   Sets 'connected' output to true.&#10; */&#10;exports.onOpen = function () {&#10;    console.log('Status: Connection established');&#10;    send('connected', true);&#10;};&#10;&#10;/** Send false to 'connected' output, and if 'reconnectOnClose'&#10; *  parameter evaluates to true and wrapup() has not been called,&#10; *  then invoke initialize().&#10; *  This will be called if either side closes the connection.&#10; *  @param message Possible message about the closure.&#10; */&#10;function onClose(message) {&#10;    console.log('Status: Connection closed: ' + message);&#10;    if (inputHandle) {&#10;        // wrapup() has not been called.&#10;        // Probably the server closed the connection.&#10;        send('connected', false);&#10;        // Reconnect if reconnectOnClose is true.&#10;        if (getParameter('reconnectOnClose')) {&#10;            // Use 'this' rather than 'export' so initialize() can be overridden.&#10;            this.initialize();&#10;        } else {&#10;            // Not set to reconnect on close.&#10;            // Close and unregister everything.&#10;            client.removeAllListeners('open');&#10;            client.removeAllListeners('message');&#10;            client.removeAllListeners('close');&#10;            client = null;&#10;        }&#10;    }&#10;}&#10;&#10;/** Send the message received from web socket to the 'received' output. */&#10;exports.onMessage = function (message) {&#10;    send('received', message);&#10;};&#10;&#10;/** Close the web socket connection. */&#10;exports.wrapup = function () {&#10;    if (inputHandle !== null) {&#10;        removeInputHandler(inputHandle);&#10;        inputHandle = null;&#10;    }&#10;    if (client) {&#10;        client.removeAllListeners('open');&#10;        client.removeAllListeners('message');&#10;        client.removeAllListeners('close');&#10;        client.close();&#10;        console.log('Status: Connection closed in wrapup.');&#10;        client = null;&#10;    }&#10;};&#10;">
-            <property name="style" class="ptolemy.actor.gui.style.NoteStyle">
-                <property name="note" class="ptolemy.kernel.util.StringAttribute" value="NOTE: To see the script, invoke Open Actor">
+        </entity>
+        <entity name="RefineApplauseState" class="ptolemy.actor.lib.jjs.JavaScript">
+            <property name="script" class="ptolemy.actor.parameters.PortParameter" value="// Put your JavaScript program here.&#10;// Add ports and parameters.&#10;// Define JavaScript functions initialize(), fire(), and/or wrapup().&#10;// Refer to parameters in scope using dollar-sign{parameterName}.&#10;// In the fire() function, use get(parameterName, channel) to read inputs.&#10;// Send to output ports using send(value, portName, channel).&#10;exports.setup = function() {&#10;  input('input');&#10;  parameter('someApplauseThreshold');&#10;  parameter('maxApplauseThreshold');&#10;  output('status',{'type':'string'}); &#10;}  &#10;exports.fire = function() {&#10;  var token = get('input'); &#10;  var thresh = getParameter('someApplauseThreshold');&#10;  var maxThresh = getParameter('maxApplauseThreshold');&#10;  var outputStatus = &quot;no_applause&quot;; &#10;  if ( token &gt;=  maxThresh) {&#10;  	outputStatus = &quot;some_applause&quot;;  &#10;  	sentApplauseSignal = true;&#10;  }  &#10;  &#10;  send('status', outputStatus);&#10;//  else if (token &gt;= thresh) {&#10;//  	outputStatus = &quot;SOME_APPLAUSE&quot;;&#10;//  }&#10;  &#10;}">
+                <property name="style" class="ptolemy.actor.gui.style.NoteStyle">
+                    <property name="note" class="ptolemy.kernel.util.StringAttribute" value="NOTE: To see the script, invoke Open Actor">
+                    </property>
                 </property>
             </property>
-        </property>
-        <property name="accessorSource" class="org.terraswarm.accessor.JSAccessor$ActionableAttribute" value="http://www.terraswarm.org/accessors/net/WebSocketClient.js">
-        </property>
-        <property name="checkoutOrUpdateAccessorsRepository" class="ptolemy.actor.parameters.SharedParameter" value="false">
-        </property>
-        <property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
-            <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;This accessor sends and/or receives messages from a web socket at&#10; the specified host and port. In &lt;code&gt;initialize()&lt;/code&gt;, it&#10; begins connecting to the web socket server.&#10; Once the connection is established, a &lt;code&gt;true&lt;/code&gt; boolean is sent to&#10; the &lt;code&gt;connected&lt;/code&gt; output.&#10; If connection is not established immediately, the accessor will attempt to&#10; reconnect (numberOfRetries) times at an interval of (reconnectInterval)&lt;/p&gt;&#10;&lt;p&gt; Whenever an input is received on the &lt;code&gt;toSend&lt;/code&gt;&#10; input, the message is sent to the socket. If the socket is not yet open,&#10; this accessor will, by default, queue the message to send when the socket opens,&#10; unless the &lt;code&gt;discardMessagesBeforeOpen&lt;/code&gt; parameter is true, in which case,&#10; input messages that are received before the socket is opened will be&#10; discarded. If messages are queued and &lt;code&gt;throttleFactor&lt;/code&gt; is non-zero, then&#10; whenever a message is queued to be later sent, the accessor will stall&#10; by a number of milliseconds given by the queue size times the throttleFactor.&#10; The longer the queue, the longer the stall. Note that this will likely block&#10; the host from executing, so this feature should be used with caution.&lt;/p&gt;&#10;&lt;p&gt; Whenever a message is received from the socket, that message is&#10; produced on the &lt;code&gt;'received'&lt;/code&gt; output.&lt;/p&gt;&#10;&lt;p&gt; When &lt;code&gt;wrapup()&lt;/code&gt; is invoked, this accessor closes the&#10; connection.&lt;/p&gt;&#10;&lt;p&gt; If the connection is dropped midway, the client will attempt to reconnect if &#10; (reconnectOnClose) is true. This does not apply when the accessor wraps up. &lt;/p&gt;&#10;&lt;p&gt; The data can be any type that has a JSON representation.&#10; For incoming messages, this accessor assumes that the message is&#10; a string in UTF-8 that encodes a JSON object.&lt;/p&gt;&#10;&lt;p&gt; When a model with an instance of this accessor stops executing, there&#10; are two mechanisms by which data in transit can be lost. In both cases, warning&#10; messages or error messages will be issued to the host to be displayed or otherwise&#10; handled as the host sees fit.&lt;/p&gt;&#10;&lt;h1&gt;First, there might be queued messages that were received on &lt;code&gt;toSend&lt;/code&gt; but have not yet&lt;/h1&gt;&lt;p&gt;   been sent, either because the socket has not yet been opened or because&#10;   it was closed from the other side.&lt;/p&gt;&#10;&lt;h1&gt;Second, a message might be received from the server after shutdown has commenced.&lt;/h1&gt;&lt;p&gt;   In particular, received messages are handled asynchronously by a handler function&#10;   that can be invoked at any time, and that handler might be invoked after it is no&#10;   longer possible for this accessor to produce outputs (it has entered its wrapup&#10;   phase of execution).&lt;/p&gt;&#10;&lt;p&gt; The server might similarly lose messages by the same two mechanisms occurring&#10; on the server side. In that case, messages will presumably be displayed on the&#10; server side.&lt;/p&gt;&#10;&lt;p&gt; Accessors that extend this one can override the &lt;code&gt;toSendInputHandler&lt;/code&gt; function&#10; to customize what is sent. See &lt;code&gt;RosPublisher.js&lt;/code&gt; for an example.&lt;/p&gt;&#10;&lt;p&gt; This accessor requires the 'webSocket' module.&lt;/p&gt;">
+            <property name="_tableauFactory" class="ptolemy.vergil.toolbox.TextEditorTableauFactory">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="script">
+                </property>
+                <property name="syntaxStyle" class="ptolemy.kernel.util.StringAttribute" value="text/javascript">
+                </property>
             </property>
-            <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Hokeun Kim, Marcus Pan, Edward A. Lee, Matt Weber">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{90.0, -990.0}">
             </property>
-            <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$Id: WebSocketClient.js 268 2015-08-21 21:58:32Z eal $">
+            <property name="someApplauseThreshold" class="ptolemy.data.expr.Parameter" value="someApplauseThreshold">
             </property>
-            <property name="toSend (port)" class="ptolemy.kernel.util.StringAttribute" value="undefined The data to be sent over the socket.">
+            <property name="maxApplauseThreshold" class="ptolemy.data.expr.Parameter" value="maxApplauseThreshold">
             </property>
-            <property name="connected (port)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;boolean&quot;]}) Output `true` on connected and `false` on disconnected.">
+            <port name="input" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="status" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="MonitorValue" class="ptolemy.actor.lib.gui.MonitorValue">
+            <doc>Monitor and display values</doc>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="15">
             </property>
-            <property name="received (port)" class="ptolemy.kernel.util.StringAttribute" value="undefined The data received from the web socket server.">
+            <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+                </property>
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+                </property>
             </property>
-            <property name="server (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;string&quot;]}) The IP address or domain name of server. Defaults to 'localhost'.">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{280.0, -860.0}">
             </property>
-            <property name="port (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) The port that the web socket listens to. Defaults to 8080.">
+            <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
             </property>
-            <property name="numberOfRetries (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) The number of times to retry if a connection fails. Defaults to 5.">
+        </entity>
+        <entity name="Expression" class="ptolemy.actor.lib.Expression">
+            <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="sending.equals(oldState)">
             </property>
-            <property name="timeBetweenRetries (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) The time between retries in milliseconds. Defaults to 100.">
+            <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="expression">
+                </property>
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+                </property>
+                <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
+                </property>
             </property>
-            <property name="reconnectOnClose (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;boolean&quot;]}) The option of whether or not to reconnect when disconnected.">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{305.0, -900.0}">
             </property>
-            <property name="discardMessagesBeforeOpen (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;boolean&quot;]}) If true, then any messages received on `toSend` before the socket is open will be discarded. This defaults to false.">
+            <port name="sending" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+            </port>
+        </entity>
+        <entity name="SetVariable" class="ptolemy.actor.lib.SetVariable">
+            <property name="variableName" class="ptolemy.kernel.util.StringAttribute" value="oldState">
             </property>
-            <property name="throttleFactor (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) If non-zero, specifies a time (in milliseconds) to stall when a message is queued because the socket is not yet open. The time of the stall will be the queue size (after adding the message) times the throttleFactor. This defaults to 0.">
+            <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="variableName">
+                </property>
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="40">
+                </property>
             </property>
-        </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{568.3736258719202, -895.0189323239983}">
-        </property>
-        <property name="_tableauFactory" class="ptolemy.vergil.toolbox.TextEditorTableauFactory">
-            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="script">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{255.0, -805.0}">
             </property>
-            <property name="syntaxStyle" class="ptolemy.kernel.util.StringAttribute" value="text/javascript">
+        </entity>
+        <entity name="Display" class="ptolemy.actor.lib.gui.Display">
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={470, 346, 499, 208}, maximized=false}">
             </property>
-        </property>
-        <property name="server" class="ptolemy.data.expr.Parameter" value="192.168.11.108">
-            <property name="_stringMode" class="ptolemy.kernel.util.SingletonAttribute">
+            <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute">
             </property>
-        </property>
-        <property name="port" class="ptolemy.data.expr.Parameter" value="8084">
-        </property>
-        <property name="numberOfRetries" class="ptolemy.data.expr.Parameter" value="5">
-        </property>
-        <property name="timeBetweenRetries" class="ptolemy.data.expr.Parameter" value="100">
-        </property>
-        <property name="reconnectOnClose" class="ptolemy.data.expr.Parameter" value="true">
-        </property>
-        <property name="discardMessagesBeforeOpen" class="ptolemy.data.expr.Parameter" value="false">
-        </property>
-        <property name="throttleFactor" class="ptolemy.data.expr.Parameter" value="0">
-        </property>
-        <port name="toSend" class="ptolemy.actor.TypedIOPort">
-            <property name="input"/>
-            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{555.0, -980.0}">
             </property>
-        </port>
-        <port name="connected" class="ptolemy.actor.TypedIOPort">
-            <property name="output"/>
-            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+        </entity>
+        <entity name="BooleanSwitch" class="ptolemy.actor.lib.BooleanSwitch">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{430.0, -990.0}">
             </property>
-        </port>
-        <port name="received" class="ptolemy.actor.TypedIOPort">
-            <property name="output"/>
-            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+        </entity>
+        <entity name="WebSocketClient" class="org.terraswarm.accessor.JSAccessor">
+            <property name="script" class="ptolemy.actor.parameters.PortParameter" value="// Copyright (c) 2014-2015 The Regents of the University of California.&#10;// All rights reserved.&#10;&#10;// Permission is hereby granted, without written agreement and without&#10;// license or royalty fees, to use, copy, modify, and distribute this&#10;// software and its documentation for any purpose, provided that the above&#10;// copyright notice and the following two paragraphs appear in all copies&#10;// of this software.&#10;&#10;// IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY&#10;// FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES&#10;// ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF&#10;// THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF&#10;// SUCH DAMAGE.&#10;&#10;// THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,&#10;// INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF&#10;// MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE&#10;// PROVIDED HEREUNDER IS ON AN &quot;AS IS&quot; BASIS, AND THE UNIVERSITY OF&#10;// CALIFORNIA HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES,&#10;// ENHANCEMENTS, OR MODIFICATIONS.&#10;&#10;/** This accessor sends and/or receives messages from a web socket at&#10; *  the specified host and port. In `initialize()`, it&#10; *  begins connecting to the web socket server.&#10; *  Once the connection is established, a `true` boolean is sent to&#10; *  the `connected` output.&#10; *  If connection is not established immediately, the accessor will attempt to&#10; *  reconnect (numberOfRetries) times at an interval of (reconnectInterval)&#10; *&#10; *  Whenever an input is received on the `toSend`&#10; *  input, the message is sent to the socket. If the socket is not yet open,&#10; *  this accessor will, by default, queue the message to send when the socket opens,&#10; *  unless the `discardMessagesBeforeOpen` parameter is true, in which case,&#10; *  input messages that are received before the socket is opened will be&#10; *  discarded. If messages are queued and `throttleFactor` is non-zero, then&#10; *  whenever a message is queued to be later sent, the accessor will stall&#10; *  by a number of milliseconds given by the queue size times the throttleFactor.&#10; *  The longer the queue, the longer the stall. Note that this will likely block&#10; *  the host from executing, so this feature should be used with caution.&#10; *&#10; *  Whenever a message is received from the socket, that message is&#10; *  produced on the `'received'` output.&#10; *&#10; *  When `wrapup()` is invoked, this accessor closes the&#10; *  connection.&#10; *  &#10; *  If the connection is dropped midway, the client will attempt to reconnect if &#10; *  (reconnectOnClose) is true. This does not apply when the accessor wraps up. &#10; *&#10; *  The data can be any type that has a JSON representation.&#10; *  For incoming messages, this accessor assumes that the message is&#10; *  a string in UTF-8 that encodes a JSON object.&#10; *&#10; *  When a model with an instance of this accessor stops executing, there&#10; *  are two mechanisms by which data in transit can be lost. In both cases, warning&#10; *  messages or error messages will be issued to the host to be displayed or otherwise&#10; *  handled as the host sees fit.&#10; *  &#10; *  # First, there might be queued messages that were received on `toSend` but have not yet&#10; *    been sent, either because the socket has not yet been opened or because&#10; *    it was closed from the other side.&#10; *  # Second, a message might be received from the server after shutdown has commenced.&#10; *    In particular, received messages are handled asynchronously by a handler function&#10; *    that can be invoked at any time, and that handler might be invoked after it is no&#10; *    longer possible for this accessor to produce outputs (it has entered its wrapup&#10; *    phase of execution).&#10; *  &#10; *  The server might similarly lose messages by the same two mechanisms occurring&#10; *  on the server side. In that case, messages will presumably be displayed on the&#10; *  server side.&#10; *&#10; *  Accessors that extend this one can override the `toSendInputHandler` function&#10; *  to customize what is sent. See `RosPublisher.js` for an example.&#10; *&#10; *  This accessor requires the 'webSocket' module.&#10; *&#10; *  @accessor net/WebSocketClient&#10; *  @parameter {string} server The IP address or domain name of server. Defaults to 'localhost'.&#10; *  @parameter {int} port The port that the web socket listens to. Defaults to 8080.&#10; *  @parameter {int} numberOfRetries The number of times to retry if a connection fails. Defaults to 5.&#10; *  @parameter {int} timeBetweenRetries The time between retries in milliseconds. Defaults to 100.&#10; *  @parameter {boolean} reconnectOnClose The option of whether or not to reconnect when disconnected.&#10; *  @parameter {boolean} discardMessagesBeforeOpen If true, then any messages received on `toSend` before the socket is open will be discarded. This defaults to false.&#10; *  @parameter {int} throttleFactor If non-zero, specifies a time (in milliseconds) to stall when a message is queued because the socket is not yet open. The time of the stall will be the queue size (after adding the message) times the throttleFactor. This defaults to 0.&#10; *  @input toSend The data to be sent over the socket.&#10; *  @output {boolean} connected Output `true` on connected and `false` on disconnected.&#10; *  @output received The data received from the web socket server.&#10; *  @author Hokeun Kim, Marcus Pan, Edward A. Lee, Matt Weber&#10; *  @version $$Id: WebSocketClient.js 268 2015-08-21 21:58:32Z eal $$&#10; */&#10;/* These are needed by JSLint, see https://chess.eecs.berkeley.edu/ptexternal/wiki/Main/JSLint */&#10;&quot;use strict&quot;;&#10;/*global addInputHandler, error, get, getParameter, input, onClose, output, parameter, removeInputHandler, send */&#10;&#10;var WebSocket = require('webSocket');&#10;var client = null;&#10;var inputHandle = null;&#10;&#10;/** Set up the accessor by defining the parameters, inputs, and outputs. */&#10;exports.setup = function () {&#10;    parameter('server', {&#10;        type : 'string',&#10;        value : 'localhost'&#10;    });&#10;    parameter('port', {&#10;        type : 'int',&#10;        value : 8080&#10;    });&#10;    parameter('numberOfRetries', {&#10;        type : 'int',&#10;        value : 5&#10;    });&#10;    parameter('timeBetweenRetries', {&#10;        type : 'int',&#10;        value : 100&#10;    });&#10;    parameter('reconnectOnClose', {&#10;        type : 'boolean',&#10;        value : true&#10;    });&#10;    parameter('discardMessagesBeforeOpen', {&#10;        type : 'boolean',&#10;        value : false&#10;    });&#10;    parameter('throttleFactor', {&#10;        type : 'int',&#10;        value : 0&#10;    });&#10;    input('toSend');&#10;    output('connected', {&#10;        type : 'boolean'&#10;    });&#10;    output('received');&#10;};&#10;&#10;/** Initializes accessor by attaching functions to inputs. */&#10;exports.initialize = function () {&#10;&#10;    //record the object that calls it (could be a derived accessor). &#10;    var callObj = this;&#10;&#10;    client = new WebSocket.Client(&#10;        {&#10;            'host' : getParameter('server'),&#10;            'port' : getParameter('port'),&#10;            'numberOfRetries' : getParameter('numberOfRetries'),&#10;            'timeBetweenRetries' : getParameter('timeBetweenRetries'),&#10;            'discardMessagesBeforeOpen' : getParameter('discardMessagesBeforeOpen'),&#10;            'throttleFactor' : getParameter('throttleFactor')&#10;        }&#10;    );&#10;&#10;    client.on('open', this.onOpen);&#10;    client.on('message', this.onMessage);&#10;&#10;    //bind onClose() to caller's object, &#10;    //so initialize() of caller's object is called if reconnect is true.&#10;    client.on('close', onClose.bind(callObj));&#10;    client.on('error', function (message) {&#10;        error(message);&#10;    });&#10;    //only execute once, and not when trying to reconnect. &#10;    if (inputHandle === null) {&#10;        inputHandle = addInputHandler('toSend', this.toSendInputHandler);&#10;    }&#10;};&#10;&#10;/** Handles input on 'toSend'. */&#10;exports.toSendInputHandler = function () {&#10;    exports.sendToWebSocket(get('toSend'));&#10;};&#10;&#10;/** Sends JSON data to the web socket. */&#10;exports.sendToWebSocket = function (data) {&#10;    if (client !== null) {&#10;        client.send(data);&#10;        console.log(&quot;Sending to web socket: &quot; + JSON.stringify(data));&#10;    } else {&#10;        console.log(&quot;Client is null. Could not send message: &quot;&#10;                    + JSON.stringify(data));&#10;    }&#10;};&#10;&#10;/** Executes once  web socket establishes a connection.&#10; *   Sets 'connected' output to true.&#10; */&#10;exports.onOpen = function () {&#10;    console.log('Status: Connection established');&#10;    send('connected', true);&#10;};&#10;&#10;/** Send false to 'connected' output, and if 'reconnectOnClose'&#10; *  parameter evaluates to true and wrapup() has not been called,&#10; *  then invoke initialize().&#10; *  This will be called if either side closes the connection.&#10; *  @param message Possible message about the closure.&#10; */&#10;function onClose(message) {&#10;    console.log('Status: Connection closed: ' + message);&#10;    if (inputHandle) {&#10;        // wrapup() has not been called.&#10;        // Probably the server closed the connection.&#10;        send('connected', false);&#10;        // Reconnect if reconnectOnClose is true.&#10;        if (getParameter('reconnectOnClose')) {&#10;            // Use 'this' rather than 'export' so initialize() can be overridden.&#10;            this.initialize();&#10;        } else {&#10;            // Not set to reconnect on close.&#10;            // Close and unregister everything.&#10;            client.removeAllListeners('open');&#10;            client.removeAllListeners('message');&#10;            client.removeAllListeners('close');&#10;            client = null;&#10;        }&#10;    }&#10;}&#10;&#10;/** Send the message received from web socket to the 'received' output. */&#10;exports.onMessage = function (message) {&#10;    send('received', message);&#10;};&#10;&#10;/** Close the web socket connection. */&#10;exports.wrapup = function () {&#10;    if (inputHandle !== null) {&#10;        removeInputHandler(inputHandle);&#10;        inputHandle = null;&#10;    }&#10;    if (client) {&#10;        client.removeAllListeners('open');&#10;        client.removeAllListeners('message');&#10;        client.removeAllListeners('close');&#10;        client.close();&#10;        console.log('Status: Connection closed in wrapup.');&#10;        client = null;&#10;    }&#10;};&#10;">
+                <property name="style" class="ptolemy.actor.gui.style.NoteStyle">
+                    <property name="note" class="ptolemy.kernel.util.StringAttribute" value="NOTE: To see the script, invoke Open Actor">
+                    </property>
+                </property>
             </property>
-        </port>
+            <property name="accessorSource" class="org.terraswarm.accessor.JSAccessor$ActionableAttribute" value="http://www.terraswarm.org/accessors/net/WebSocketClient.js">
+            </property>
+            <property name="checkoutOrUpdateAccessorsRepository" class="ptolemy.actor.parameters.SharedParameter" value="false">
+            </property>
+            <property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+                <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;This accessor sends and/or receives messages from a web socket at&#10; the specified host and port. In &lt;code&gt;initialize()&lt;/code&gt;, it&#10; begins connecting to the web socket server.&#10; Once the connection is established, a &lt;code&gt;true&lt;/code&gt; boolean is sent to&#10; the &lt;code&gt;connected&lt;/code&gt; output.&#10; If connection is not established immediately, the accessor will attempt to&#10; reconnect (numberOfRetries) times at an interval of (reconnectInterval)&lt;/p&gt;&#10;&lt;p&gt; Whenever an input is received on the &lt;code&gt;toSend&lt;/code&gt;&#10; input, the message is sent to the socket. If the socket is not yet open,&#10; this accessor will, by default, queue the message to send when the socket opens,&#10; unless the &lt;code&gt;discardMessagesBeforeOpen&lt;/code&gt; parameter is true, in which case,&#10; input messages that are received before the socket is opened will be&#10; discarded. If messages are queued and &lt;code&gt;throttleFactor&lt;/code&gt; is non-zero, then&#10; whenever a message is queued to be later sent, the accessor will stall&#10; by a number of milliseconds given by the queue size times the throttleFactor.&#10; The longer the queue, the longer the stall. Note that this will likely block&#10; the host from executing, so this feature should be used with caution.&lt;/p&gt;&#10;&lt;p&gt; Whenever a message is received from the socket, that message is&#10; produced on the &lt;code&gt;'received'&lt;/code&gt; output.&lt;/p&gt;&#10;&lt;p&gt; When &lt;code&gt;wrapup()&lt;/code&gt; is invoked, this accessor closes the&#10; connection.&lt;/p&gt;&#10;&lt;p&gt; If the connection is dropped midway, the client will attempt to reconnect if &#10; (reconnectOnClose) is true. This does not apply when the accessor wraps up. &lt;/p&gt;&#10;&lt;p&gt; The data can be any type that has a JSON representation.&#10; For incoming messages, this accessor assumes that the message is&#10; a string in UTF-8 that encodes a JSON object.&lt;/p&gt;&#10;&lt;p&gt; When a model with an instance of this accessor stops executing, there&#10; are two mechanisms by which data in transit can be lost. In both cases, warning&#10; messages or error messages will be issued to the host to be displayed or otherwise&#10; handled as the host sees fit.&lt;/p&gt;&#10;&lt;h1&gt;First, there might be queued messages that were received on &lt;code&gt;toSend&lt;/code&gt; but have not yet&lt;/h1&gt;&lt;p&gt;   been sent, either because the socket has not yet been opened or because&#10;   it was closed from the other side.&lt;/p&gt;&#10;&lt;h1&gt;Second, a message might be received from the server after shutdown has commenced.&lt;/h1&gt;&lt;p&gt;   In particular, received messages are handled asynchronously by a handler function&#10;   that can be invoked at any time, and that handler might be invoked after it is no&#10;   longer possible for this accessor to produce outputs (it has entered its wrapup&#10;   phase of execution).&lt;/p&gt;&#10;&lt;p&gt; The server might similarly lose messages by the same two mechanisms occurring&#10; on the server side. In that case, messages will presumably be displayed on the&#10; server side.&lt;/p&gt;&#10;&lt;p&gt; Accessors that extend this one can override the &lt;code&gt;toSendInputHandler&lt;/code&gt; function&#10; to customize what is sent. See &lt;code&gt;RosPublisher.js&lt;/code&gt; for an example.&lt;/p&gt;&#10;&lt;p&gt; This accessor requires the 'webSocket' module.&lt;/p&gt;">
+                </property>
+                <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Hokeun Kim, Marcus Pan, Edward A. Lee, Matt Weber">
+                </property>
+                <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$Id: WebSocketClient.js 268 2015-08-21 21:58:32Z eal $">
+                </property>
+                <property name="toSend (port)" class="ptolemy.kernel.util.StringAttribute" value="undefined The data to be sent over the socket.">
+                </property>
+                <property name="connected (port)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;boolean&quot;]}) Output `true` on connected and `false` on disconnected.">
+                </property>
+                <property name="received (port)" class="ptolemy.kernel.util.StringAttribute" value="undefined The data received from the web socket server.">
+                </property>
+                <property name="server (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;string&quot;]}) The IP address or domain name of server. Defaults to 'localhost'.">
+                </property>
+                <property name="port (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) The port that the web socket listens to. Defaults to 8080.">
+                </property>
+                <property name="numberOfRetries (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) The number of times to retry if a connection fails. Defaults to 5.">
+                </property>
+                <property name="timeBetweenRetries (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) The time between retries in milliseconds. Defaults to 100.">
+                </property>
+                <property name="reconnectOnClose (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;boolean&quot;]}) The option of whether or not to reconnect when disconnected.">
+                </property>
+                <property name="discardMessagesBeforeOpen (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;boolean&quot;]}) If true, then any messages received on `toSend` before the socket is open will be discarded. This defaults to false.">
+                </property>
+                <property name="throttleFactor (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) If non-zero, specifies a time (in milliseconds) to stall when a message is queued because the socket is not yet open. The time of the stall will be the queue size (after adding the message) times the throttleFactor. This defaults to 0.">
+                </property>
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{568.3736258719202, -895.0189323239983}">
+            </property>
+            <property name="_tableauFactory" class="ptolemy.vergil.toolbox.TextEditorTableauFactory">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="script">
+                </property>
+                <property name="syntaxStyle" class="ptolemy.kernel.util.StringAttribute" value="text/javascript">
+                </property>
+            </property>
+            <property name="server" class="ptolemy.data.expr.Parameter" value="192.168.11.108">
+                <property name="_stringMode" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="port" class="ptolemy.data.expr.Parameter" value="8084">
+            </property>
+            <property name="numberOfRetries" class="ptolemy.data.expr.Parameter" value="5">
+            </property>
+            <property name="timeBetweenRetries" class="ptolemy.data.expr.Parameter" value="100">
+            </property>
+            <property name="reconnectOnClose" class="ptolemy.data.expr.Parameter" value="true">
+            </property>
+            <property name="discardMessagesBeforeOpen" class="ptolemy.data.expr.Parameter" value="false">
+            </property>
+            <property name="throttleFactor" class="ptolemy.data.expr.Parameter" value="0">
+            </property>
+            <port name="toSend" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="connected" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="received" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <relation name="relation4" class="ptolemy.actor.TypedIORelation">
+            <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;MovingAverage.output&quot;,x=-25.0,y=-990.0}, tail={id=&quot;RefineApplauseState.input&quot;,x=90.0,y=-990.0}, points={} } }">
+            </property>
+        </relation>
+        <relation name="relation5" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+            </property>
+            <vertex name="vertex1" value="{210.0, -990.0}">
+            </vertex>
+            <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;relation5.vertex1&quot;,x=210.0,y=-990.0}, tail={id=&quot;Expression.sending&quot;,x=305.0,y=-900.0}, points={210.0,-900.0} },{ head={id=&quot;RefineApplauseState.status&quot;,x=90.0,y=-990.0}, tail={id=&quot;relation5.vertex1&quot;,x=210.0,y=-990.0}, points={} },{ head={id=&quot;MonitorValue.input&quot;,x=280.0,y=-860.0}, tail={id=&quot;relation5.vertex1&quot;,x=210.0,y=-990.0}, points={210.0,-860.0} },{ head={id=&quot;relation5.vertex1&quot;,x=210.0,y=-990.0}, tail={id=&quot;SetVariable.input&quot;,x=255.0,y=-805.0}, points={210.0,-805.0} },{ head={id=&quot;relation5.vertex1&quot;,x=210.0,y=-990.0}, tail={id=&quot;BooleanSwitch.input&quot;,x=430.0,y=-990.0}, points={} } }">
+            </property>
+        </relation>
+        <relation name="relation6" class="ptolemy.actor.TypedIORelation">
+            <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Expression.output&quot;,x=305.0,y=-900.0}, tail={id=&quot;BooleanSwitch.control&quot;,x=430.0,y=-990.0}, points={430.0,-900.0} } }">
+            </property>
+        </relation>
+        <relation name="relation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+            </property>
+            <vertex name="vertex1" value="{515.0, -980.0}">
+            </vertex>
+            <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;relation.vertex1&quot;,x=515.0,y=-980.0}, tail={id=&quot;WebSocketClient.toSend&quot;,x=575.0,y=-895.0}, points={515.0,-895.0} },{ head={id=&quot;Display.input&quot;,x=555.0,y=-980.0}, tail={id=&quot;relation.vertex1&quot;,x=515.0,y=-980.0}, points={} },{ head={id=&quot;BooleanSwitch.falseOutput&quot;,x=430.0,y=-990.0}, tail={id=&quot;relation.vertex1&quot;,x=515.0,y=-980.0}, points={} } }">
+            </property>
+        </relation>
+        <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <link port="port_5" relation="relation2"/>
+        <link port="MovingAverage.input" relation="relation2"/>
+        <link port="MovingAverage.output" relation="relation4"/>
+        <link port="RefineApplauseState.input" relation="relation4"/>
+        <link port="RefineApplauseState.status" relation="relation5"/>
+        <link port="MonitorValue.input" relation="relation5"/>
+        <link port="Expression.output" relation="relation6"/>
+        <link port="Expression.sending" relation="relation5"/>
+        <link port="SetVariable.input" relation="relation5"/>
+        <link port="Display.input" relation="relation"/>
+        <link port="BooleanSwitch.input" relation="relation5"/>
+        <link port="BooleanSwitch.control" relation="relation6"/>
+        <link port="BooleanSwitch.falseOutput" relation="relation"/>
+        <link port="WebSocketClient.toSend" relation="relation"/>
     </entity>
     <relation name="relation7" class="ptolemy.actor.TypedIORelation">
         <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ApplauseScore.input&quot;,x=-140.0,y=-980.0}, tail={id=&quot;GMTKOnline.received&quot;,x=-285.0,y=-990.0}, points={} } }">
@@ -1390,50 +1457,12 @@
         <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;GMTKOnline.toSend&quot;,x=-285.0,y=-990.0}, tail={id=&quot;ComputeAudioFeatures.port_7&quot;,x=-465.0,y=-990.0}, points={} } }">
         </property>
     </relation>
-    <relation name="relation2" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ApplauseScore.output&quot;,x=-140.0,y=-980.0}, tail={id=&quot;MovingAverage.input&quot;,x=-25.0,y=-990.0}, points={} } }">
-        </property>
-    </relation>
-    <relation name="relation4" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;MovingAverage.output&quot;,x=-25.0,y=-990.0}, tail={id=&quot;RefineApplauseState.input&quot;,x=90.0,y=-990.0}, points={} } }">
-        </property>
-    </relation>
-    <relation name="relation5" class="ptolemy.actor.TypedIORelation">
-        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
-        </property>
-        <vertex name="vertex1" value="{210.0, -990.0}">
-        </vertex>
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;relation5.vertex1&quot;,x=210.0,y=-990.0}, tail={id=&quot;Expression.sending&quot;,x=305.0,y=-900.0}, points={210.0,-900.0} },{ head={id=&quot;RefineApplauseState.status&quot;,x=90.0,y=-990.0}, tail={id=&quot;relation5.vertex1&quot;,x=210.0,y=-990.0}, points={} },{ head={id=&quot;MonitorValue.input&quot;,x=280.0,y=-860.0}, tail={id=&quot;relation5.vertex1&quot;,x=210.0,y=-990.0}, points={210.0,-860.0} },{ head={id=&quot;relation5.vertex1&quot;,x=210.0,y=-990.0}, tail={id=&quot;SetVariable.input&quot;,x=255.0,y=-805.0}, points={210.0,-805.0} },{ head={id=&quot;relation5.vertex1&quot;,x=210.0,y=-990.0}, tail={id=&quot;BooleanSwitch.input&quot;,x=430.0,y=-990.0}, points={} } }">
-        </property>
-    </relation>
-    <relation name="relation6" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Expression.output&quot;,x=305.0,y=-900.0}, tail={id=&quot;BooleanSwitch.control&quot;,x=430.0,y=-990.0}, points={430.0,-900.0} } }">
-        </property>
-    </relation>
-    <relation name="relation" class="ptolemy.actor.TypedIORelation">
-        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
-        </property>
-        <vertex name="vertex1" value="{515.0, -980.0}">
-        </vertex>
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;relation.vertex1&quot;,x=515.0,y=-980.0}, tail={id=&quot;WebSocketClient.toSend&quot;,x=575.0,y=-895.0}, points={515.0,-895.0} },{ head={id=&quot;Display.input&quot;,x=555.0,y=-980.0}, tail={id=&quot;relation.vertex1&quot;,x=515.0,y=-980.0}, points={} },{ head={id=&quot;BooleanSwitch.falseOutput&quot;,x=430.0,y=-990.0}, tail={id=&quot;relation.vertex1&quot;,x=515.0,y=-980.0}, points={} } }">
-        </property>
+    <relation name="relation2_5" class="ptolemy.actor.TypedIORelation">
     </relation>
     <link port="ApplauseScore.input" relation="relation7"/>
-    <link port="ApplauseScore.output" relation="relation2"/>
+    <link port="ApplauseScore.output" relation="relation2_5"/>
     <link port="GMTKOnline.toSend" relation="relation3"/>
     <link port="GMTKOnline.received" relation="relation7"/>
     <link port="ComputeAudioFeatures.port_7" relation="relation3"/>
-    <link port="MovingAverage.input" relation="relation2"/>
-    <link port="MovingAverage.output" relation="relation4"/>
-    <link port="RefineApplauseState.input" relation="relation4"/>
-    <link port="RefineApplauseState.status" relation="relation5"/>
-    <link port="MonitorValue.input" relation="relation5"/>
-    <link port="Expression.output" relation="relation6"/>
-    <link port="Expression.sending" relation="relation5"/>
-    <link port="SetVariable.input" relation="relation5"/>
-    <link port="Display.input" relation="relation"/>
-    <link port="BooleanSwitch.input" relation="relation5"/>
-    <link port="BooleanSwitch.control" relation="relation6"/>
-    <link port="BooleanSwitch.falseOutput" relation="relation"/>
-    <link port="WebSocketClient.toSend" relation="relation"/>
+    <link port="ProcessOutput.port_5" relation="relation2_5"/>
 </entity>
