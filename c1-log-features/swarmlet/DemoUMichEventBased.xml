@@ -8,9 +8,9 @@
     </property>
     <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1065, 524]">
     </property>
-    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.7918515783017697">
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.9255324837358525">
     </property>
-    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{-206.1969037652015, -974.6771990060806}">
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{-224.0498046875, -957.9288636700237}">
     </property>
     <property name="enableBackwardTypeInference" class="ptolemy.data.expr.Parameter" value="true">
     </property>
@@ -62,14 +62,7 @@
         </property>
         <property name="text" class="ptolemy.kernel.util.StringAttribute" value="fps">
         </property>
-        <property name="_location" class="ptolemy.vergil.basic.RelativeLocation" value="[-230.0, -1075.0]">
-        </property>
-    </property>
-    <property name="LocalPreferences" class="ptolemy.actor.gui.PtolemyPreferences">
-        <property name="backgroundColor" class="ptolemy.actor.gui.ColorAttribute" value="{1,1,1,1}">
-            <display name="Background Color"/>
-        </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[-55.0, -550.0]">
+        <property name="_location" class="ptolemy.vergil.basic.RelativeLocation" value="[-215.0, -1095.0]">
         </property>
     </property>
     <property name="someApplauseThreshold" class="ptolemy.data.expr.Parameter" value="0.5">
@@ -127,6 +120,18 @@
         <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
         </property>
         <property name="_location" class="ptolemy.kernel.util.Location" value="{-180.0, -1085.0}">
+        </property>
+    </property>
+    <property name="LocalPreferences" class="ptolemy.actor.gui.PtolemyPreferences">
+        <property name="backgroundColor" class="ptolemy.actor.gui.ColorAttribute" value="{1,1,1,1}">
+            <display name="Background Color"/>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-55.0, -550.0]">
+        </property>
+    </property>
+    <property name="_layoutConfiguration" class="ptolemy.vergil.basic.layout.LayoutConfiguration">
+        <property name="includeDecorations" class="ptolemy.data.expr.Parameter" value="false">
+            <display name="Include decorations"/>
         </property>
     </property>
     <entity name="ApplauseScore" class="ptolemy.actor.lib.jjs.JavaScript">
@@ -1212,7 +1217,7 @@
         <link port="AudioCapture.output" relation="relation3"/>
     </entity>
     <entity name="ProcessOutput" class="ptolemy.actor.TypedCompositeActor">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[-5.0, -990.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-25.0, -990.0}">
         </property>
         <property name="_icon" class="ptolemy.vergil.icon.EditorIcon">
             <property name="rectangle" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
@@ -1330,7 +1335,7 @@
         <entity name="Display" class="ptolemy.actor.lib.gui.Display">
             <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={470, 346, 499, 208}, maximized=false}">
             </property>
-            <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute">
+            <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[499, 164]">
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="{600.0, -935.0}">
             </property>
@@ -1439,7 +1444,7 @@
             </property>
             <vertex name="vertex1" value="{560.0, -935.0}">
             </vertex>
-            <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;.WebSocketClient.toSend&quot;,x=625.0,y=-855.0}, tail={id=&quot;relation.vertex1&quot;,x=560.0,y=-935.0}, points={560.0,-855.0} },{ head={id=&quot;Display.input&quot;,x=600.0,y=-935.0}, tail={id=&quot;relation.vertex1&quot;,x=560.0,y=-935.0}, points={} },{ head={id=&quot;BooleanSwitch.falseOutput&quot;,x=475.0,y=-945.0}, tail={id=&quot;relation.vertex1&quot;,x=560.0,y=-935.0}, points={} },{ head={id=&quot;relation.vertex1&quot;,x=560.0,y=-935.0}, tail={id=&quot;WebSocketClient.toSend&quot;,x=625.0,y=-850.0}, points={560.0,-850.0} } }">
+            <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;.WebSocketClient.toSend&quot;,x=625.0,y=-855.0}, tail={id=&quot;relation.vertex1&quot;,x=560.0,y=-935.0}, points={560.0,-855.0} },{ head={id=&quot;Display.input&quot;,x=600.0,y=-935.0}, tail={id=&quot;relation.vertex1&quot;,x=560.0,y=-935.0}, points={} },{ head={id=&quot;BooleanSwitch.falseOutput&quot;,x=475.0,y=-945.0}, tail={id=&quot;relation.vertex1&quot;,x=560.0,y=-935.0}, points={} },{ head={id=&quot;WebSocketClient.toSend&quot;,x=625.0,y=-850.0}, tail={id=&quot;relation.vertex1&quot;,x=560.0,y=-935.0}, points={560.0,-850.0} } }">
             </property>
         </relation>
         <relation name="relation2" class="ptolemy.actor.TypedIORelation">
@@ -1470,6 +1475,8 @@
         </property>
     </relation>
     <relation name="relation2_5" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ApplauseScore.output&quot;,x=-140.0,y=-980.0}, tail={id=&quot;ProcessOutput.port_5&quot;,x=-25.0,y=-990.0}, points={} } }">
+        </property>
     </relation>
     <link port="ApplauseScore.input" relation="relation7"/>
     <link port="ApplauseScore.output" relation="relation2_5"/>
