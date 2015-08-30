@@ -4,11 +4,11 @@
 Number of cliques = 1
 == Clique number: 0, root/right-interface clique, root/right-interface clique, leaf
 Clique information: 2 packed bits, 1 unsigned words (0 splits), weight = 0.602060, jt_weight = 1.000000
-4 Nodes: state(0)[2],observatn(0),state(1)[2],observatn(1)
-4 Assigned: state(0),observatn(0),state(1),observatn(1)
-4 Assigned Sorted: state(0)[2],observatn(0),state(1)[2],observatn(1)
-4 Dispositions: 0 0 0 0
-4 Assigned Prob: state(0),observatn(0),state(1),observatn(1)
+3 Nodes: state(0)[2],observatn(0),state(1)[2]
+3 Assigned: state(0),observatn(0),state(1)
+3 Assigned Sorted: state(0)[2],observatn(0),state(1)[2]
+3 Dispositions: 0 0 0
+3 Assigned Prob: state(0),observatn(0),state(1)
 0 Cum Assigned Prob: 
 0 Union Incomming Seps: 
 0 Unassigned Iterated: 
@@ -30,12 +30,12 @@ Number of separators = 0
 Number of cliques = 1
 == Clique number: 0, root/right-interface clique, root/right-interface clique, leaf/left-interface clique
 Clique information: 2 packed bits, 1 unsigned words (0 splits), weight = 0.602060, jt_weight = 1.000000
-3 Nodes: state(1)[2],state(2)[2],observatn(2)
-2 Assigned: state(2),observatn(2)
-2 Assigned Sorted: state(2)[2],observatn(2)
+3 Nodes: state(1)[2],observatn(1),state(2)[2]
+2 Assigned: observatn(1),state(2)
+2 Assigned Sorted: observatn(1),state(2)[2]
 2 Dispositions: 0 0
-2 Assigned Prob: state(2),observatn(2)
-4 Cum Assigned Prob: state(0),observatn(0),state(1),observatn(1)
+2 Assigned Prob: observatn(1),state(2)
+3 Cum Assigned Prob: state(0),observatn(0),state(1)
 1 Union Incomming Seps: state(1)
 0 Unassigned Iterated: 
 0 Cumulative Unassigned: 
@@ -63,12 +63,12 @@ Separator information: 0 acc packed bits (0 words, 0 splits), 1 rem packed bits 
 Number of cliques = 1
 == Clique number: 0, root/right-interface clique, root clique, leaf/left-interface clique
 Clique information: 1 packed bits, 1 unsigned words (0 splits), weight = 0.301030, jt_weight = 1.000000
-1 Nodes: state(2)[2]
-0 Assigned: 
-0 Assigned Sorted: 
-0 Dispositions:
-0 Assigned Prob: 
-6 Cum Assigned Prob: state(0),observatn(0),state(1),observatn(1),state(2),observatn(2)
+2 Nodes: state(2)[2],observatn(2)
+1 Assigned: observatn(2)
+1 Assigned Sorted: observatn(2)
+1 Dispositions: 0
+1 Assigned Prob: observatn(2)
+5 Cum Assigned Prob: state(0),observatn(0),state(1),observatn(1),state(2)
 1 Union Incomming Seps: state(2)
 0 Unassigned Iterated: 
 0 Cumulative Unassigned: 
