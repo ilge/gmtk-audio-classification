@@ -1,0 +1,6 @@
+Creating Junction Tree
+DONE creating Junction Tree
+Loading accumulators from 'accumulators/acc_0_0_1comp.data'
+Maximum number of EM iterations reached (1). Stopping
+### Final time (seconds) just for EM stage: User: 0.000296, System: 0.000354, CPU 0.000650
+____ PROGRAM ENDED SUCCESSFULLY WITH STATUS 0 AT Monday August 17 2015, 12:13:09 PDT ____

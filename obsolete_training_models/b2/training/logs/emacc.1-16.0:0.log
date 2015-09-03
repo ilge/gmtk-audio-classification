@@ -1,0 +1,6 @@
+Creating Junction Tree
+DONE creating Junction Tree
+Segment 0, after CE, log(prob(evidence)) = -257619.995370, per frame =-61.047392, per numUFrams = -61.047392
+EMIter0: Total data log prob from 4220 frames processed is: -2.576199954e+05
+NOTE: storing current accumulators (from training 1 segments) to file 'accumulators/acc_0_1_16comp.data' and exiting.
+____ PROGRAM ENDED SUCCESSFULLY WITH STATUS 0 AT Thursday August 20 2015, 12:21:35 PDT ____

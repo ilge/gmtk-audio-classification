@@ -1,0 +1,450 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="Energy" class="ptolemy.actor.TypedCompositeActor">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.devel">
+    </property>
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={33, 22, 1407, 878}, maximized=true}">
+    </property>
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1173, 768]">
+    </property>
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.5705842332716872">
+    </property>
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{611.130859375, -129.16697455395536}">
+    </property>
+    <property name="applause" class="ptolemy.data.expr.Parameter" value="false">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{135.0, -785.0}">
+        </property>
+    </property>
+    <property name="fs" class="ptolemy.data.expr.Parameter" value="48000">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-85.0, -785.0}">
+        </property>
+    </property>
+    <property name="windowSize" class="ptolemy.data.expr.Parameter" value="fs/3">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{265.0, -785.0}">
+        </property>
+    </property>
+    <property name="numChannels" class="ptolemy.data.expr.Parameter" value="18">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{405.0, -785.0}">
+        </property>
+    </property>
+    <property name="enableBackwardTypeInference" class="ptolemy.data.expr.Parameter" value="true">
+    </property>
+    <property name="featuresPerChannel" class="ptolemy.data.expr.Parameter" value="5">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-400.0, -720.0}">
+        </property>
+    </property>
+    <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
+        <property name="stopTime" class="ptolemy.data.expr.Parameter" value="1.0">
+        </property>
+        <property name="stopWhenQueueIsEmpty" class="ptolemy.data.expr.Parameter" value="false">
+        </property>
+        <property name="synchronizeToRealTime" class="ptolemy.data.expr.Parameter" value="true">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-355.0, -765.0}">
+        </property>
+    </property>
+    <property name="nOverlap" class="ptolemy.data.expr.Parameter" value="fs/frameRate">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-235.0, -720.0}">
+        </property>
+    </property>
+    <property name="frameRate" class="ptolemy.data.expr.Parameter" value="6">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{15.0, -785.0}">
+        </property>
+    </property>
+    <property name="Annotation" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+        <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Capture starts at t=3s">
+        </property>
+        <property name="_location" class="ptolemy.vergil.basic.RelativeLocation" value="{120.0, -730.0}">
+        </property>
+    </property>
+    <property name="Annotation2" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+        <property name="textSize" class="ptolemy.data.expr.Parameter" value="24">
+        </property>
+        <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Run this model with: ../afte6_prime/decoding/applauseVerbose.sh&#10;&#10;Please update the Ptolemy tree before running. AFTEFast.java has changed (again).">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-410.0, -650.0}">
+        </property>
+    </property>
+    <property name="cfs" class="ptolemy.data.expr.Parameter" value="{6393,8001,10000}">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-55.0, -720.0}">
+        </property>
+    </property>
+    <property name="nfft" class="ptolemy.data.expr.Parameter" value="64">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-265.0, -785.0}">
+        </property>
+    </property>
+    <property name="nCoef" class="ptolemy.data.expr.Parameter" value="32">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-180.0, -785.0}">
+        </property>
+    </property>
+    <entity name="DiscreteClock" class="ptolemy.actor.lib.DiscreteClock">
+        <property name="period" class="ptolemy.actor.parameters.PortParameter" value="1.0/fs">
+        </property>
+        <doc>Create periodic timed events.</doc>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-355.0, -445.0}">
+        </property>
+    </entity>
+    <entity name="SequenceToArray2" class="ptolemy.domains.sdf.lib.SequenceToArray">
+        <property name="arrayLength" class="ptolemy.actor.parameters.PortParameter" value="nOverlap">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-115.0, -435.0}">
+        </property>
+    </entity>
+    <entity name="AFTEDiscriminant" class="org.ptolemy.machineLearning.lib.AFTEDiscriminant">
+        <property name="centerFrequencies" class="ptolemy.data.expr.Parameter" value="{ 25,87, 163,259,377,524,707,934,1217,1568,2004,2546,3220,4058,5099,6393,8001,10000}">
+        </property>
+        <property name="outputFeatureIndices" class="ptolemy.data.expr.Parameter" value="createSequence(1,1,18*33)">
+        </property>
+        <property name="normalize" class="ptolemy.data.expr.Parameter" value="false">
+        </property>
+        <property name="normalizeByDc" class="ptolemy.data.expr.Parameter" value="true">
+        </property>
+        <property name="fs" class="ptolemy.data.expr.Parameter" value="fs">
+        </property>
+        <property name="transferSize" class="ptolemy.data.expr.Parameter" value="fs">
+        </property>
+        <property name="nOverlap" class="ptolemy.data.expr.Parameter" value="nOverlap">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{125.0, -515.0}">
+        </property>
+    </entity>
+    <entity name="ArrayPlotter" class="ptolemy.actor.lib.gui.ArrayPlotter">
+        <property name="legend" class="ptolemy.kernel.util.StringAttribute" value="1sec window, 1/3sec window">
+        </property>
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={70, 336, 1370, 224}, maximized=false}">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[1370, 180]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{630.0, -425.0}">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>ArrayPlotter</title>
+<xRange min="0.0" max="593.0"/>
+<yRange min="1.9559900596370378E-4" max="0.7096095203522557"/>
+</plot>?>
+        </configure>
+    </entity>
+    <entity name="AudioCapture" class="ptolemy.actor.lib.javasound.AudioCapture">
+        <property name="sampleRate" class="ptolemy.actor.parameters.SharedParameter" value="48000">
+            <property name="style" class="ptolemy.actor.gui.style.ChoiceStyle">
+                <property name="8000" class="ptolemy.kernel.util.StringAttribute" value="8000">
+                </property>
+                <property name="11025" class="ptolemy.kernel.util.StringAttribute" value="11025">
+                </property>
+                <property name="22050" class="ptolemy.kernel.util.StringAttribute" value="22050">
+                </property>
+                <property name="44100" class="ptolemy.kernel.util.StringAttribute" value="44100">
+                </property>
+                <property name="48000" class="ptolemy.kernel.util.StringAttribute" value="48000">
+                </property>
+            </property>
+        </property>
+        <property name="bitsPerSample" class="ptolemy.actor.parameters.SharedParameter" value="16">
+            <property name="style" class="ptolemy.actor.gui.style.ChoiceStyle">
+                <property name="8" class="ptolemy.kernel.util.StringAttribute" value="8">
+                </property>
+                <property name="16" class="ptolemy.kernel.util.StringAttribute" value="16">
+                </property>
+            </property>
+        </property>
+        <property name="channels" class="ptolemy.actor.parameters.SharedParameter" value="1">
+            <property name="style" class="ptolemy.actor.gui.style.ChoiceStyle">
+                <property name="1" class="ptolemy.kernel.util.StringAttribute" value="1">
+                </property>
+                <property name="2" class="ptolemy.kernel.util.StringAttribute" value="2">
+                </property>
+            </property>
+        </property>
+        <property name="transferSize" class="ptolemy.actor.parameters.SharedParameter" value="nOverlap">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-237.50060272216797, -444.1927032470703]">
+        </property>
+    </entity>
+    <entity name="AFTEFast" class="org.ptolemy.machineLearning.lib.AFTEFast">
+        <property name="centerFrequencies" class="ptolemy.data.expr.Parameter" value="{ 25,87, 163,259,377,524,707,934,1217,1568,2004,2546,3220,4058,5099,6393,8001,10000}">
+        </property>
+        <property name="outputAllFFTCoefficients" class="ptolemy.data.expr.Parameter" value="true">
+        </property>
+        <property name="normalizeFeaturesByDC" class="ptolemy.data.expr.Parameter" value="true">
+        </property>
+        <property name="fftCoefficientsToOutput" class="ptolemy.data.expr.Parameter" value="createSequence(0,1,nCoef+1)">
+        </property>
+        <property name="fftLength" class="ptolemy.data.expr.Parameter" value="nfft">
+        </property>
+        <property name="fs" class="ptolemy.data.expr.Parameter" value="fs">
+        </property>
+        <property name="fmodspec" class="ptolemy.data.expr.Parameter" value="100">
+        </property>
+        <property name="transferSize" class="ptolemy.data.expr.Parameter" value="windowSize">
+        </property>
+        <property name="nOverlap" class="ptolemy.data.expr.Parameter" value="nOverlap">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{35.0, -435.0}">
+        </property>
+    </entity>
+    <entity name="ArrayToSequence" class="ptolemy.domains.sdf.lib.ArrayToSequence">
+        <property name="arrayLength" class="ptolemy.data.expr.Parameter" value="numChannels">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{245.0, -435.0}">
+        </property>
+    </entity>
+    <entity name="ArrayToSequence2" class="ptolemy.domains.sdf.lib.ArrayToSequence">
+        <property name="arrayLength" class="ptolemy.data.expr.Parameter" value="nCoef+1">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{370.0, -435.0}">
+        </property>
+    </entity>
+    <entity name="SequenceToArray" class="ptolemy.domains.sdf.lib.SequenceToArray">
+        <property name="arrayLength" class="ptolemy.actor.parameters.PortParameter" value="(nCoef+1)*numChannels">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{500.0, -425.0}">
+        </property>
+    </entity>
+    <entity name="AFTEEnergy" class="org.ptolemy.machineLearning.lib.AFTEEnergy">
+        <property name="centerFrequencies" class="ptolemy.data.expr.Parameter" value="{ 25,87, 163,259,377,524,707,934,1217,1568,2004,2546,3220,4058,5099,6393,8001,10000}">
+        </property>
+        <property name="outputFeatureIndices" class="ptolemy.data.expr.Parameter" value="createSequence(1,1,9*18)">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[80.0, -295.0]">
+        </property>
+    </entity>
+    <entity name="ArrayPlotter2" class="ptolemy.actor.lib.gui.ArrayPlotter">
+        <property name="legend" class="ptolemy.kernel.util.StringAttribute" value="1sec window, 1/3sec window">
+        </property>
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={81, 553, 1370, 224}, maximized=false}">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[1370, 180]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{627.780460688951, -346.48808644131566}">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>ArrayPlotter</title>
+<xRange min="0.0" max="161.0"/>
+<yRange min="0.0" max="0.21012324032610732"/>
+</plot>?>
+        </configure>
+    </entity>
+    <entity name="AudioReader" class="ptolemy.actor.lib.javasound.AudioReader">
+        <property name="fileOrURL" class="ptolemy.data.expr.FileParameter" value="/Users/oldilge/Google Drive/Applause Detection/samples/applause-1.wav">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{597.9864372850387, -647.9334997044283}">
+        </property>
+    </entity>
+    <relation name="relation12" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="{260.0, -515.0}">
+        </vertex>
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;.Scale.output&quot;,x=400.0,y=-480.0}, tail={id=&quot;relation12.vertex1&quot;,x=715.0,y=-480.0}, points={} },{ head={id=&quot;relation12.vertex1&quot;,x=260.0,y=-515.0}, tail={id=&quot;AFTEDiscriminant.output&quot;,x=125.0,y=-515.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation7" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ArrayToSequence.output&quot;,x=245.0,y=-435.0}, tail={id=&quot;ArrayToSequence2.input&quot;,x=370.0,y=-435.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation15" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ArrayToSequence2.output&quot;,x=370.0,y=-435.0}, tail={id=&quot;SequenceToArray.input&quot;,x=500.0,y=-425.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation17" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="{140.0, -435.0}">
+        </vertex>
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ArrayToSequence.input&quot;,x=245.0,y=-435.0}, tail={id=&quot;relation17.vertex1&quot;,x=140.0,y=-435.0}, points={} },{ head={id=&quot;AFTEFast.output&quot;,x=35.0,y=-435.0}, tail={id=&quot;relation17.vertex1&quot;,x=140.0,y=-435.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="{-15.0, -435.0}">
+        </vertex>
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;relation2.vertex1&quot;,x=-15.0,y=-435.0}, tail={id=&quot;AFTEFast.input&quot;,x=35.0,y=-435.0}, points={} },{ head={id=&quot;SequenceToArray2.output&quot;,x=-115.0,y=-435.0}, tail={id=&quot;relation2.vertex1&quot;,x=-15.0,y=-435.0}, points={} },{ head={id=&quot;AFTEDiscriminant.input&quot;,x=125.0,y=-515.0}, tail={id=&quot;relation2.vertex1&quot;,x=-15.0,y=-435.0}, points={-15.0,-515.0} } }">
+        </property>
+    </relation>
+    <relation name="relation3" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation5" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation4" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <link port="DiscreteClock.output" relation="relation"/>
+    <link port="SequenceToArray2.input" relation="relation4"/>
+    <link port="SequenceToArray2.output" relation="relation2"/>
+    <link port="AFTEDiscriminant.input" relation="relation2"/>
+    <link port="AFTEDiscriminant.output" relation="relation12"/>
+    <link port="ArrayPlotter.input" relation="relation12"/>
+    <link port="ArrayPlotter.input" relation="relation3"/>
+    <link port="AudioCapture.trigger" relation="relation"/>
+    <link port="AudioCapture.output" relation="relation4"/>
+    <link port="AFTEFast.input" relation="relation2"/>
+    <link port="AFTEFast.output" relation="relation17"/>
+    <link port="ArrayToSequence.input" relation="relation17"/>
+    <link port="ArrayToSequence.output" relation="relation7"/>
+    <link port="ArrayToSequence2.input" relation="relation7"/>
+    <link port="ArrayToSequence2.output" relation="relation15"/>
+    <link port="SequenceToArray.input" relation="relation15"/>
+    <link port="SequenceToArray.output" relation="relation3"/>
+    <link port="AFTEEnergy.input" relation="relation2"/>
+    <link port="AFTEEnergy.output" relation="relation5"/>
+    <link port="ArrayPlotter2.input" relation="relation5"/>
+</entity>

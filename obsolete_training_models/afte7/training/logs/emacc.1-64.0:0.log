@@ -1,0 +1,24 @@
+Creating Junction Tree
+DONE creating Junction Tree
+Segment 0, after CE, log(prob(evidence)) = -515589.746648, per frame =-196.116298, per numUFrams = -196.116298
+EMIter0: Total data log prob from 2629 frames processed is: -5.155897466e+05
+NOTE: storing current accumulators (from training 1 segments) to file 'accumulators/acc_0_1_64comp.data' and exiting.
+WARNING: zero accumulator values for mean vector 'mean0_cl0_cl1_cl0'
+WARNING: zero accumulator values for mean vector 'mean0_cl0_cl0_cl0'
+WARNING: zero accumulator values for mean vector 'mean1_cl2_cl0_cl0_cl0'
+WARNING: zero accumulator values for mean vector 'mean1_cl0_cl2'
+WARNING: zero accumulator values for mean vector 'mean1_cl0_cl1_cl0'
+WARNING: zero accumulator values for mean vector 'mean1_cl0_cl0_cl0'
+WARNING: zero accumulator values for covariance vector 'covar0_cl0_cl1_cl0'
+WARNING: zero accumulator values for covariance vector 'covar0_cl0_cl0_cl0'
+WARNING: zero accumulator values for covariance vector 'covar1_cl2_cl0_cl0_cl0'
+WARNING: zero accumulator values for covariance vector 'covar1_cl0_cl2'
+WARNING: zero accumulator values for covariance vector 'covar1_cl0_cl1_cl0'
+WARNING: zero accumulator values for covariance vector 'covar1_cl0_cl0_cl0'
+WARNING: zero accumulator values for Diag Gaussian 'gc_0_cl0_cl1_cl0'
+WARNING: zero accumulator values for Diag Gaussian 'gc_0_cl0_cl0_cl0'
+WARNING: zero accumulator values for Diag Gaussian 'gc_1_cl2_cl0_cl0_cl0'
+WARNING: zero accumulator values for Diag Gaussian 'gc_1_cl0_cl2'
+WARNING: zero accumulator values for Diag Gaussian 'gc_1_cl0_cl1_cl0'
+WARNING: zero accumulator values for Diag Gaussian 'gc_1_cl0_cl0_cl0'
+____ PROGRAM ENDED SUCCESSFULLY WITH STATUS 0 AT Friday August 14 2015, 16:25:54 PDT ____

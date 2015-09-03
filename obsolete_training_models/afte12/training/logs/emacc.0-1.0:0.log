@@ -1,0 +1,7 @@
+WARNING: reading diagonal covariance matrix 'covar0' (from file 'initialParams.gmp' line 27), and 1 variance values (out of 20) were  < current Floor = (1.000000e-05), forcing them to floor.
+Creating Junction Tree
+DONE creating Junction Tree
+Segment 0, after CE, log(prob(evidence)) = 211061.035573, per frame =54.327165, per numUFrams = 54.327165
+EMIter0: Total data log prob from 3885 frames processed is: 2.110610356e+05
+NOTE: storing current accumulators (from training 1 segments) to file 'accumulators/acc_0_0_1comp.data' and exiting.
+____ PROGRAM ENDED SUCCESSFULLY WITH STATUS 0 AT Wednesday August 19 2015, 16:50:02 PDT ____

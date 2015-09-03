@@ -1,0 +1,10 @@
+Creating Junction Tree
+DONE creating Junction Tree
+Loading accumulators from 'accumulators/acc_0_0_16comp.data'
+WARNING: covariance vector named 'covar0_cl2_cl3_cl0_cl0' had 1 variances floored, minimum variance found was 8.526634e-07.
+WARNING: covariance vector named 'covar1_cl1_cl0_cl0_cl3' had 2 variances floored, minimum variance found was 1.216210e-06.
+NOTE: DPMF 'dpmf0' has 0/1 elements vanishing/splitting
+NOTE: DPMF 'dpmf1' has 0/1 elements vanishing/splitting
+Maximum number of EM iterations reached (1). Stopping
+### Final time (seconds) just for EM stage: User: 0.051141, System: 0.005854, CPU 0.056995
+____ PROGRAM ENDED SUCCESSFULLY WITH STATUS 0 AT Friday August 14 2015, 16:29:55 PDT ____

@@ -1,0 +1,8 @@
+Creating Junction Tree
+DONE creating Junction Tree
+Loading accumulators from 'accumulators/acc_0_0_2comp.data'
+NOTE: DPMF 'dpmf0' has 0/1 elements vanishing/splitting
+NOTE: DPMF 'dpmf1' has 0/1 elements vanishing/splitting
+Maximum number of EM iterations reached (1). Stopping
+### Final time (seconds) just for EM stage: User: 0.000401, System: 0.000362, CPU 0.000763
+____ PROGRAM ENDED SUCCESSFULLY WITH STATUS 0 AT Thursday August 20 2015, 01:40:33 PDT ____

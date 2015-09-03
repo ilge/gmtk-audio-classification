@@ -1,0 +1,52 @@
+GRAPHICAL_MODEL applause_detector_decoding
+
+frame: 0 {
+
+    variable : state {
+
+/* we don't need the symbol table in training since state is observed
+        symboltable: collection("stateNames"); */
+
+/* The state value is discrete, so it must come after the continuous observations.
+   The continuous values are at indices 0 through 4, so the state value is at
+   index 5. */
+	type : discrete observed 20:20 cardinality 2;
+
+/* Ideally, the training data will have examples of both states. We're not
+   training the initial state distribution, so we can specify the initial
+   state distribution CPT in the input master file. I'll use pi as we did
+   in the decoding model. */
+	conditionalparents : nil using DenseCPT("pi");
+    }
+
+    variable : observatn {
+	type : continuous observed 0:19;
+
+/* The GMMs collections contains 2 Gaussian mixtures (gm0 and gm1). The
+   internal:copyParent mapping says to use (train) gm0 when observatn's
+   parent (state) is 0, and use gm1 when state is 1.*/
+	conditionalparents : state(0) using mixture collection("GMMs") mapping("internal:copyParent");
+    }
+}
+
+/* We still need the second frame for the model to be an HMM */
+
+frame: 1 {
+
+    variable : state {
+
+	type : discrete observed 20:20 cardinality 2;
+	conditionalparents : state(-1) using DenseCPT("transitions");
+    }
+
+    variable : observatn {
+	type : continuous observed 0:19;
+	% ’observation’ at frame 1 has one parent, ’state(0)’
+	% Note that ’state(0)’ refers to the state variable
+	% in the current frame, which in this case is frame 1.
+	conditionalparents : state(0) using mixture collection("GMMs") mapping("internal:copyParent");
+    }
+}
+
+/* frame 1 is unrolled */
+chunk 1:1;

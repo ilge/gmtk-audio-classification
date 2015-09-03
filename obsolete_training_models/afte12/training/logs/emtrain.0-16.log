@@ -1,0 +1,134 @@
+Creating Junction Tree
+DONE creating Junction Tree
+Loading accumulators from 'accumulators/acc_0_0_16comp.data'
+WARNING: covariance vector named 'covar0' had 2 variances floored, minimum variance found was 7.064339e-06.
+WARNING: covariance vector named 'covar0_cl8' had 5 variances floored, minimum variance found was 3.617818e-06.
+WARNING: covariance vector named 'covar0_cl7' had 4 variances floored, minimum variance found was 1.090420e-06.
+WARNING: covariance vector named 'covar0_cl6' had 5 variances floored, minimum variance found was 3.061841e-06.
+WARNING: covariance vector named 'covar0_cl5' had 5 variances floored, minimum variance found was 2.563252e-06.
+WARNING: covariance vector named 'covar0_cl5_cl2' had 5 variances floored, minimum variance found was 1.026514e-06.
+WARNING: covariance vector named 'covar0_cl5_cl1' had 6 variances floored, minimum variance found was 2.165054e-06.
+WARNING: covariance vector named 'covar0_cl5_cl0' had 5 variances floored, minimum variance found was 3.331800e-06.
+WARNING: covariance vector named 'covar0_cl4' had 2 variances floored, minimum variance found was 8.160261e-06.
+WARNING: covariance vector named 'covar0_cl3' had 6 variances floored, minimum variance found was 2.952669e-06.
+WARNING: covariance vector named 'covar0_cl2' had 6 variances floored, minimum variance found was 2.287896e-06.
+WARNING: covariance vector named 'covar0_cl2_cl1' had 5 variances floored, minimum variance found was 1.936124e-06.
+WARNING: covariance vector named 'covar0_cl2_cl0' had 5 variances floored, minimum variance found was 2.986610e-06.
+WARNING: covariance vector named 'covar0_cl1' had 5 variances floored, minimum variance found was 6.180607e-06.
+WARNING: covariance vector named 'covar0_cl1_cl1' had 8 variances floored, minimum variance found was 6.057247e-07.
+WARNING: covariance vector named 'covar0_cl1_cl0' had 5 variances floored, minimum variance found was 1.708158e-06.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl2' had 5 variances floored, minimum variance found was 9.723335e-07.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl1' had 6 variances floored, minimum variance found was 1.429038e-06.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl1_cl1' had 9 variances floored, minimum variance found was 6.190731e-07.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl1_cl0' had 7 variances floored, minimum variance found was 8.567845e-07.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0' had 5 variances floored, minimum variance found was 9.721722e-07.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0_cl3' had 9 variances floored, minimum variance found was 1.113837e-06.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0_cl2' had 7 variances floored, minimum variance found was 1.280920e-06.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0_cl1' had 8 variances floored, minimum variance found was 4.354786e-07.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0_cl0' had 8 variances floored, minimum variance found was 1.621161e-06.
+WARNING: covariance vector named 'covar0_cl0' had 11 variances floored, minimum variance found was 2.882710e-07.
+WARNING: covariance vector named 'covar0_cl0_cl4' had 14 variances floored, minimum variance found was 3.595262e-07.
+WARNING: covariance vector named 'covar0_cl0_cl4_cl1' had 14 variances floored, minimum variance found was 1.028439e-07.
+WARNING: covariance vector named 'covar0_cl0_cl4_cl0' had 14 variances floored, minimum variance found was 4.690360e-07.
+WARNING: covariance vector named 'covar0_cl0_cl3' had 10 variances floored, minimum variance found was 5.136363e-07.
+WARNING: covariance vector named 'covar0_cl0_cl3_cl0' had 8 variances floored, minimum variance found was 2.617440e-06.
+WARNING: covariance vector named 'covar0_cl0_cl3_cl0_cl0' had 13 variances floored, minimum variance found was 6.230057e-07.
+WARNING: covariance vector named 'covar0_cl0_cl2' had 18 variances floored, minimum variance found was 7.782413e-09.
+WARNING: covariance vector named 'covar0_cl0_cl2_cl4' had 19 variances floored, minimum variance found was 6.271614e-09.
+WARNING: covariance vector named 'covar0_cl0_cl2_cl3' had 17 variances floored, minimum variance found was 1.971796e-08.
+WARNING: covariance vector named 'covar0_cl0_cl2_cl2' had 18 variances floored, minimum variance found was 1.346582e-10.
+WARNING: covariance vector named 'covar0_cl0_cl2_cl1' had 14 variances floored, minimum variance found was 6.316872e-09.
+WARNING: covariance vector named 'covar0_cl0_cl2_cl1_cl5' had 14 variances floored, minimum variance found was 2.579730e-09.
+WARNING: covariance vector named 'covar0_cl0_cl2_cl1_cl4' had 15 variances floored, minimum variance found was 8.841338e-10.
+WARNING: covariance vector named 'covar0_cl0_cl2_cl1_cl3' had 15 variances floored, minimum variance found was 1.664286e-09.
+WARNING: covariance vector named 'covar0_cl0_cl2_cl1_cl2' had 17 variances floored, minimum variance found was 1.133934e-09.
+WARNING: covariance vector named 'covar0_cl0_cl2_cl1_cl1' had 14 variances floored, minimum variance found was 2.312987e-08.
+WARNING: covariance vector named 'covar0_cl0_cl2_cl1_cl1_cl1' had 15 variances floored, minimum variance found was 6.114347e-10.
+WARNING: covariance vector named 'covar0_cl0_cl2_cl1_cl1_cl0' had 14 variances floored, minimum variance found was 5.442042e-11.
+WARNING: covariance vector named 'covar0_cl0_cl2_cl1_cl0' had 14 variances floored, minimum variance found was 8.693780e-10.
+WARNING: covariance vector named 'covar0_cl0_cl2_cl1_cl0_cl0' had 14 variances floored, minimum variance found was 1.852424e-11.
+WARNING: covariance vector named 'covar0_cl0_cl2_cl0' had 14 variances floored, minimum variance found was 1.565071e-12.
+WARNING: covariance vector named 'covar0_cl0_cl1' had 10 variances floored, minimum variance found was 5.275467e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl10' had 10 variances floored, minimum variance found was 4.468496e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl9' had 11 variances floored, minimum variance found was 3.598873e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl8' had 10 variances floored, minimum variance found was 1.979761e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl7' had 10 variances floored, minimum variance found was 2.180958e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl7_cl0' had 10 variances floored, minimum variance found was 4.218475e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl6' had 10 variances floored, minimum variance found was 4.227491e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl6_cl0' had 12 variances floored, minimum variance found was 4.112310e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl5' had 11 variances floored, minimum variance found was 1.848555e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl5_cl0' had 13 variances floored, minimum variance found was 9.237149e-08.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl4' had 10 variances floored, minimum variance found was 4.650338e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl3' had 11 variances floored, minimum variance found was 3.636834e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl3_cl1' had 12 variances floored, minimum variance found was 2.020182e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl3_cl0' had 11 variances floored, minimum variance found was 6.155805e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl2' had 10 variances floored, minimum variance found was 4.273580e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl2_cl6' had 13 variances floored, minimum variance found was 8.424901e-08.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl2_cl5' had 10 variances floored, minimum variance found was 3.146407e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl2_cl4' had 12 variances floored, minimum variance found was 3.672569e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl2_cl3' had 11 variances floored, minimum variance found was 2.876576e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl2_cl2' had 11 variances floored, minimum variance found was 1.506039e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl2_cl1' had 11 variances floored, minimum variance found was 1.350157e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl2_cl0' had 11 variances floored, minimum variance found was 4.839869e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl1' had 10 variances floored, minimum variance found was 2.808604e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl1_cl7' had 11 variances floored, minimum variance found was 1.888407e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl1_cl6' had 15 variances floored, minimum variance found was 5.600755e-08.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl1_cl5' had 11 variances floored, minimum variance found was 3.575596e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl1_cl4' had 10 variances floored, minimum variance found was 2.955898e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl1_cl4_cl0' had 13 variances floored, minimum variance found was 1.869553e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl1_cl3' had 12 variances floored, minimum variance found was 4.862608e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl1_cl2' had 11 variances floored, minimum variance found was 6.985109e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl1_cl2_cl0' had 11 variances floored, minimum variance found was 4.481440e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl1_cl1' had 11 variances floored, minimum variance found was 1.484150e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl1_cl1_cl2' had 13 variances floored, minimum variance found was 1.920408e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl1_cl1_cl1' had 12 variances floored, minimum variance found was 1.429678e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl1_cl1_cl0' had 12 variances floored, minimum variance found was 5.267834e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl1_cl0' had 10 variances floored, minimum variance found was 2.095700e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl1_cl0_cl0' had 12 variances floored, minimum variance found was 5.255923e-08.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl0' had 10 variances floored, minimum variance found was 2.034949e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl0_cl5' had 10 variances floored, minimum variance found was 3.729077e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl0_cl4' had 11 variances floored, minimum variance found was 1.436390e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl0_cl3' had 9 variances floored, minimum variance found was 8.194986e-08.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl0_cl2' had 8 variances floored, minimum variance found was 4.951654e-08.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl0_cl1' had 10 variances floored, minimum variance found was 1.321621e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl0_cl1_cl2' had 11 variances floored, minimum variance found was 9.277315e-08.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl0_cl1_cl1' had 9 variances floored, minimum variance found was 7.354220e-08.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl0_cl1_cl0' had 10 variances floored, minimum variance found was 1.780075e-07.
+WARNING: covariance vector named 'covar0_cl0_cl1_cl0_cl0' had 10 variances floored, minimum variance found was 1.832338e-07.
+WARNING: covariance vector named 'covar0_cl0_cl0' had 8 variances floored, minimum variance found was 2.087595e-07.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl5' had 9 variances floored, minimum variance found was 2.195466e-07.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl4' had 9 variances floored, minimum variance found was 6.088222e-07.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl3' had 7 variances floored, minimum variance found was 1.875182e-06.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl3_cl0' had 9 variances floored, minimum variance found was 6.898163e-07.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl2' had 7 variances floored, minimum variance found was 1.826850e-06.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl2_cl1' had 6 variances floored, minimum variance found was 1.276622e-06.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl2_cl0' had 8 variances floored, minimum variance found was 1.233258e-06.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl1' had 8 variances floored, minimum variance found was 8.492595e-07.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl1_cl2' had 8 variances floored, minimum variance found was 7.214471e-07.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl1_cl1' had 8 variances floored, minimum variance found was 4.731740e-07.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl1_cl0' had 8 variances floored, minimum variance found was 1.051137e-06.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl0' had 8 variances floored, minimum variance found was 1.299268e-06.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl0_cl1' had 8 variances floored, minimum variance found was 1.189281e-06.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl0_cl0' had 8 variances floored, minimum variance found was 2.315998e-06.
+WARNING: covariance vector named 'covar1' had 3 variances floored, minimum variance found was 8.352463e-06.
+WARNING: covariance vector named 'covar1_cl2' had 3 variances floored, minimum variance found was 8.438364e-06.
+WARNING: covariance vector named 'covar1_cl0' had 4 variances floored, minimum variance found was 5.268087e-06.
+WARNING: covariance vector named 'covar1_cl0_cl2' had 4 variances floored, minimum variance found was 3.185155e-08.
+WARNING: covariance vector named 'covar1_cl0_cl1' had 6 variances floored, minimum variance found was 1.457823e-08.
+WARNING: covariance vector named 'covar1_cl0_cl1_cl1' had 7 variances floored, minimum variance found was 3.984884e-06.
+WARNING: covariance vector named 'covar1_cl0_cl1_cl0' had 5 variances floored, minimum variance found was 2.823043e-06.
+WARNING: covariance vector named 'covar1_cl0_cl0' had 10 variances floored, minimum variance found was 2.477382e-06.
+WARNING: covariance vector named 'covar1_cl0_cl0_cl1' had 13 variances floored, minimum variance found was 4.744835e-07.
+WARNING: covariance vector named 'covar1_cl0_cl0_cl0' had 13 variances floored, minimum variance found was 6.175122e-07.
+WARNING: covariance vector named 'covar1_cl0_cl0_cl0_cl1' had 14 variances floored, minimum variance found was 8.637029e-07.
+WARNING: covariance vector named 'covar1_cl0_cl0_cl0_cl0' had 12 variances floored, minimum variance found was 1.388240e-06.
+NOTE: DPMF 'dpmf0' has 1/1 elements vanishing/splitting
+NOTE: saving only 122 used means out of a total of 123
+NOTE: saving only 122 used covariances out of a total of 123
+NOTE: saving only 122 used components out of a total of 123
+NOTE: saving only 122 used means out of a total of 123
+NOTE: saving only 122 used covariances out of a total of 123
+NOTE: saving only 122 used components out of a total of 123
+Maximum number of EM iterations reached (1). Stopping
+### Final time (seconds) just for EM stage: User: 0.005063, System: 0.000980, CPU 0.006043
+____ PROGRAM ENDED SUCCESSFULLY WITH STATUS 0 AT Wednesday August 19 2015, 16:40:09 PDT ____

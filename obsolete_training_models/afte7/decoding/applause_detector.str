@@ -1,0 +1,46 @@
+GRAPHICAL_MODEL applause_detector_decoding
+
+frame: 0 {
+
+    variable : state {
+        symboltable: collection("stateNames");
+	type : discrete hidden cardinality 2;
+	conditionalparents : nil using DenseCPT("pi");
+    }
+
+    variable : observatn {
+	type : continuous observed 0:197;
+	conditionalparents : state(0) using mixture collection("GMMs") mapping("internal:copyParent");
+    }
+}
+
+frame: 1 {
+
+    variable : state {
+        symboltable: collection("stateNames");
+	type : discrete hidden cardinality 2;
+	% In this case, state in the second frame has
+	% as a parent ’state(-1)’ which means the state
+	% variable one time frame preceeding this one. In other
+	% words, when a variable named ’var’ is specified
+	% as ’var(n)’ to designate a parent, the ’n’ is
+	% the relative frame offset. If n=0, it refers
+	% to the variable named ’var’ in the current frame,
+	% if n=-1, it refers to the previous frame. Other
+	% values of n (both positive and negative) are also
+	% possible.
+	conditionalparents : state(-1) using DenseCPT("transitions");
+    }
+
+    variable : observatn {
+	type : continuous observed 0:197;
+	% ’observation’ at frame 1 has one parent, ’state(0)’
+	% Note that ’state(0)’ refers to the state variable
+	% in the current frame, which in this case is frame 1.
+	conditionalparents : state(0) using mixture collection("GMMs") mapping("internal:copyParent");
+    }
+}
+
+% The chunk specifier, saying only that
+% frame 1 is the chunk to be repeated.
+chunk 1:1;

@@ -1,0 +1,489 @@
+
+
+
+Ilge:training oldilge$ ./hmm_train_command_splitVanish
+
+*********************************************************
+Step 0: Start the training with 1 Gaussian component per mixture
+*********************************************************
+
+Generating accumulators. NumComponents: 1, iteration 0
+Merging accumulators and updating parameters
+LL -7.93991963108179880e+03
+*********************************************************
+Step 1: Train multiple EM iterations with no splitting or vanishing until you have reached 2% convergence.
+*********************************************************
+-------------------------------------------------
+Generating accumulators. NumComponents: 1, iteration 1
+Merging accumulators and updating parameters
+LL -5.84021232179202343e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 1, iteration 2
+Merging accumulators and updating parameters
+LL -5.84021232179202343e+03
+---Trained to 2 % convergence.
+*********************************************************
+Step 2: Do an iteration that splits all Gaussians, and then continue training with no splitting/vanishing until 2% convergence ratio is achieved.
+*********************************************************
+
+=================================================
+Doubling components 1 to 2
+
+Generating accumulators. NumComponents: 2, iteration 0
+Merging accumulators and updating parameters
+LL -5.84021232179202343e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 2, iteration 1
+Merging accumulators and updating parameters
+LL -6.17284827485639289e+03
+---Trained to 2 % convergence.
+
+=================================================
+Doubling components 2 to 4
+
+Generating accumulators. NumComponents: 4, iteration 0
+Merging accumulators and updating parameters
+LL -5.49992261576102737e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 1
+Merging accumulators and updating parameters
+LL -4.12291041590367422e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 2
+Merging accumulators and updating parameters
+LL -2.68537414321716096e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 3
+Merging accumulators and updating parameters
+LL -1.88600099165677284e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 4
+Merging accumulators and updating parameters
+LL -1.24196334988309513e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 5
+Merging accumulators and updating parameters
+LL -7.07097284614625096e+02
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 6
+Merging accumulators and updating parameters
+LL -1.74492215500194646e+02
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 7
+Merging accumulators and updating parameters
+LL -7.36537179020343160e+01
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 8
+Merging accumulators and updating parameters
+LL 1.34397256117554260e+01
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 9
+Merging accumulators and updating parameters
+LL 4.75866422701911915e+01
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 10
+Merging accumulators and updating parameters
+LL 7.01941888433200347e+01
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 11
+Merging accumulators and updating parameters
+LL 9.54520786246881272e+01
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 12
+Merging accumulators and updating parameters
+LL 1.97788226095966877e+02
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 13
+Merging accumulators and updating parameters
+LL 2.80285504843498643e+02
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 14
+Merging accumulators and updating parameters
+LL 3.31411095757165015e+02
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 15
+Merging accumulators and updating parameters
+LL 3.64725112982977407e+02
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 16
+Merging accumulators and updating parameters
+LL 3.85407540115039239e+02
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 17
+Merging accumulators and updating parameters
+LL 4.00290850597992460e+02
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 18
+Merging accumulators and updating parameters
+LL 4.11496867960003044e+02
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 19
+Merging accumulators and updating parameters
+LL 4.20138202647646779e+02
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 20
+Merging accumulators and updating parameters
+LL 4.27751008802728620e+02
+---trained to 2 % convergence.
+*********************************************************
+Step 5: Set mcvr = 10, mcsr = 1 for 1 EM iteration.
+*********************************************************
+
+=================================================
+Moderate vanishing and aggressive splitting: MCVR 10 MCSR 1 round 0
+
+Generating accumulators. NumComponents: 4, iteration 0
+Merging accumulators and updating parameters
+*********************************************************
+Step 6: Set mcvr = 10, mcsr = 1e10 for 1 iteration (just to kill off some of the weak Gaussians from step 5)
+*********************************************************
+-------------------------------------------------
+Moderate vanishing and no splitting: MCVR 10 MCSR 1e10 round 0
+
+Generating accumulators. NumComponents: 4, iteration 1
+Merging accumulators and updating parameters
+*********************************************************
+Step 7: Continue training with splitting/vanishing until 2% convergence.
+*********************************************************
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 2
+Merging accumulators and updating parameters
+LL 8.68315907243347397e+02
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 3
+Merging accumulators and updating parameters
+LL 1.27737173329666939e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 4
+Merging accumulators and updating parameters
+LL 1.67966368493423988e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 5
+Merging accumulators and updating parameters
+LL 1.84452452853315390e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 6
+Merging accumulators and updating parameters
+LL 1.90578906541312926e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 7
+Merging accumulators and updating parameters
+LL 1.93058954249994144e+03
+---trained to 2 % convergence.
+*********************************************************
+Step 5: Set mcvr = 10, mcsr = 1 for 1 EM iteration.
+*********************************************************
+
+=================================================
+Moderate vanishing and aggressive splitting: MCVR 10 MCSR 1 round 1
+
+Generating accumulators. NumComponents: 4, iteration 0
+Merging accumulators and updating parameters
+*********************************************************
+Step 6: Set mcvr = 10, mcsr = 1e10 for 1 iteration (just to kill off some of the weak Gaussians from step 5)
+*********************************************************
+-------------------------------------------------
+Moderate vanishing and no splitting: MCVR 10 MCSR 1e10 round 1
+
+Generating accumulators. NumComponents: 4, iteration 1
+Merging accumulators and updating parameters
+*********************************************************
+Step 7: Continue training with splitting/vanishing until 2% convergence.
+*********************************************************
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 2
+Merging accumulators and updating parameters
+LL 2.05325553263143047e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 3
+Merging accumulators and updating parameters
+LL 2.08368206984968720e+03
+---trained to 2 % convergence.
+*********************************************************
+Step 5: Set mcvr = 10, mcsr = 1 for 1 EM iteration.
+*********************************************************
+
+=================================================
+Moderate vanishing and aggressive splitting: MCVR 10 MCSR 1 round 2
+
+Generating accumulators. NumComponents: 4, iteration 0
+Merging accumulators and updating parameters
+*********************************************************
+Step 6: Set mcvr = 10, mcsr = 1e10 for 1 iteration (just to kill off some of the weak Gaussians from step 5)
+*********************************************************
+-------------------------------------------------
+Moderate vanishing and no splitting: MCVR 10 MCSR 1e10 round 2
+
+Generating accumulators. NumComponents: 4, iteration 1
+Merging accumulators and updating parameters
+*********************************************************
+Step 7: Continue training with splitting/vanishing until 2% convergence.
+*********************************************************
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 2
+Merging accumulators and updating parameters
+LL 2.24135750318161126e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 3
+Merging accumulators and updating parameters
+LL 2.35864592268823935e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 4
+Merging accumulators and updating parameters
+LL 2.43579574801678200e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 5
+Merging accumulators and updating parameters
+LL 2.52388826601828077e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 6
+Merging accumulators and updating parameters
+LL 2.59981533161625521e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 7
+Merging accumulators and updating parameters
+LL 2.62566333951570368e+03
+---trained to 2 % convergence.
+*********************************************************
+Step 5: Set mcvr = 10, mcsr = 1 for 1 EM iteration.
+*********************************************************
+
+=================================================
+Moderate vanishing and aggressive splitting: MCVR 10 MCSR 1 round 3
+
+Generating accumulators. NumComponents: 4, iteration 0
+Merging accumulators and updating parameters
+*********************************************************
+Step 6: Set mcvr = 10, mcsr = 1e10 for 1 iteration (just to kill off some of the weak Gaussians from step 5)
+*********************************************************
+-------------------------------------------------
+Moderate vanishing and no splitting: MCVR 10 MCSR 1e10 round 3
+
+Generating accumulators. NumComponents: 4, iteration 1
+Merging accumulators and updating parameters
+*********************************************************
+Step 7: Continue training with splitting/vanishing until 2% convergence.
+*********************************************************
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 2
+Merging accumulators and updating parameters
+LL 2.70300534250275632e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 3
+Merging accumulators and updating parameters
+LL 2.78154464450662590e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 4
+Merging accumulators and updating parameters
+LL 2.83657798791048299e+03
+---trained to 2 % convergence.
+*********************************************************
+Step 5: Set mcvr = 10, mcsr = 1 for 1 EM iteration.
+*********************************************************
+
+=================================================
+Moderate vanishing and aggressive splitting: MCVR 10 MCSR 1 round 4
+
+Generating accumulators. NumComponents: 4, iteration 0
+Merging accumulators and updating parameters
+*********************************************************
+Step 6: Set mcvr = 10, mcsr = 1e10 for 1 iteration (just to kill off some of the weak Gaussians from step 5)
+*********************************************************
+-------------------------------------------------
+Moderate vanishing and no splitting: MCVR 10 MCSR 1e10 round 4
+
+Generating accumulators. NumComponents: 4, iteration 1
+Merging accumulators and updating parameters
+*********************************************************
+Step 7: Continue training with splitting/vanishing until 2% convergence.
+*********************************************************
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 2
+Merging accumulators and updating parameters
+LL 2.97881234206923273e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 3
+Merging accumulators and updating parameters
+LL 3.01975513660273236e+03
+---trained to 2 % convergence.
+*********************************************************
+Step 5: Set mcvr = 10, mcsr = 1 for 1 EM iteration.
+*********************************************************
+
+=================================================
+Moderate vanishing and aggressive splitting: MCVR 10 MCSR 1 round 5
+
+Generating accumulators. NumComponents: 4, iteration 0
+Merging accumulators and updating parameters
+*********************************************************
+Step 6: Set mcvr = 10, mcsr = 1e10 for 1 iteration (just to kill off some of the weak Gaussians from step 5)
+*********************************************************
+-------------------------------------------------
+Moderate vanishing and no splitting: MCVR 10 MCSR 1e10 round 5
+
+Generating accumulators. NumComponents: 4, iteration 1
+Merging accumulators and updating parameters
+*********************************************************
+Step 7: Continue training with splitting/vanishing until 2% convergence.
+*********************************************************
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 2
+Merging accumulators and updating parameters
+LL 3.15662859399120043e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 3
+Merging accumulators and updating parameters
+LL 3.20618361805999939e+03
+---trained to 2 % convergence.
+*********************************************************
+Step 5: Set mcvr = 10, mcsr = 1 for 1 EM iteration.
+*********************************************************
+
+=================================================
+Moderate vanishing and aggressive splitting: MCVR 10 MCSR 1 round 6
+
+Generating accumulators. NumComponents: 4, iteration 0
+Merging accumulators and updating parameters
+*********************************************************
+Step 6: Set mcvr = 10, mcsr = 1e10 for 1 iteration (just to kill off some of the weak Gaussians from step 5)
+*********************************************************
+-------------------------------------------------
+Moderate vanishing and no splitting: MCVR 10 MCSR 1e10 round 6
+
+Generating accumulators. NumComponents: 4, iteration 1
+Merging accumulators and updating parameters
+*********************************************************
+Step 7: Continue training with splitting/vanishing until 2% convergence.
+*********************************************************
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 2
+Merging accumulators and updating parameters
+LL 3.46355058218798649e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 3
+Merging accumulators and updating parameters
+LL 3.51675548011062347e+03
+---trained to 2 % convergence.
+*********************************************************
+Step 5: Set mcvr = 10, mcsr = 1 for 1 EM iteration.
+*********************************************************
+
+=================================================
+Moderate vanishing and aggressive splitting: MCVR 10 MCSR 1 round 7
+
+Generating accumulators. NumComponents: 4, iteration 0
+Merging accumulators and updating parameters
+*********************************************************
+Step 6: Set mcvr = 10, mcsr = 1e10 for 1 iteration (just to kill off some of the weak Gaussians from step 5)
+*********************************************************
+-------------------------------------------------
+Moderate vanishing and no splitting: MCVR 10 MCSR 1e10 round 7
+
+Generating accumulators. NumComponents: 4, iteration 1
+Merging accumulators and updating parameters
+*********************************************************
+Step 7: Continue training with splitting/vanishing until 2% convergence.
+*********************************************************
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 2
+Merging accumulators and updating parameters
+LL 3.68861406413631767e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 3
+Merging accumulators and updating parameters
+LL 3.75416106066021030e+03
+---trained to 2 % convergence.
+*********************************************************
+Step 5: Set mcvr = 10, mcsr = 1 for 1 EM iteration.
+*********************************************************
+
+=================================================
+Moderate vanishing and aggressive splitting: MCVR 10 MCSR 1 round 8
+
+Generating accumulators. NumComponents: 4, iteration 0
+Merging accumulators and updating parameters
+*********************************************************
+Step 6: Set mcvr = 10, mcsr = 1e10 for 1 iteration (just to kill off some of the weak Gaussians from step 5)
+*********************************************************
+-------------------------------------------------
+Moderate vanishing and no splitting: MCVR 10 MCSR 1e10 round 8
+
+Generating accumulators. NumComponents: 4, iteration 1
+Merging accumulators and updating parameters
+*********************************************************
+Step 7: Continue training with splitting/vanishing until 2% convergence.
+*********************************************************
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 2
+Merging accumulators and updating parameters
+LL 3.86891516581403494e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 3
+Merging accumulators and updating parameters
+LL 3.92822033215430383e+03
+---trained to 2 % convergence.
+*********************************************************
+Step 5: Set mcvr = 10, mcsr = 1 for 1 EM iteration.
+*********************************************************
+
+=================================================
+Moderate vanishing and aggressive splitting: MCVR 10 MCSR 1 round 9
+
+Generating accumulators. NumComponents: 4, iteration 0
+Merging accumulators and updating parameters
+*********************************************************
+Step 6: Set mcvr = 10, mcsr = 1e10 for 1 iteration (just to kill off some of the weak Gaussians from step 5)
+*********************************************************
+-------------------------------------------------
+Moderate vanishing and no splitting: MCVR 10 MCSR 1e10 round 9
+
+Generating accumulators. NumComponents: 4, iteration 1
+Merging accumulators and updating parameters
+*********************************************************
+Step 7: Continue training with splitting/vanishing until 2% convergence.
+*********************************************************
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 2
+Merging accumulators and updating parameters
+LL 4.13491305075861874e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 3
+Merging accumulators and updating parameters
+LL 4.20032918890970541e+03
+---trained to 2 % convergence.
+*********************************************************
+Step 8: Set mcvr = 10, mcsr = 5 for 2 iterations.
+*********************************************************
+
+=================================================
+Moderate vanishing/splitting: MCVR 10 MCSR 5
+
+Generating accumulators. NumComponents: 4, iteration 0
+Merging accumulators and updating parameters
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 1
+Merging accumulators and updating parameters
+*********************************************************
+Step 9: Train with no splitting/vanishing until 0.2% convergence.
+*********************************************************
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 2
+Merging accumulators and updating parameters
+LL 4.30482120090023363e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 3
+Merging accumulators and updating parameters
+LL 4.32370656173002772e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 4
+Merging accumulators and updating parameters
+LL 4.33474991272723037e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 5
+Merging accumulators and updating parameters
+LL 4.34424474592803745e+03
+-------------------------------------------------
+Generating accumulators. NumComponents: 4, iteration 6
+Merging accumulators and updating parameters
+LL 4.35270456162879509e+03
+---Trained to 0.2 % convergence. 

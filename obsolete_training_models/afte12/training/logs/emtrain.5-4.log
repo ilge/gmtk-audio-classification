@@ -1,0 +1,11 @@
+Creating Junction Tree
+DONE creating Junction Tree
+Loading accumulators from 'accumulators/acc_0_5_4comp.data'
+WARNING: covariance vector named 'covar0' had 2 variances floored, minimum variance found was 7.594237e-06.
+WARNING: covariance vector named 'covar0_cl1' had 3 variances floored, minimum variance found was 6.467372e-06.
+WARNING: covariance vector named 'covar0_cl0' had 6 variances floored, minimum variance found was 1.347938e-06.
+WARNING: covariance vector named 'covar0_cl0_cl0' had 6 variances floored, minimum variance found was 1.736932e-06.
+WARNING: covariance vector named 'covar1_cl0_cl0' had 9 variances floored, minimum variance found was 2.447676e-06.
+Maximum number of EM iterations reached (1). Stopping
+### Final time (seconds) just for EM stage: User: 0.000672, System: 0.000463, CPU 0.001135
+____ PROGRAM ENDED SUCCESSFULLY WITH STATUS 0 AT Wednesday August 19 2015, 16:50:06 PDT ____

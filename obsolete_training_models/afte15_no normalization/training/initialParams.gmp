@@ -1,0 +1,79 @@
+
+% dense probability mass functions
+2
+
+0 dpmf0 1 1.0
+1 dpmf1 1 1.0
+
+% sparse probability mass functions
+0
+
+% means
+2
+
+0 mean0 
+25
+0.1056 0.25156 0.24802 0.23706 0.2616 0.25133 0.24365 0.23983 0.22674 0.2501 0.2342 0.22788 0.22226 0.21132 0.23985 0.22295 0.2154 0.21231 0.20444 0.21511 0.21417 0.20723 0.21112 0.20883 0.19925
+1 mean1 
+25
+0.42229 0.47747 0.51111 0.49935 0.49541 0.48128 0.53333 0.54586 0.54723 0.49805 0.48137 0.50747 0.52786 0.52018 0.46777 0.45214 0.4855 0.49558 0.49387 0.48706 0.49967 0.50132 0.49097 0.5007 0.50699
+
+% covariances
+2
+
+0 covar0 
+25
+0.012607 0.013148 0.012885 0.014528 0.014205 0.011706 0.011165 0.010421 0.010452 0.017609 0.013525 0.012067 0.010859 0.011139 0.014848 0.012479 0.010666 0.01036 0.011942 0.014528 0.014445 0.015973 0.016646 0.015738 0.015973
+
+1 covar1 
+25
+0.071727 0.15275 0.14695 0.15653 0.16164 0.15154 0.15114 0.13331 0.15658 0.1991 0.18891 0.2077 0.19093 0.2049 0.15899 0.14447 0.16274 0.15191 0.17598 0.1707 0.17038 0.18307 0.20451 0.18293 0.20983
+
+
+
+% dlink matrices
+0
+
+% weight matrices
+0
+
+% dense CPTs
+2
+
+% These are listed in the doNotTrain file, so they shoud not
+% be updated during trianing
+
+0 
+pi
+0 % num parents
+2 % num values 
+0.9 0.1
+
+1 
+transitions
+1 %one parent
+2 2 % # parent values, # self values
+0.8 0.2
+0.9 0.1
+
+
+% Gaussian components
+2
+
+0 25 0 gc_0 mean0 covar0
+1 25 0 gc_1 mean1 covar1
+
+% Gaussian mixtures
+2
+
+0 25 gm0 1 dpmf0 gc_0
+1 25 gm1 1 dpmf1 gc_1
+
+% switching mixture of Gaussians
+0
+
+% logistic regression switching mixture of Gaussians
+0
+
+% MLP-based switching mixture of Gaussians
+0

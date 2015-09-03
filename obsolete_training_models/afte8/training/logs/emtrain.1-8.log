@@ -1,0 +1,13 @@
+Creating Junction Tree
+DONE creating Junction Tree
+Loading accumulators from 'accumulators/acc_0_1_8comp.data'
+NOTE: DPMF 'dpmf1' has 1/0 elements vanishing/splitting
+NOTE: saving only 15 used means out of a total of 16
+NOTE: saving only 15 used covariances out of a total of 16
+NOTE: saving only 15 used components out of a total of 16
+NOTE: saving only 15 used means out of a total of 16
+NOTE: saving only 15 used covariances out of a total of 16
+NOTE: saving only 15 used components out of a total of 16
+Maximum number of EM iterations reached (1). Stopping
+### Final time (seconds) just for EM stage: User: 0.001614, System: 0.000564, CPU 0.002178
+____ PROGRAM ENDED SUCCESSFULLY WITH STATUS 0 AT Friday August 14 2015, 17:33:39 PDT ____

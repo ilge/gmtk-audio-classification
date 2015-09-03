@@ -1,0 +1,19 @@
+NAME_COLLECTION_IN_FILE inline 2
+
+% A symboltable allows you to give symbolic names to the
+% numeric values of a discrete variable:
+%   state = 0 = "noApplause"
+%   state = 1 = "yesApplause"
+0 
+stateNames
+2
+noApplause
+yesApplause
+
+1
+GMMs
+2
+gm0
+gm1
+
+

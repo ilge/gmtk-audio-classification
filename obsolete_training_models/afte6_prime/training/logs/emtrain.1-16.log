@@ -1,0 +1,19 @@
+Creating Junction Tree
+DONE creating Junction Tree
+Loading accumulators from 'accumulators/acc_0_1_16comp.data'
+WARNING: covariance vector named 'covar1_cl2' had 36 variances floored, minimum variance found was -2.517644e-08.
+WARNING: covariance vector named 'covar1_cl2_cl0' had 36 variances floored, minimum variance found was -4.769974e-08.
+WARNING: covariance vector named 'covar1_cl1_cl0' had 36 variances floored, minimum variance found was 1.463709e-10.
+WARNING: Gaussian Component named 'gc_1_cl1_cl0_cl0' did not receive any accumulated probability in EM iteration. Global missed increment count is 0. Also check child mean 'mean1_cl1_cl0_cl0' and covar 'covar1_cl1_cl0_cl0'
+WARNING: Mean vec 'mean1_cl1_cl0_cl0' received only -1.000000e+17 accumulated log probability (min is -6.000000e+02) in EM iteration, using previous meansWARNING: Diag covariance vec 'covar1_cl1_cl0_cl0' received only -1.000000e+17 accumulated log probability (min is -6.000000e+02) in EM iteration, using previous values.WARNING: covariance vector named 'covar1_cl0' had 3 variances floored, minimum variance found was 7.798386e-07.
+WARNING: Gaussian Component named 'gc_1_cl0_cl0' did not receive any accumulated probability in EM iteration. Global missed increment count is 0. Also check child mean 'mean1_cl0_cl0' and covar 'covar1_cl0_cl0'
+WARNING: Mean vec 'mean1_cl0_cl0' received only -1.000000e+17 accumulated log probability (min is -6.000000e+02) in EM iteration, using previous meansWARNING: Diag covariance vec 'covar1_cl0_cl0' received only -1.000000e+17 accumulated log probability (min is -6.000000e+02) in EM iteration, using previous values.NOTE: DPMF 'dpmf1' has 3/0 elements vanishing/splitting
+NOTE: saving only 23 used means out of a total of 26
+NOTE: saving only 23 used covariances out of a total of 26
+NOTE: saving only 23 used components out of a total of 26
+NOTE: saving only 23 used means out of a total of 26
+NOTE: saving only 23 used covariances out of a total of 26
+NOTE: saving only 23 used components out of a total of 26
+Maximum number of EM iterations reached (1). Stopping
+### Final time (seconds) just for EM stage: User: 0.001706, System: 0.000544, CPU 0.002250
+____ PROGRAM ENDED SUCCESSFULLY WITH STATUS 0 AT Monday August 17 2015, 11:47:45 PDT ____

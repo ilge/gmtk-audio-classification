@@ -1,0 +1,20 @@
+Creating Junction Tree
+DONE creating Junction Tree
+Loading accumulators from 'accumulators/acc_0_3_32comp.data'
+WARNING: covariance vector named 'covar0_cl3_cl0' had 3 variances floored, minimum variance found was 3.804595e-06.
+WARNING: covariance vector named 'covar0_cl1_cl2' had 25 variances floored, minimum variance found was -7.255322e-09.
+WARNING: covariance vector named 'covar0_cl1_cl1' had 25 variances floored, minimum variance found was -5.456759e-08.
+WARNING: covariance vector named 'covar0_cl1_cl0' had 25 variances floored, minimum variance found was -3.839319e-07.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0' had 3 variances floored, minimum variance found was 7.995958e-08.
+WARNING: covariance vector named 'covar0_cl0_cl2' had 25 variances floored, minimum variance found was -8.492206e-08.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl2' had 25 variances floored, minimum variance found was -5.791111e-08.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl1' had 25 variances floored, minimum variance found was -8.464474e-08.
+WARNING: covariance vector named 'covar1_cl1_cl2' had 25 variances floored, minimum variance found was -1.923907e-07.
+WARNING: covariance vector named 'covar1_cl1_cl1' had 25 variances floored, minimum variance found was -7.562405e-07.
+WARNING: covariance vector named 'covar1_cl1_cl0' had 25 variances floored, minimum variance found was -2.687976e-07.
+WARNING: covariance vector named 'covar1_cl0_cl3' had 25 variances floored, minimum variance found was -5.450894e-08.
+WARNING: covariance vector named 'covar1_cl0_cl2_cl0' had 25 variances floored, minimum variance found was -1.767967e-07.
+WARNING: covariance vector named 'covar1_cl0_cl0_cl2' had 25 variances floored, minimum variance found was -8.235266e-08.
+Maximum number of EM iterations reached (1). Stopping
+### Final time (seconds) just for EM stage: User: 0.002246, System: 0.000811, CPU 0.003057
+____ PROGRAM ENDED SUCCESSFULLY WITH STATUS 0 AT Monday August 10 2015, 19:08:23 PDT ____

@@ -1,0 +1,28 @@
+Creating Junction Tree
+DONE creating Junction Tree
+Loading accumulators from 'accumulators/acc_0_2_8comp.data'
+WARNING: covariance vector named 'covar0_cl3' had 3 variances floored, minimum variance found was 1.105701e-06.
+WARNING: covariance vector named 'covar0_cl3_cl0' had 3 variances floored, minimum variance found was 6.349254e-07.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0' had 2 variances floored, minimum variance found was 1.500235e-06.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0_cl3' had 3 variances floored, minimum variance found was 3.784568e-07.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0_cl3_cl0' had 2 variances floored, minimum variance found was 1.919268e-07.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0_cl2' had 2 variances floored, minimum variance found was 1.001508e-06.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0_cl2_cl0' had 2 variances floored, minimum variance found was 8.218590e-07.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0_cl1' had 2 variances floored, minimum variance found was 1.030176e-06.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0_cl1_cl1' had 2 variances floored, minimum variance found was 3.555641e-08.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0_cl1_cl0' had 2 variances floored, minimum variance found was 4.031329e-07.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0_cl0' had 2 variances floored, minimum variance found was 1.204640e-06.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0_cl0_cl1' had 3 variances floored, minimum variance found was 7.404861e-07.
+WARNING: covariance vector named 'covar0_cl1_cl0_cl0_cl0_cl0' had 3 variances floored, minimum variance found was 4.636260e-07.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl0_cl1_cl0' had 2 variances floored, minimum variance found was 1.991778e-06.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl0_cl1_cl0_cl2' had 2 variances floored, minimum variance found was 1.394115e-06.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl0_cl1_cl0_cl1' had 2 variances floored, minimum variance found was 1.434145e-06.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl0_cl1_cl0_cl0' had 3 variances floored, minimum variance found was 7.836904e-07.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl0_cl1_cl0_cl0_cl1' had 2 variances floored, minimum variance found was 1.256696e-06.
+WARNING: covariance vector named 'covar0_cl0_cl0_cl0_cl1_cl0_cl0_cl0' had 2 variances floored, minimum variance found was 1.487617e-06.
+WARNING: covariance vector named 'covar1_cl1_cl2_cl4' had 25 variances floored, minimum variance found was -3.612579e-06.
+WARNING: covariance vector named 'covar1_cl0_cl0_cl2_cl1_cl0' had 25 variances floored, minimum variance found was -5.794922e-06.
+WARNING: covariance vector named 'covar1_cl0_cl0_cl1_cl1_cl0' had 24 variances floored, minimum variance found was -1.376733e-05.
+Maximum number of EM iterations reached (1). Stopping
+### Final time (seconds) just for EM stage: User: 0.012045, System: 0.001340, CPU 0.013385
+____ PROGRAM ENDED SUCCESSFULLY WITH STATUS 0 AT Thursday August 20 2015, 12:20:19 PDT ____

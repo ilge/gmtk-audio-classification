@@ -1,0 +1,9 @@
+Creating Junction Tree
+DONE creating Junction Tree
+Segment 0, after CE, log(prob(evidence)) = -153577.516299, per frame =-36.392776, per numUFrams = -36.392776
+EMIter0: Total data log prob from 4220 frames processed is: -1.535775163e+05
+NOTE: storing current accumulators (from training 1 segments) to file 'accumulators/acc_0_1_8comp.data' and exiting.
+WARNING: zero accumulator values for mean vector 'mean1_cl0_cl0_cl0'
+WARNING: zero accumulator values for covariance vector 'covar1_cl0_cl0_cl0'
+WARNING: zero accumulator values for Diag Gaussian 'gc_1_cl0_cl0_cl0'
+____ PROGRAM ENDED SUCCESSFULLY WITH STATUS 0 AT Thursday August 20 2015, 01:40:37 PDT ____

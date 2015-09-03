@@ -1,0 +1,8 @@
+WARNING: reading diagonal covariance matrix 'covar0' (from file 'initialParams.gmp' line 27), and 1 variance values (out of 20) were  < current Floor = (1.000000e-05), forcing them to floor.
+Creating Junction Tree
+DONE creating Junction Tree
+Loading accumulators from 'accumulators/acc_0_0_1comp.data'
+WARNING: covariance vector named 'covar0' had 1 variances floored, minimum variance found was 7.928039e-06.
+Maximum number of EM iterations reached (1). Stopping
+### Final time (seconds) just for EM stage: User: 0.000335, System: 0.000474, CPU 0.000809
+____ PROGRAM ENDED SUCCESSFULLY WITH STATUS 0 AT Wednesday August 19 2015, 16:50:02 PDT ____

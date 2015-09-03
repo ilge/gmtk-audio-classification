@@ -1,0 +1,109 @@
+===============================
+   P1 partition information: JT_weight = 1.000000
+=== Clique Information ===
+Number of cliques = 1
+== Clique number: 0, root/right-interface clique, root/right-interface clique, leaf
+Clique information: 0 packed bits, 0 unsigned words (0 splits), weight = 0.000000, jt_weight = 1.000000
+2 Nodes: state(0)[2],observatn(0)
+2 Assigned: state(0),observatn(0)
+2 Assigned Sorted: state(0)[2],observatn(0)
+2 Dispositions: 0 0
+2 Assigned Prob: state(0),observatn(0)
+0 Cum Assigned Prob: 
+0 Union Incomming Seps: 
+0 Unassigned Iterated: 
+0 Cumulative Unassigned: 
+0 Hidden/Hashable: 
+0 Clique Neighbors: 
+0 Clique Children: 
+0 Receive Seps: 
+0 incomming VE Separators
+Send Sep: -1
+
+=== Separator Information ===
+Number of separators = 0
+
+
+===============================
+   Co partition information: JT_weight = 1.000000
+=== Clique Information ===
+Number of cliques = 1
+== Clique number: 0, root/right-interface clique, root/right-interface clique, leaf/left-interface clique
+Clique information: 0 packed bits, 0 unsigned words (0 splits), weight = 0.000000, jt_weight = 1.000000
+2 Nodes: state(1)[2],observatn(1)
+2 Assigned: state(1),observatn(1)
+2 Assigned Sorted: state(1)[2],observatn(1)
+2 Dispositions: 0 0
+2 Assigned Prob: state(1),observatn(1)
+2 Cum Assigned Prob: state(0),observatn(0)
+0 Union Incomming Seps: 
+0 Unassigned Iterated: 
+0 Cumulative Unassigned: 
+0 Hidden/Hashable: 
+0 Clique Neighbors: 
+0 Clique Children: 
+1 Receive Seps: 0,
+0 incomming VE Separators
+Send Sep: -1
+
+=== Separator Information ===
+Number of separators = 1
+== Separator number: 0
+Separator information: 0 acc packed bits (0 words, 0 splits), 0 rem packed bits (0 words, 0 splits)
+0 Nodes: 
+0 Acc Inter: 
+0 Hid Acc Inter: 
+0 remainder: 
+0 hRemainder: 
+
+
+===============================
+   E1 partition information: JT_weight = 1.000000
+=== Clique Information ===
+Number of cliques = 1
+== Clique number: 0, root/right-interface clique, root clique, leaf/left-interface clique
+Clique information: 0 packed bits, 0 unsigned words (0 splits), weight = 0.000000, jt_weight = 1.000000
+2 Nodes: state(2)[2],observatn(2)
+2 Assigned: state(2),observatn(2)
+2 Assigned Sorted: state(2)[2],observatn(2)
+2 Dispositions: 0 0
+2 Assigned Prob: state(2),observatn(2)
+4 Cum Assigned Prob: state(0),observatn(0),state(1),observatn(1)
+0 Union Incomming Seps: 
+0 Unassigned Iterated: 
+0 Cumulative Unassigned: 
+0 Hidden/Hashable: 
+0 Clique Neighbors: 
+0 Clique Children: 
+1 Receive Seps: 0,
+0 incomming VE Separators
+Send Sep: -1
+
+=== Separator Information ===
+Number of separators = 1
+== Separator number: 0
+Separator information: 0 acc packed bits (0 words, 0 splits), 0 rem packed bits (0 words, 0 splits)
+0 Nodes: 
+0 Acc Inter: 
+0 Hid Acc Inter: 
+0 remainder: 
+0 hRemainder: 
+
+
+===============================
+
+===============================
+   P1 message order
+Number of messages: 0
+
+
+===============================
+   Co message order
+Number of messages: 0
+
+
+===============================
+   E1 message order
+Number of messages: 0
+
+
