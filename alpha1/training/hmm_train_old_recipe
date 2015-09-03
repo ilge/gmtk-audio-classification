@@ -1,0 +1,381 @@
+#! /bin/sh
+
+# Set the TKSRC environment variable to the directory containing the GMTK
+# executables. We do this to make it convenient to have multiple GMTK build
+# trees. Most users probably won't need that and would be happier assuming
+# the GMTK executables are under the normal PATH...
+export TKSRC="/Users/oldilge/Documents/gmtk-1.4.1/tksrc";
+if [ x$TKSRC = x ]; then
+  echo ERROR: you must set the TKSRC environment variable to 
+  echo the directory containing the GMTK executables.
+  exit 5
+fi
+
+# This script does parallel EM training by launching multiple shell
+# processes since most CPUs are multi-core these days. This is probably
+# overkill for the applause detector, but I'd rather not introduce bugs
+# by trying to remove the parallelism. It parallelizes over segments, so
+# since (at the moment) we only have 1 segment there won't be any actual
+# parallelism. Set the NUMPROCS environment variable to the number of
+# processes you want to run in parallel - the default is 1.
+
+: ${NUMPROCS:=1}
+ACCRANGE=0:$((NUMPROCS-1))
+
+# These tell gmtkEMtrain about the training data file(s)
+
+OFARGS="-of1 training_data/training_ayHadiIns.flat -fmt1 flatascii -nf1 10 -ni1 1"
+
+
+# The difference between the decoding and training structure files
+# is that state is observed in the trianing model.
+
+STRFILE=applause_detector_train.str
+
+# The master file defines the non-graphical parts of the model
+# that we are not training - the initial state & state transition
+# CPTs, any decision trees, symbol tables
+
+MASTERFILE=applause_detector.mtr
+
+# This is the input trainable file for the initial parameters.
+
+INITIALPARAMS=initialParams.gmp
+
+if [ ! -f ${STRFILE}.trifile ]; then
+  echo ERROR: ${STRFILE}.trifile is missing. Run triangulate.sh
+  exit 5
+fi
+
+
+# The script divides the # of segments of training data by
+# NUMPROCS to determine the number of processes to launch.
+# This just checks that the script can find the obs-info
+# program which it uses to determine the # of segments
+OBSPATH=$TKSRC
+if [ ! -f $TKSRC/obs-info ]; then
+  if [ -f $TKSRC/../featureFileIO/obs-info ]; then
+    OBSPATH=$TKSRC/../featureFileIO
+  else
+    echo ERROR: I could not find the GMTK obs-info program.
+    echo I looked in $TKSRC and $TKSRC/../featureFileIO
+    echo You may need to adjust your TKSRC environment variable
+    echo or build and install GMTK
+    exit 5
+  fi
+fi
+
+declare -i NUMSEGMENTS=`$OBSPATH/obs-info $OFARGS | awk '{print $3}'`
+
+
+# Generate accumulators in parallel, dividing the NUMSEGMENTS 
+# segments up about evenly over NUMPROCS processes
+
+# generateAccumulators EMiter numComponents inputTrainable
+function generateAccumulators {
+  TRRNGinc=`expr $NUMSEGMENTS / $NUMPROCS`
+  extraTRRNG=`expr $NUMSEGMENTS % $NUMPROCS`
+
+  TRRNGstart=0
+  TRRNGend=`expr $TRRNGinc - 1`
+  for (( p=0 ; p < $NUMPROCS ; p+=1 )); do
+    if test $p -lt $extraTRRNG ; then
+      TRRNGend=`expr $TRRNGend + 1`
+    fi
+    TRRNG=$TRRNGstart:$TRRNGend
+
+    if test $p = 0; then
+      DIRICHLET=T
+    else
+      DIRICHLET=F
+    fi
+
+    echo Generating accumulators. NumComponents: $2, iteration $1
+    gmtkcmd="$TKSRC/gmtkEMtrain  \
+        $OFARGS \
+        -trrng $TRRNG \
+        -inputMasterFile $MASTERFILE \
+        -inputTrainable $3 \
+        -objsNotToTrain doNotTrain \
+        -strF $STRFILE \
+        -maxEmIters 1 \
+        -storeAccFile accumulators/acc_${p}_${1}_${2}comp.data \
+	      -checkTriFileCards F \
+        -varFloor 1e-5 \
+        -floorVarOnRead T \
+        -dirichletPriors $DIRICHLET \
+        -meanCloneSTDfrac 0.25 \
+        -covarCloneSTDfrac 0.0 \
+        $CPPARGS \
+    > logs/emacc.${1}-${2}.$TRRNG.log 2>&1"
+    echo Generating accumulators for segments $TRRNG iteration $1 with $2 components >> command_log
+    echo $gmtkcmd >>command_log
+    eval $gmtkcmd &
+    emaccpid[$p]=$!
+    logname[$p]=logs/emacc.${1}-${2}.$TRRNG.log
+
+    TRRNGstart=`expr $TRRNGend + 1`
+    TRRNGend=`expr $TRRNGstart + $TRRNGinc - 1`
+  done
+ 
+# wait for parallel gmtkEMtrain processes to finish before proceeding
+  for (( p=0 ; p < $NUMPROCS ; p+=1 )); do
+    wait ${emaccpid[$p]} || panic ${logname[$p]}
+  done
+}
+
+
+# Merge accumulators and update parameters accordingly
+
+#mergeAccumulators EMiter numComponents inputTrainable outputTrainable [-splitOption X [-vanishOption Y] ]
+function mergeAccumulators {
+  echo Merging accumulators and updating parameters
+  gmtkcmd="$TKSRC/gmtkEMtrain  \
+      $OFARGS \
+      -trrng nil $5 $6 $7 $8 \
+      -inputMasterFile $MASTERFILE \
+      -inputTrainable $3 \
+      -objsNotToTrain doNotTrain \
+      -outputTrainable $4 \
+      -strF $STRFILE \
+      -maxEmIters 1 \
+      -loadAccFile accumulators/acc_@D_${1}_${2}comp.data \
+      -loadAccRange $ACCRANGE \
+      -llStoreFile llstore/llstore.${1}_${2} \
+      -checkTriFileCards F \
+      -varFloor 1e-5 \
+      -dirichletPriors T \
+      -floorVarOnRead T \
+      -meanCloneSTDfrac 0.25 \
+      -covarCloneSTDfrac 0.0 \
+      $CPPARGS \
+  > logs/emtrain.${1}-${2}.log 2>&1"
+  echo Accumulating and training >> command_log
+  echo $gmtkcmd >> command_log
+  eval $gmtkcmd || panic logs/emtrain.${1}-${2}.log
+}
+
+
+function panic {
+  echo An error occurred. See $1
+  exit 5
+}
+
+
+# Train current configuration to specified level of convergence
+
+# trainToConvergence prevEmIter maxLLratio numComponents
+function trainToConvergence {
+  MAX_EM_ITER=1000
+
+  prevIter=$1
+  for (( EMiter=$prevIter+1 ; $EMiter <= $MAX_EM_ITER ; EMiter+=1 )); do
+    echo "-------------------------------------------------"
+
+    prevParams=learnedParams/${3}comp_${prevIter}.gmp
+    newParams=learnedParams/${3}comp_$EMiter.gmp
+
+    generateAccumulators $EMiter $3 $prevParams
+
+    oldLL=`cat llstore/llstore.${prevIter}_${3}`
+
+    mergeAccumulators $EMiter $3 $prevParams $newParams
+
+    curLL=`cat llstore/llstore.${EMiter}_${3}`
+    LLratio=`awk -v a=$curLL -v b=$oldLL 'function abs(x) { if (x<0) return -x; else return x} BEGIN{print (a-b)/abs(b)}'`
+    echo LL ratio $LLratio
+    echo LL $curLL
+
+    converged=`awk -v a=$LLratio -v limit=$2 'BEGIN{if (a < limit) print 1; else print 0}'`
+    if [ $converged -eq 1 ]; then
+      break
+    fi
+    prevIter=$EMiter
+  done
+  cp $newParams learnedParams/${3}comp-frame.gmp
+
+  echo ---Trained to $2 % convergence.
+}
+
+
+trap "exit" INT TERM
+trap "kill 0" EXIT
+
+if [ ! -d accumulators ]; then
+  mkdir accumulators
+fi
+if [ ! -d llstore ]; then
+  mkdir llstore
+fi
+if [ ! -d logs ]; then
+  mkdir logs
+fi
+if [ ! -d learnedParams ]; then
+  mkdir learnedParams
+fi
+
+if [ -f command_log ]; then
+  rm command_log
+  touch command_log
+fi
+
+echo "*********************************************************"
+echo Step 0: Start the training with 1 Gaussian component per mixture
+echo "*********************************************************"
+
+EMiter=0
+numComponents=1
+
+generateAccumulators $EMiter $numComponents $INITIALPARAMS
+mergeAccumulators $EMiter $numComponents $INITIALPARAMS learnedParams/${numComponents}comp_$EMiter.gmp 
+echo LL `cat llstore/llstore.${EMiter}_${numComponents}`
+
+echo "*********************************************************"
+echo Step 1: Train multiple EM iterations with no splitting or vanishing until you have reached 2% convergence.
+echo "*********************************************************"
+# Step 1: Train multiple EM iterations with no splitting or 
+# vanishing until you have reached 2% convergence.
+
+trainToConvergence $EMiter 0.02 $numComponents
+
+# Repeat steps 1 and 2 a few times (typically 5).
+
+echo "*********************************************************"
+echo Step 2: Do an iteration that splits all Gaussians, and then continue training with no splitting/vanishing until 2% convergence ratio is achieved.
+echo "*********************************************************"
+
+NUM_STEPS_1_2=1
+for (( i=0 ; i <= $NUM_STEPS_1_2 ; i+=1 )); do
+  echo
+  echo "================================================="
+  echo Doubling components $numComponents to $((numComponents + $numComponents))
+  echo 
+
+
+  prevParams=learnedParams/${numComponents}comp-frame.gmp
+  prevComponents=$numComponents
+
+  EMiter=0
+  numComponents=`expr $numComponents + $numComponents`
+  newParams=learnedParams/${numComponents}comp_$EMiter.gmp
+
+  generateAccumulators $EMiter $numComponents $prevParams
+  mergeAccumulators $EMiter $numComponents $prevParams $newParams -topForceSplit $prevComponents
+  echo LL `cat llstore/llstore.${EMiter}_${numComponents}`
+ 
+  trainToConvergence $EMiter 0.02 $numComponents
+done
+
+
+# At this point it becomes dangerous to split all Gaussians because 
+# some of them will start to have determinants that reach the
+# minimum, which will kill the job. So, then we start vanishing:
+
+# Repeat steps 3 and 4 a few times. 
+
+NUM_STEPS_3_4=0
+for (( i=0 ; i < $NUM_STEPS_3_4 ; i+=1 )); do
+  echo
+  echo "================================================="
+  echo Moderate vanishing and aggressive splitting: MCVR 10  MCSR 1 round ${i}
+  echo 
+
+echo "*********************************************************"
+echo Step 3: Run one EM iteration with mcvr = 10 and mcsr = 1.
+echo "*********************************************************"
+  prevParams=learnedParams/${numComponents}comp-frame.gmp
+  EMiter=0
+  newParams=learnedParams/${numComponents}comp_$EMiter.gmp
+
+  generateAccumulators $EMiter $numComponents $prevParams
+  mergeAccumulators $EMiter $numComponents $prevParams $newParams -mcvr 10 -mcsr 1
+  echo LL `cat llstore/llstore.${EMiter}_${numComponents}`
+
+
+echo "*********************************************************"
+echo Step 4: Continue training with no splitting/vanishing until 2% convergence.
+echo "*********************************************************"
+
+  trainToConvergence $EMiter 0.02 $numComponents
+done
+
+
+# After a while some of the Gaussians again might start
+# to have determinants that hit the minimum, so we then do:
+
+# Repeat steps 5, 6, and 7 a few times.
+
+NUM_STEPS_5_6_7=10
+for (( i=0 ; i < $NUM_STEPS_5_6_7 ; i+=1 )); do
+
+echo "*********************************************************"
+echo Step 5: Set mcvr = 10, mcsr = 1 for 1 EM iteration.
+echo "*********************************************************"
+  echo
+  echo "================================================="
+  echo Moderate vanishing and aggressive splitting: MCVR 10  MCSR 1 round ${i}
+  echo 
+
+  prevParams=learnedParams/${numComponents}comp-frame.gmp
+  EMiter=0
+  newParams=learnedParams/${numComponents}comp_$EMiter.gmp
+  
+  generateAccumulators $EMiter $numComponents $prevParams
+  mergeAccumulators $EMiter $numComponents $prevParams $newParams -mcvr 10 -mcsr 1
+
+echo "*********************************************************"
+echo "Step 6: Set mcvr = 10, mcsr = 1e10 for 1 iteration (just to kill off some of the weak Gaussians from step 5)"
+echo "*********************************************************"
+  echo "-------------------------------------------------"
+  echo Moderate vanishing and no splitting: MCVR 10  MCSR 1e10 round ${i}
+  echo 
+  prevParams=learnedParams/${numComponents}comp_$EMiter.gmp
+  EMiter=1
+  newParams=learnedParams/${numComponents}comp_$EMiter.gmp
+  
+  generateAccumulators $EMiter $numComponents $prevParams
+  mergeAccumulators $EMiter $numComponents $prevParams $newParams -mcvr 10 -mcsr 1e10
+
+
+echo "*********************************************************"
+echo "Step 7: Continue training with splitting/vanishing until 2% convergence."
+echo "*********************************************************"
+
+  trainToConvergence $EMiter 0.02 $numComponents
+done
+
+
+# Finally to do the final following steps to achieve convergence:
+
+echo "*********************************************************"
+echo "Step 8: Set mcvr = 10, mcsr = 5 for 2 iterations."
+echo "*********************************************************"
+
+
+
+echo
+echo "================================================="
+echo Moderate vanishing/splitting: MCVR 10  MCSR 5
+echo 
+
+prevParams=learnedParams/${numComponents}comp-frame.gmp
+EMiter=0
+newParams=learnedParams/${numComponents}comp_$EMiter.gmp
+  
+generateAccumulators $EMiter $numComponents $prevParams
+mergeAccumulators $EMiter $numComponents $prevParams $newParams -mcvr 10 -mcsr 5
+
+echo "-------------------------------------------------"
+prevParams=learnedParams/${numComponents}comp_$EMiter.gmp
+EMiter=1
+newParams=learnedParams/${numComponents}comp_$EMiter.gmp
+  
+generateAccumulators $EMiter $numComponents $prevParams
+mergeAccumulators $EMiter $numComponents $prevParams $newParams -mcvr 10 -mcsr 5
+
+echo "*********************************************************"
+echo "Step 9: Train with no splitting/vanishing until 0.02% convergence."
+echo "*********************************************************"
+
+
+trainToConvergence $EMiter 0.002 $numComponents
