@@ -1,0 +1,1609 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="DebugNumSmooth" class="ptolemy.actor.TypedCompositeActor">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.devel">
+    </property>
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={73, 30, 1241, 634}, maximized=false}">
+    </property>
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1007, 524]">
+    </property>
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0639387895045094">
+    </property>
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{-199.45800781250006, -1084.8431877664243}">
+    </property>
+    <property name="enableBackwardTypeInference" class="ptolemy.data.expr.Parameter" value="true">
+    </property>
+    <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
+        <property name="stopTime" class="ptolemy.data.expr.Parameter" value="">
+        </property>
+        <property name="stopWhenQueueIsEmpty" class="ptolemy.data.expr.Parameter" value="true">
+        </property>
+        <property name="synchronizeToRealTime" class="ptolemy.data.expr.Parameter" value="false">
+        </property>
+        <property name="enforceMicrostepSemantics" class="ptolemy.data.expr.Parameter" value="false">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-595.0, -1260.0]">
+        </property>
+    </property>
+    <property name="_defaultInferredWidthTo1" class="ptolemy.data.expr.Parameter" value="true">
+    </property>
+    <property name="frameRate" class="ptolemy.data.expr.Parameter" value="15">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-260.0, -1280.0]">
+        </property>
+    </property>
+    <property name="Annotation2" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+        <property name="textSize" class="ptolemy.data.expr.Parameter" value="14">
+        </property>
+        <property name="text" class="ptolemy.kernel.util.StringAttribute" value="fps">
+        </property>
+        <property name="_location" class="ptolemy.vergil.basic.RelativeLocation" value="[-165.0, -1290.0]">
+        </property>
+    </property>
+    <property name="someApplauseThreshold" class="ptolemy.data.expr.Parameter" value="1.0">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-70.0, -1295.0]">
+        </property>
+    </property>
+    <property name="maxApplauseThreshold" class="ptolemy.data.expr.Parameter" value="1.0">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-70.0, -1275.0]">
+        </property>
+    </property>
+    <property name="oldState" class="ptolemy.data.expr.Parameter" value="&quot;no_applause&quot;">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-260.0, -1260.0]">
+        </property>
+    </property>
+    <property name="_layoutConfiguration" class="ptolemy.vergil.basic.layout.LayoutConfiguration">
+        <property name="includeDecorations" class="ptolemy.data.expr.Parameter" value="false">
+            <display name="Include decorations"/>
+        </property>
+    </property>
+    <property name="nOverlap" class="ptolemy.data.expr.Parameter" value="fs/frameRate">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-260.0, -1300.0]">
+        </property>
+    </property>
+    <property name="fs" class="ptolemy.data.expr.Parameter" value="48000">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-260.0, -1320.0]">
+        </property>
+    </property>
+    <entity name="DiscreteClock" class="ptolemy.actor.lib.DiscreteClock">
+        <property name="period" class="ptolemy.actor.parameters.PortParameter" value="1.0/48e3">
+        </property>
+        <property name="values" class="ptolemy.data.expr.Parameter" value="{true}">
+        </property>
+        <doc>Create periodic timed events.</doc>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-530.0, -1160.0}">
+        </property>
+    </entity>
+    <entity name="GMTKOnline2" class="org.terraswarm.accessor.JSAccessor">
+        <property name="script" class="ptolemy.actor.parameters.PortParameter" value="// Copyright (c) 2014-2015 The Regents of the University of California.&#10;// All rights reserved.&#10;&#10;// Permission is hereby granted, without written agreement and without&#10;// license or royalty fees, to use, copy, modify, and distribute this&#10;// software and its documentation for any purpose, provided that the above&#10;// copyright notice and the following two paragraphs appear in all copies&#10;// of this software.&#10;&#10;// IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY&#10;// FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES&#10;// ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF&#10;// THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF&#10;// SUCH DAMAGE.&#10;&#10;// THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,&#10;// INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF&#10;// MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE&#10;// PROVIDED HEREUNDER IS ON AN &quot;AS IS&quot; BASIS, AND THE UNIVERSITY OF&#10;// CALIFORNIA HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES,&#10;// ENHANCEMENTS, OR MODIFICATIONS.&#10;&#10;/** This accessor sends and/or receives messages from a web socket at&#10; *  the specified host and port. In `initialize()`, it&#10; *  begins connecting to the web socket server.&#10; *  Once the connection is established, a `true` boolean is sent to&#10; *  the `connected` output.&#10; *  If connection is not established immediately, the accessor will attempt to&#10; *  reconnect (numberOfRetries) times at an interval of (reconnectInterval)&#10; *&#10; *  Whenever an input is received on the `toSend`&#10; *  input, the message is sent to the socket. If the socket is not yet open,&#10; *  this accessor will, by default, queue the message to send when the socket opens,&#10; *  unless the `discardMessagesBeforeOpen` parameter is true, in which case,&#10; *  input messages that are received before the socket is opened will be&#10; *  discarded. If messages are queued and `throttleFactor` is non-zero, then&#10; *  whenever a message is queued to be later sent, the accessor will stall&#10; *  by a number of milliseconds given by the queue size times the throttleFactor.&#10; *  The longer the queue, the longer the stall. Note that this will likely block&#10; *  the host from executing, so this feature should be used with caution.&#10; *&#10; *  Whenever a message is received from the socket, that message is&#10; *  produced on the `'received'` output. The maxFrameSize parameter limits the size&#10; *  of received messages, and any attempt to send to this client a larger message&#10; *  will cause an error.&#10; *&#10; *  When `wrapup()` is invoked, this accessor closes the&#10; *  connection.&#10; *  &#10; *  If the connection is dropped midway, the client will attempt to reconnect if &#10; *  (reconnectOnClose) is true. This does not apply when the accessor wraps up. &#10; *&#10; *  The default type for both sending and receiving&#10; *  is 'application/json', which allows sending and receiving anything that has&#10; *  a string representation in JSON. The types supported by this implementation&#10; *  include at least:&#10; *  * __application/json__: The send() function uses JSON.stringify() and sends the&#10; *    result with a UTF-8 encoding. An incoming byte stream will be parsed as JSON,&#10; *    and if the parsing fails, will be provided as a string interpretation of the byte&#10; *    stream.&#10; *  * __text/\*__: Any text type is sent as a string encoded in UTF-8.&#10; *  * __image/x__: Where __x__ is one of __json__, __png__, __gif__,&#10; *    and more.&#10; *    In this case, the data passed to send() is assumed to be an image, as encoded&#10; *    on the host, and the image will be encoded as a byte stream in the specified&#10; *    format before sending.  A received byte stream will be decoded as an image,&#10; *    if possible.&#10; *&#10; *  When a model with an instance of this accessor stops executing, there&#10; *  are two mechanisms by which data in transit can be lost. In both cases, warning&#10; *  messages or error messages will be issued to the host to be displayed or otherwise&#10; *  handled as the host sees fit.&#10; *  &#10; *  * First, there might be queued messages that were received on `toSend` but have not yet&#10; *    been sent, either because the socket has not yet been opened or because&#10; *    it was closed from the other side.&#10; *  * Second, a message might be received from the server after shutdown has commenced.&#10; *    In particular, received messages are handled asynchronously by a handler function&#10; *    that can be invoked at any time, and that handler might be invoked after it is no&#10; *    longer possible for this accessor to produce outputs (it has entered its wrapup&#10; *    phase of execution).&#10; *  &#10; *  The server might similarly lose messages by the same two mechanisms occurring&#10; *  on the server side. In that case, messages will presumably be displayed on the&#10; *  server side.&#10; *&#10; *  Accessors that extend this one can override the `toSendInputHandler` function&#10; *  to customize what is sent. See `RosPublisher.js` for an example.&#10; *&#10; *  This accessor requires the 'webSocket' module.&#10; *&#10; *  @accessor net/WebSocketClient&#10; *  @parameter {string} server The IP address or domain name of server. Defaults to 'localhost'.&#10; *  @parameter {int} port The port that the web socket listens to. Defaults to 8080.&#10; *  @parameter {string} receiveType The MIME type for incoming messages, which defaults to 'application/json'.&#10; *  @parameter {string} sendType The MIME type for outgoing messages, which defaults to 'application/json'.&#10; *  @parameter {int} connectTimeout The time in milliseconds to wait before giving up on a connection (default is 60000).&#10; *  @parameter {int} maxFrameSize The maximum frame size for a received message (default is 65536).&#10; *  @parameter {int} numberOfRetries The number of times to retry if a connection fails. Defaults to 5.&#10; *  @parameter {int} timeBetweenRetries The time between retries in milliseconds. Defaults to 100.&#10; *  @parameter {boolean} reconnectOnClose The option of whether or not to reconnect when disconnected.&#10; *  @parameter {boolean} discardMessagesBeforeOpen If true, then any messages received on `toSend` before the socket is open will be discarded. This defaults to false.&#10; *  @parameter {int} throttleFactor If non-zero, specifies a time (in milliseconds) to stall when a message is queued because the socket is not yet open. The time of the stall will be the queue size (after adding the message) times the throttleFactor. This defaults to 0.&#10; *  @input toSend The data to be sent over the socket.&#10; *  @output {boolean} connected Output `true` on connected and `false` on disconnected.&#10; *  @output received The data received from the web socket server.&#10; *  @author Hokeun Kim, Marcus Pan, Edward A. Lee, Matt Weber&#10; *  @version $$Id: WebSocketClient.js 292 2015-09-01 14:16:50Z eal $$&#10; */&#10;/* These are needed by JSLint, see https://chess.eecs.berkeley.edu/ptexternal/wiki/Main/JSLint */&#10;&quot;use strict&quot;;&#10;/*global addInputHandler, error, get, getParameter, input, onClose, output, parameter, removeInputHandler, send */&#10;&#10;var WebSocket = require('webSocket');&#10;var client = null;&#10;var inputHandle = null;&#10;&#10;/** Set up the accessor by defining the parameters, inputs, and outputs. */&#10;exports.setup = function () {&#10;    parameter('server', {&#10;        type : 'string',&#10;        value : 'localhost'&#10;    });&#10;    parameter('port', {&#10;        type : 'int',&#10;        value : 8080&#10;    });&#10;    parameter('receiveType', {&#10;        type : 'string',&#10;        value : 'application/json',&#10;        options : WebSocket.supportedReceiveTypes()&#10;    });&#10;    parameter('sendType', {&#10;        type : 'string',&#10;        value : 'application/json',&#10;        options : WebSocket.supportedSendTypes()&#10;    });&#10;    parameter('connectTimeout', {&#10;        value: 60000, &#10;        type: &quot;int&quot; &#10;    });&#10;    parameter('maxFrameSize', {&#10;        value: 65536, &#10;        type: &quot;int&quot; &#10;    });&#10;    parameter('numberOfRetries', {&#10;        type : 'int',&#10;        value : 5&#10;    });&#10;    parameter('timeBetweenRetries', {&#10;        type : 'int',&#10;        value : 100&#10;    });&#10;    parameter('reconnectOnClose', {&#10;        type : 'boolean',&#10;        value : true&#10;    });&#10;    parameter('discardMessagesBeforeOpen', {&#10;        type : 'boolean',&#10;        value : false&#10;    });&#10;    parameter('throttleFactor', {&#10;        type : 'int',&#10;        value : 0&#10;    });&#10;    input('toSend');&#10;    output('connected', {&#10;        type : 'boolean'&#10;    });&#10;    output('received');&#10;};&#10;&#10;/** Initializes accessor by attaching functions to inputs. */&#10;exports.initialize = function () {&#10;&#10;    //record the object that calls it (could be a derived accessor). &#10;    var callObj = this;&#10;&#10;    client = new WebSocket.Client(&#10;        {&#10;            'host' : getParameter('server'),&#10;            'port' : getParameter('port'),&#10;            'receiveType' : getParameter('receiveType'),&#10;            'sendType' : getParameter('sendType'),&#10;            'connectTimeout' : getParameter('connectTimeout'),&#10;            'maxFrameSize' : getParameter('maxFrameSize'),&#10;            'numberOfRetries' : getParameter('numberOfRetries'),&#10;            'timeBetweenRetries' : getParameter('timeBetweenRetries'),&#10;            'discardMessagesBeforeOpen' : getParameter('discardMessagesBeforeOpen'),&#10;            'throttleFactor' : getParameter('throttleFactor')&#10;        }&#10;    );&#10;&#10;    client.on('open', this.onOpen);&#10;    client.on('message', this.onMessage);&#10;&#10;    //bind onClose() to caller's object, &#10;    //so initialize() of caller's object is called if reconnect is true.&#10;    client.on('close', onClose.bind(callObj));&#10;    client.on('error', function (message) {&#10;        error(message);&#10;    });&#10;    //only execute once, and not when trying to reconnect. &#10;    if (inputHandle === null) {&#10;        inputHandle = addInputHandler('toSend', this.toSendInputHandler);&#10;    }&#10;};&#10;&#10;/** Handles input on 'toSend'. */&#10;exports.toSendInputHandler = function () {&#10;    exports.sendToWebSocket(get('toSend'));&#10;};&#10;&#10;/** Sends JSON data to the web socket. */&#10;exports.sendToWebSocket = function (data) {&#10;    if (client !== null) {&#10;        client.send(data);&#10;        //console.log(&quot;Sending to web socket: &quot; + data);&#10;    } else {&#10;        console.log(&quot;Client is null. Could not send message: &quot; + data);&#10;    }&#10;};&#10;&#10;/** Executes once  web socket establishes a connection.&#10; *   Sets 'connected' output to true.&#10; */&#10;exports.onOpen = function () {&#10;    console.log('Status: Connection established');&#10;    send('connected', true);&#10;};&#10;&#10;/** Send false to 'connected' output, and if 'reconnectOnClose'&#10; *  parameter evaluates to true and wrapup() has not been called,&#10; *  then invoke initialize().&#10; *  This will be called if either side closes the connection.&#10; *  @param message Possible message about the closure.&#10; */&#10;function onClose(message) {&#10;    console.log('Status: Connection closed: ' + message);&#10;    if (inputHandle) {&#10;        // wrapup() has not been called.&#10;        // Probably the server closed the connection.&#10;        send('connected', false);&#10;        // Reconnect if reconnectOnClose is true.&#10;        if (getParameter('reconnectOnClose')) {&#10;            // Use 'this' rather than 'export' so initialize() can be overridden.&#10;            this.initialize();&#10;        } else {&#10;            // Not set to reconnect on close.&#10;            // Close and unregister everything.&#10;            client.removeAllListeners('open');&#10;            client.removeAllListeners('message');&#10;            client.removeAllListeners('close');&#10;            client = null;&#10;        }&#10;    }&#10;}&#10;&#10;/** Send the message received from web socket to the 'received' output. */&#10;exports.onMessage = function (message) {&#10;    send('received', message);&#10;};&#10;&#10;/** Close the web socket connection. */&#10;exports.wrapup = function () {&#10;    if (inputHandle !== null) {&#10;        removeInputHandler(inputHandle);&#10;        inputHandle = null;&#10;    }&#10;    if (client) {&#10;        client.removeAllListeners('open');&#10;        client.removeAllListeners('message');&#10;        client.removeAllListeners('close');&#10;        client.close();&#10;        console.log('Status: Connection closed in wrapup.');&#10;        client = null;&#10;    }&#10;};&#10;">
+            <property name="style" class="ptolemy.actor.gui.style.NoteStyle">
+                <property name="note" class="ptolemy.kernel.util.StringAttribute" value="NOTE: To see the script, invoke Open Actor">
+                </property>
+            </property>
+        </property>
+        <property name="accessorSource" class="org.terraswarm.accessor.JSAccessor$ActionableAttribute" value="http://www.terraswarm.org/accessors/net/WebSocketClient.js">
+        </property>
+        <property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+            <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;This accessor sends and/or receives messages from a web socket at&#10; the specified host and port. In &lt;code&gt;initialize()&lt;/code&gt;, it&#10; begins connecting to the web socket server.&#10; Once the connection is established, a &lt;code&gt;true&lt;/code&gt; boolean is sent to&#10; the &lt;code&gt;connected&lt;/code&gt; output.&#10; If connection is not established immediately, the accessor will attempt to&#10; reconnect (numberOfRetries) times at an interval of (reconnectInterval)&lt;/p&gt;&#10;&lt;p&gt; Whenever an input is received on the &lt;code&gt;toSend&lt;/code&gt;&#10; input, the message is sent to the socket. If the socket is not yet open,&#10; this accessor will, by default, queue the message to send when the socket opens,&#10; unless the &lt;code&gt;discardMessagesBeforeOpen&lt;/code&gt; parameter is true, in which case,&#10; input messages that are received before the socket is opened will be&#10; discarded. If messages are queued and &lt;code&gt;throttleFactor&lt;/code&gt; is non-zero, then&#10; whenever a message is queued to be later sent, the accessor will stall&#10; by a number of milliseconds given by the queue size times the throttleFactor.&#10; The longer the queue, the longer the stall. Note that this will likely block&#10; the host from executing, so this feature should be used with caution.&lt;/p&gt;&#10;&lt;p&gt; Whenever a message is received from the socket, that message is&#10; produced on the &lt;code&gt;'received'&lt;/code&gt; output.&lt;/p&gt;&#10;&lt;p&gt; When &lt;code&gt;wrapup()&lt;/code&gt; is invoked, this accessor closes the&#10; connection.&lt;/p&gt;&#10;&lt;p&gt; If the connection is dropped midway, the client will attempt to reconnect if &#10; (reconnectOnClose) is true. This does not apply when the accessor wraps up. &lt;/p&gt;&#10;&lt;p&gt; The data can be any type that has a JSON representation.&#10; For incoming messages, this accessor assumes that the message is&#10; a string in UTF-8 that encodes a JSON object.&lt;/p&gt;&#10;&lt;p&gt; When a model with an instance of this accessor stops executing, there&#10; are two mechanisms by which data in transit can be lost. In both cases, warning&#10; messages or error messages will be issued to the host to be displayed or otherwise&#10; handled as the host sees fit.&lt;/p&gt;&#10;&lt;h1&gt;First, there might be queued messages that were received on &lt;code&gt;toSend&lt;/code&gt; but have not yet&lt;/h1&gt;&lt;p&gt;   been sent, either because the socket has not yet been opened or because&#10;   it was closed from the other side.&lt;/p&gt;&#10;&lt;h1&gt;Second, a message might be received from the server after shutdown has commenced.&lt;/h1&gt;&lt;p&gt;   In particular, received messages are handled asynchronously by a handler function&#10;   that can be invoked at any time, and that handler might be invoked after it is no&#10;   longer possible for this accessor to produce outputs (it has entered its wrapup&#10;   phase of execution).&lt;/p&gt;&#10;&lt;p&gt; The server might similarly lose messages by the same two mechanisms occurring&#10; on the server side. In that case, messages will presumably be displayed on the&#10; server side.&lt;/p&gt;&#10;&lt;p&gt; Accessors that extend this one can override the &lt;code&gt;toSendInputHandler&lt;/code&gt; function&#10; to customize what is sent. See &lt;code&gt;RosPublisher.js&lt;/code&gt; for an example.&lt;/p&gt;&#10;&lt;p&gt; This accessor requires the 'webSocket' module.&lt;/p&gt;">
+            </property>
+            <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Hokeun Kim, Marcus Pan, Edward A. Lee, Matt Weber">
+            </property>
+            <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$Id: WebSocketClient.js 255 2015-08-12 00:05:42Z cxh $">
+            </property>
+            <property name="toSend (port)" class="ptolemy.kernel.util.StringAttribute" value="undefined The data to be sent over the socket.">
+            </property>
+            <property name="connected (port)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;boolean&quot;]}) Output `true` on connected and `false` on disconnected.">
+            </property>
+            <property name="received (port)" class="ptolemy.kernel.util.StringAttribute" value="undefined The data received from the web socket server.">
+            </property>
+            <property name="server (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;string&quot;]}) The IP address or domain name of server. Defaults to 'localhost'.">
+            </property>
+            <property name="port (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) The port that the web socket listens to. Defaults to 8080.">
+            </property>
+            <property name="numberOfRetries (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) The number of times to retry if a connection fails. Defaults to 5.">
+            </property>
+            <property name="timeBetweenRetries (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) The time between retries in milliseconds. Defaults to 100.">
+            </property>
+            <property name="reconnectOnClose (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;boolean&quot;]}) The option of whether or not to reconnect when disconnected.">
+            </property>
+            <property name="discardMessagesBeforeOpen (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;boolean&quot;]}) If true, then any messages received on `toSend` before the socket is open will be discarded. This defaults to false.">
+            </property>
+            <property name="throttleFactor (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) If non-zero, specifies a time (in milliseconds) to stall when a message is queued because the socket is not yet open. The time of the stall will be the queue size (after adding the message) times the throttleFactor. This defaults to 0.">
+            </property>
+        </property>
+        <property name="_tableauFactory" class="ptolemy.vergil.toolbox.TextEditorTableauFactory">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="script">
+            </property>
+            <property name="syntaxStyle" class="ptolemy.kernel.util.StringAttribute" value="text/javascript">
+            </property>
+        </property>
+        <property name="server" class="ptolemy.data.expr.Parameter" value="localhost">
+            <property name="_stringMode" class="ptolemy.kernel.util.SingletonAttribute">
+            </property>
+        </property>
+        <property name="port" class="ptolemy.data.expr.Parameter" value="8082">
+        </property>
+        <property name="numberOfRetries" class="ptolemy.data.expr.Parameter" value="5">
+        </property>
+        <property name="timeBetweenRetries" class="ptolemy.data.expr.Parameter" value="100">
+        </property>
+        <property name="reconnectOnClose" class="ptolemy.data.expr.Parameter" value="true">
+        </property>
+        <property name="discardMessagesBeforeOpen" class="ptolemy.data.expr.Parameter" value="false">
+        </property>
+        <property name="throttleFactor" class="ptolemy.data.expr.Parameter" value="0">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-250.0, -1160.0}">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.EditorIcon">
+            <property name="rectangle" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[0.0, 0.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="60">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="40">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0, 1.0, 1.0, 1.0}">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line2" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-21.0, -11.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-16.0, 0.0]">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="40.0">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="0.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-21.0, -11.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,0.2,0.2,1.0}">
+                </property>
+            </property>
+            <property name="ellipse5" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-20.0, 12.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.2,0.6,1.0}">
+                </property>
+            </property>
+            <property name="ellipse6" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-8.0, 12.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.2,0.6,1.0}">
+                </property>
+            </property>
+            <property name="ellipse7" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[4.0, 12.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.2,0.6,1.0}">
+                </property>
+            </property>
+            <property name="ellipse11" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[10.0, 0.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,1.0,1,1.0}">
+                </property>
+            </property>
+            <property name="line3" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-9.0, -12.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line4" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[2.0, -13.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line5" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[17.0, -9.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line6" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-21.0, 12.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="-10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line8" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-8.0, 12.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="-10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line10" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[3.0, 13.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="-10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line11" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[16.0, 12.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="-10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={158, 438, 934, 634}, maximized=false}">
+            </property>
+            <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 524]">
+            </property>
+            <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="4.0">
+            </property>
+            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{12.5, 9.25}">
+            </property>
+            <property name="ellipse4" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[16.0, -11.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,0.2,0.2,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse12" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[22.0, 0.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,1.0,1,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse8" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[17.0, 12.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.2,0.6,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse10" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-2.0, 0.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,1.0,1,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse3" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[4.0, -11.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,0.2,0.2,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse9" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-14.0, 0.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,1.0,1,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse2" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-8.0, -11.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,0.2,0.2,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+        </property>
+        <property name="receiveType" class="ptolemy.data.expr.Parameter" value="application/json">
+            <property name="_stringMode" class="ptolemy.kernel.util.SingletonAttribute">
+            </property>
+        </property>
+        <property name="sendType" class="ptolemy.data.expr.Parameter" value="application/json">
+            <property name="_stringMode" class="ptolemy.kernel.util.SingletonAttribute">
+            </property>
+        </property>
+        <property name="connectTimeout" class="ptolemy.data.expr.Parameter" value="60000">
+        </property>
+        <property name="maxFrameSize" class="ptolemy.data.expr.Parameter" value="65536">
+        </property>
+        <property name="_expertMode" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <port name="toSend" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="connected" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="received" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+    </entity>
+    <entity name="ApplauseScore2" class="ptolemy.actor.lib.jjs.JavaScript">
+        <property name="script" class="ptolemy.actor.parameters.PortParameter" value="// Put your JavaScript program here.&#10;// Add ports and parameters.&#10;// Define JavaScript functions initialize(), fire(), and/or wrapup().&#10;// Refer to parameters in scope using dollar-sign{parameterName}.&#10;// In the fire() function, use get(parameterName, channel) to read inputs.&#10;// Send to output ports using send(value, portName, channel).&#10;exports.setup = function() {&#10;  input('input');&#10;  output('output',{'type':'number'});&#10;  output('frame',{'type':'string'});&#10;} &#10;exports.fire = function() {&#10;  var token = get('input'); &#10; &#10;  token = token[0];&#10;  decoded_state = token.MPEvalue;&#10;  var hidden = decoded_state.startsWith(&quot;yesApplause&quot;)? 1.0:0.0;&#10;  //if (hidden == 1) {&#10;        send('output', parseFloat(hidden));&#10;        send('frame', parseInt(token.frame)); &#10;//}&#10;}">
+            <property name="style" class="ptolemy.actor.gui.style.NoteStyle">
+                <property name="note" class="ptolemy.kernel.util.StringAttribute" value="NOTE: To see the script, invoke Open Actor">
+                </property>
+            </property>
+        </property>
+        <property name="_tableauFactory" class="ptolemy.vergil.toolbox.TextEditorTableauFactory">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="script">
+            </property>
+            <property name="syntaxStyle" class="ptolemy.kernel.util.StringAttribute" value="text/javascript">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-105.0, -1150.0}">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.EditorIcon">
+            <property name="rectangle" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-1.0, -1.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="60">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="40">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0, 1.0, 1.0, 1.0}">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="rectangle2" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-1.0, -1.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="54.0">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="35.0">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.8,1.0,0.8,0.2}">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="Annotation" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+                <property name="textSize" class="ptolemy.data.expr.Parameter" value="24">
+                </property>
+                <property name="textColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.6,0.4,1.0}">
+                </property>
+                <property name="fontFamily" class="ptolemy.data.expr.StringParameter" value="Wingdings 2">
+                </property>
+                <property name="bold" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="text" class="ptolemy.kernel.util.StringAttribute" value="NN">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-25.0, -13.0]">
+                </property>
+            </property>
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="output" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="frame" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+    </entity>
+    <entity name="SequencePlotter" class="ptolemy.actor.lib.gui.SequencePlotter">
+        <property name="fillOnWrapup" class="ptolemy.data.expr.Parameter" value="false">
+        </property>
+        <property name="automaticRescale" class="ptolemy.data.expr.Parameter" value="true">
+        </property>
+        <property name="legend" class="ptolemy.kernel.util.StringAttribute" value="numSmooth 2, numSmooth 3, numSmooth 5">
+        </property>
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={78, 278, 1246, 311}, maximized=false}">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[1246, 267]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{15.0, -1155.0}">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>SequencePlotter</title>
+<xLabel></xLabel>
+<yLabel></yLabel>
+<xRange min="0.0" max="383.0"/>
+<yRange min="0.0" max="1.0"/>
+<default marks="dots"/>
+</plot>?>
+        </configure>
+    </entity>
+    <entity name="GMTKOnline" class="org.terraswarm.accessor.JSAccessor">
+        <property name="script" class="ptolemy.actor.parameters.PortParameter" value="// Copyright (c) 2014-2015 The Regents of the University of California.&#10;// All rights reserved.&#10;&#10;// Permission is hereby granted, without written agreement and without&#10;// license or royalty fees, to use, copy, modify, and distribute this&#10;// software and its documentation for any purpose, provided that the above&#10;// copyright notice and the following two paragraphs appear in all copies&#10;// of this software.&#10;&#10;// IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY&#10;// FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES&#10;// ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF&#10;// THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF&#10;// SUCH DAMAGE.&#10;&#10;// THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,&#10;// INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF&#10;// MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE&#10;// PROVIDED HEREUNDER IS ON AN &quot;AS IS&quot; BASIS, AND THE UNIVERSITY OF&#10;// CALIFORNIA HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES,&#10;// ENHANCEMENTS, OR MODIFICATIONS.&#10;&#10;/** This accessor sends and/or receives messages from a web socket at&#10; *  the specified host and port. In `initialize()`, it&#10; *  begins connecting to the web socket server.&#10; *  Once the connection is established, a `true` boolean is sent to&#10; *  the `connected` output.&#10; *  If connection is not established immediately, the accessor will attempt to&#10; *  reconnect (numberOfRetries) times at an interval of (reconnectInterval)&#10; *&#10; *  Whenever an input is received on the `toSend`&#10; *  input, the message is sent to the socket. If the socket is not yet open,&#10; *  this accessor will, by default, queue the message to send when the socket opens,&#10; *  unless the `discardMessagesBeforeOpen` parameter is true, in which case,&#10; *  input messages that are received before the socket is opened will be&#10; *  discarded. If messages are queued and `throttleFactor` is non-zero, then&#10; *  whenever a message is queued to be later sent, the accessor will stall&#10; *  by a number of milliseconds given by the queue size times the throttleFactor.&#10; *  The longer the queue, the longer the stall. Note that this will likely block&#10; *  the host from executing, so this feature should be used with caution.&#10; *&#10; *  Whenever a message is received from the socket, that message is&#10; *  produced on the `'received'` output. The maxFrameSize parameter limits the size&#10; *  of received messages, and any attempt to send to this client a larger message&#10; *  will cause an error.&#10; *&#10; *  When `wrapup()` is invoked, this accessor closes the&#10; *  connection.&#10; *  &#10; *  If the connection is dropped midway, the client will attempt to reconnect if &#10; *  (reconnectOnClose) is true. This does not apply when the accessor wraps up. &#10; *&#10; *  The default type for both sending and receiving&#10; *  is 'application/json', which allows sending and receiving anything that has&#10; *  a string representation in JSON. The types supported by this implementation&#10; *  include at least:&#10; *  * __application/json__: The send() function uses JSON.stringify() and sends the&#10; *    result with a UTF-8 encoding. An incoming byte stream will be parsed as JSON,&#10; *    and if the parsing fails, will be provided as a string interpretation of the byte&#10; *    stream.&#10; *  * __text/\*__: Any text type is sent as a string encoded in UTF-8.&#10; *  * __image/x__: Where __x__ is one of __json__, __png__, __gif__,&#10; *    and more.&#10; *    In this case, the data passed to send() is assumed to be an image, as encoded&#10; *    on the host, and the image will be encoded as a byte stream in the specified&#10; *    format before sending.  A received byte stream will be decoded as an image,&#10; *    if possible.&#10; *&#10; *  When a model with an instance of this accessor stops executing, there&#10; *  are two mechanisms by which data in transit can be lost. In both cases, warning&#10; *  messages or error messages will be issued to the host to be displayed or otherwise&#10; *  handled as the host sees fit.&#10; *  &#10; *  * First, there might be queued messages that were received on `toSend` but have not yet&#10; *    been sent, either because the socket has not yet been opened or because&#10; *    it was closed from the other side.&#10; *  * Second, a message might be received from the server after shutdown has commenced.&#10; *    In particular, received messages are handled asynchronously by a handler function&#10; *    that can be invoked at any time, and that handler might be invoked after it is no&#10; *    longer possible for this accessor to produce outputs (it has entered its wrapup&#10; *    phase of execution).&#10; *  &#10; *  The server might similarly lose messages by the same two mechanisms occurring&#10; *  on the server side. In that case, messages will presumably be displayed on the&#10; *  server side.&#10; *&#10; *  Accessors that extend this one can override the `toSendInputHandler` function&#10; *  to customize what is sent. See `RosPublisher.js` for an example.&#10; *&#10; *  This accessor requires the 'webSocket' module.&#10; *&#10; *  @accessor net/WebSocketClient&#10; *  @parameter {string} server The IP address or domain name of server. Defaults to 'localhost'.&#10; *  @parameter {int} port The port that the web socket listens to. Defaults to 8080.&#10; *  @parameter {string} receiveType The MIME type for incoming messages, which defaults to 'application/json'.&#10; *  @parameter {string} sendType The MIME type for outgoing messages, which defaults to 'application/json'.&#10; *  @parameter {int} connectTimeout The time in milliseconds to wait before giving up on a connection (default is 60000).&#10; *  @parameter {int} maxFrameSize The maximum frame size for a received message (default is 65536).&#10; *  @parameter {int} numberOfRetries The number of times to retry if a connection fails. Defaults to 5.&#10; *  @parameter {int} timeBetweenRetries The time between retries in milliseconds. Defaults to 100.&#10; *  @parameter {boolean} reconnectOnClose The option of whether or not to reconnect when disconnected.&#10; *  @parameter {boolean} discardMessagesBeforeOpen If true, then any messages received on `toSend` before the socket is open will be discarded. This defaults to false.&#10; *  @parameter {int} throttleFactor If non-zero, specifies a time (in milliseconds) to stall when a message is queued because the socket is not yet open. The time of the stall will be the queue size (after adding the message) times the throttleFactor. This defaults to 0.&#10; *  @input toSend The data to be sent over the socket.&#10; *  @output {boolean} connected Output `true` on connected and `false` on disconnected.&#10; *  @output received The data received from the web socket server.&#10; *  @author Hokeun Kim, Marcus Pan, Edward A. Lee, Matt Weber&#10; *  @version $$Id: WebSocketClient.js 292 2015-09-01 14:16:50Z eal $$&#10; */&#10;/* These are needed by JSLint, see https://chess.eecs.berkeley.edu/ptexternal/wiki/Main/JSLint */&#10;&quot;use strict&quot;;&#10;/*global addInputHandler, error, get, getParameter, input, onClose, output, parameter, removeInputHandler, send */&#10;&#10;var WebSocket = require('webSocket');&#10;var client = null;&#10;var inputHandle = null;&#10;&#10;/** Set up the accessor by defining the parameters, inputs, and outputs. */&#10;exports.setup = function () {&#10;    parameter('server', {&#10;        type : 'string',&#10;        value : 'localhost'&#10;    });&#10;    parameter('port', {&#10;        type : 'int',&#10;        value : 8080&#10;    });&#10;    parameter('receiveType', {&#10;        type : 'string',&#10;        value : 'application/json',&#10;        options : WebSocket.supportedReceiveTypes()&#10;    });&#10;    parameter('sendType', {&#10;        type : 'string',&#10;        value : 'application/json',&#10;        options : WebSocket.supportedSendTypes()&#10;    });&#10;    parameter('connectTimeout', {&#10;        value: 60000, &#10;        type: &quot;int&quot; &#10;    });&#10;    parameter('maxFrameSize', {&#10;        value: 65536, &#10;        type: &quot;int&quot; &#10;    });&#10;    parameter('numberOfRetries', {&#10;        type : 'int',&#10;        value : 5&#10;    });&#10;    parameter('timeBetweenRetries', {&#10;        type : 'int',&#10;        value : 100&#10;    });&#10;    parameter('reconnectOnClose', {&#10;        type : 'boolean',&#10;        value : true&#10;    });&#10;    parameter('discardMessagesBeforeOpen', {&#10;        type : 'boolean',&#10;        value : false&#10;    });&#10;    parameter('throttleFactor', {&#10;        type : 'int',&#10;        value : 0&#10;    });&#10;    input('toSend');&#10;    output('connected', {&#10;        type : 'boolean'&#10;    });&#10;    output('received');&#10;};&#10;&#10;/** Initializes accessor by attaching functions to inputs. */&#10;exports.initialize = function () {&#10;&#10;    //record the object that calls it (could be a derived accessor). &#10;    var callObj = this;&#10;&#10;    client = new WebSocket.Client(&#10;        {&#10;            'host' : getParameter('server'),&#10;            'port' : getParameter('port'),&#10;            'receiveType' : getParameter('receiveType'),&#10;            'sendType' : getParameter('sendType'),&#10;            'connectTimeout' : getParameter('connectTimeout'),&#10;            'maxFrameSize' : getParameter('maxFrameSize'),&#10;            'numberOfRetries' : getParameter('numberOfRetries'),&#10;            'timeBetweenRetries' : getParameter('timeBetweenRetries'),&#10;            'discardMessagesBeforeOpen' : getParameter('discardMessagesBeforeOpen'),&#10;            'throttleFactor' : getParameter('throttleFactor')&#10;        }&#10;    );&#10;&#10;    client.on('open', this.onOpen);&#10;    client.on('message', this.onMessage);&#10;&#10;    //bind onClose() to caller's object, &#10;    //so initialize() of caller's object is called if reconnect is true.&#10;    client.on('close', onClose.bind(callObj));&#10;    client.on('error', function (message) {&#10;        error(message);&#10;    });&#10;    //only execute once, and not when trying to reconnect. &#10;    if (inputHandle === null) {&#10;        inputHandle = addInputHandler('toSend', this.toSendInputHandler);&#10;    }&#10;};&#10;&#10;/** Handles input on 'toSend'. */&#10;exports.toSendInputHandler = function () {&#10;    exports.sendToWebSocket(get('toSend'));&#10;};&#10;&#10;/** Sends JSON data to the web socket. */&#10;exports.sendToWebSocket = function (data) {&#10;    if (client !== null) {&#10;        client.send(data);&#10;        //console.log(&quot;Sending to web socket: &quot; + data);&#10;    } else {&#10;        console.log(&quot;Client is null. Could not send message: &quot; + data);&#10;    }&#10;};&#10;&#10;/** Executes once  web socket establishes a connection.&#10; *   Sets 'connected' output to true.&#10; */&#10;exports.onOpen = function () {&#10;    console.log('Status: Connection established');&#10;    send('connected', true);&#10;};&#10;&#10;/** Send false to 'connected' output, and if 'reconnectOnClose'&#10; *  parameter evaluates to true and wrapup() has not been called,&#10; *  then invoke initialize().&#10; *  This will be called if either side closes the connection.&#10; *  @param message Possible message about the closure.&#10; */&#10;function onClose(message) {&#10;    console.log('Status: Connection closed: ' + message);&#10;    if (inputHandle) {&#10;        // wrapup() has not been called.&#10;        // Probably the server closed the connection.&#10;        send('connected', false);&#10;        // Reconnect if reconnectOnClose is true.&#10;        if (getParameter('reconnectOnClose')) {&#10;            // Use 'this' rather than 'export' so initialize() can be overridden.&#10;            this.initialize();&#10;        } else {&#10;            // Not set to reconnect on close.&#10;            // Close and unregister everything.&#10;            client.removeAllListeners('open');&#10;            client.removeAllListeners('message');&#10;            client.removeAllListeners('close');&#10;            client = null;&#10;        }&#10;    }&#10;}&#10;&#10;/** Send the message received from web socket to the 'received' output. */&#10;exports.onMessage = function (message) {&#10;    send('received', message);&#10;};&#10;&#10;/** Close the web socket connection. */&#10;exports.wrapup = function () {&#10;    if (inputHandle !== null) {&#10;        removeInputHandler(inputHandle);&#10;        inputHandle = null;&#10;    }&#10;    if (client) {&#10;        client.removeAllListeners('open');&#10;        client.removeAllListeners('message');&#10;        client.removeAllListeners('close');&#10;        client.close();&#10;        console.log('Status: Connection closed in wrapup.');&#10;        client = null;&#10;    }&#10;};&#10;">
+            <property name="style" class="ptolemy.actor.gui.style.NoteStyle">
+                <property name="note" class="ptolemy.kernel.util.StringAttribute" value="NOTE: To see the script, invoke Open Actor">
+                </property>
+            </property>
+        </property>
+        <property name="accessorSource" class="org.terraswarm.accessor.JSAccessor$ActionableAttribute" value="http://www.terraswarm.org/accessors/net/WebSocketClient.js">
+        </property>
+        <property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+            <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;This accessor sends and/or receives messages from a web socket at&#10; the specified host and port. In &lt;code&gt;initialize()&lt;/code&gt;, it&#10; begins connecting to the web socket server.&#10; Once the connection is established, a &lt;code&gt;true&lt;/code&gt; boolean is sent to&#10; the &lt;code&gt;connected&lt;/code&gt; output.&#10; If connection is not established immediately, the accessor will attempt to&#10; reconnect (numberOfRetries) times at an interval of (reconnectInterval)&lt;/p&gt;&#10;&lt;p&gt; Whenever an input is received on the &lt;code&gt;toSend&lt;/code&gt;&#10; input, the message is sent to the socket. If the socket is not yet open,&#10; this accessor will, by default, queue the message to send when the socket opens,&#10; unless the &lt;code&gt;discardMessagesBeforeOpen&lt;/code&gt; parameter is true, in which case,&#10; input messages that are received before the socket is opened will be&#10; discarded. If messages are queued and &lt;code&gt;throttleFactor&lt;/code&gt; is non-zero, then&#10; whenever a message is queued to be later sent, the accessor will stall&#10; by a number of milliseconds given by the queue size times the throttleFactor.&#10; The longer the queue, the longer the stall. Note that this will likely block&#10; the host from executing, so this feature should be used with caution.&lt;/p&gt;&#10;&lt;p&gt; Whenever a message is received from the socket, that message is&#10; produced on the &lt;code&gt;'received'&lt;/code&gt; output.&lt;/p&gt;&#10;&lt;p&gt; When &lt;code&gt;wrapup()&lt;/code&gt; is invoked, this accessor closes the&#10; connection.&lt;/p&gt;&#10;&lt;p&gt; If the connection is dropped midway, the client will attempt to reconnect if &#10; (reconnectOnClose) is true. This does not apply when the accessor wraps up. &lt;/p&gt;&#10;&lt;p&gt; The data can be any type that has a JSON representation.&#10; For incoming messages, this accessor assumes that the message is&#10; a string in UTF-8 that encodes a JSON object.&lt;/p&gt;&#10;&lt;p&gt; When a model with an instance of this accessor stops executing, there&#10; are two mechanisms by which data in transit can be lost. In both cases, warning&#10; messages or error messages will be issued to the host to be displayed or otherwise&#10; handled as the host sees fit.&lt;/p&gt;&#10;&lt;h1&gt;First, there might be queued messages that were received on &lt;code&gt;toSend&lt;/code&gt; but have not yet&lt;/h1&gt;&lt;p&gt;   been sent, either because the socket has not yet been opened or because&#10;   it was closed from the other side.&lt;/p&gt;&#10;&lt;h1&gt;Second, a message might be received from the server after shutdown has commenced.&lt;/h1&gt;&lt;p&gt;   In particular, received messages are handled asynchronously by a handler function&#10;   that can be invoked at any time, and that handler might be invoked after it is no&#10;   longer possible for this accessor to produce outputs (it has entered its wrapup&#10;   phase of execution).&lt;/p&gt;&#10;&lt;p&gt; The server might similarly lose messages by the same two mechanisms occurring&#10; on the server side. In that case, messages will presumably be displayed on the&#10; server side.&lt;/p&gt;&#10;&lt;p&gt; Accessors that extend this one can override the &lt;code&gt;toSendInputHandler&lt;/code&gt; function&#10; to customize what is sent. See &lt;code&gt;RosPublisher.js&lt;/code&gt; for an example.&lt;/p&gt;&#10;&lt;p&gt; This accessor requires the 'webSocket' module.&lt;/p&gt;">
+            </property>
+            <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Hokeun Kim, Marcus Pan, Edward A. Lee, Matt Weber">
+            </property>
+            <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$Id: WebSocketClient.js 255 2015-08-12 00:05:42Z cxh $">
+            </property>
+            <property name="toSend (port)" class="ptolemy.kernel.util.StringAttribute" value="undefined The data to be sent over the socket.">
+            </property>
+            <property name="connected (port)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;boolean&quot;]}) Output `true` on connected and `false` on disconnected.">
+            </property>
+            <property name="received (port)" class="ptolemy.kernel.util.StringAttribute" value="undefined The data received from the web socket server.">
+            </property>
+            <property name="server (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;string&quot;]}) The IP address or domain name of server. Defaults to 'localhost'.">
+            </property>
+            <property name="port (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) The port that the web socket listens to. Defaults to 8080.">
+            </property>
+            <property name="numberOfRetries (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) The number of times to retry if a connection fails. Defaults to 5.">
+            </property>
+            <property name="timeBetweenRetries (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) The time between retries in milliseconds. Defaults to 100.">
+            </property>
+            <property name="reconnectOnClose (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;boolean&quot;]}) The option of whether or not to reconnect when disconnected.">
+            </property>
+            <property name="discardMessagesBeforeOpen (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;boolean&quot;]}) If true, then any messages received on `toSend` before the socket is open will be discarded. This defaults to false.">
+            </property>
+            <property name="throttleFactor (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) If non-zero, specifies a time (in milliseconds) to stall when a message is queued because the socket is not yet open. The time of the stall will be the queue size (after adding the message) times the throttleFactor. This defaults to 0.">
+            </property>
+        </property>
+        <property name="_tableauFactory" class="ptolemy.vergil.toolbox.TextEditorTableauFactory">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="script">
+            </property>
+            <property name="syntaxStyle" class="ptolemy.kernel.util.StringAttribute" value="text/javascript">
+            </property>
+        </property>
+        <property name="server" class="ptolemy.data.expr.Parameter" value="localhost">
+            <property name="_stringMode" class="ptolemy.kernel.util.SingletonAttribute">
+            </property>
+        </property>
+        <property name="port" class="ptolemy.data.expr.Parameter" value="8081">
+        </property>
+        <property name="numberOfRetries" class="ptolemy.data.expr.Parameter" value="5">
+        </property>
+        <property name="timeBetweenRetries" class="ptolemy.data.expr.Parameter" value="100">
+        </property>
+        <property name="reconnectOnClose" class="ptolemy.data.expr.Parameter" value="true">
+        </property>
+        <property name="discardMessagesBeforeOpen" class="ptolemy.data.expr.Parameter" value="false">
+        </property>
+        <property name="throttleFactor" class="ptolemy.data.expr.Parameter" value="0">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-250.0, -1065.0}">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.EditorIcon">
+            <property name="rectangle" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[0.0, 0.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="60">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="40">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0, 1.0, 1.0, 1.0}">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line2" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-21.0, -11.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-16.0, 0.0]">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="40.0">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="0.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-21.0, -11.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,0.2,0.2,1.0}">
+                </property>
+            </property>
+            <property name="ellipse5" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-20.0, 12.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.2,0.6,1.0}">
+                </property>
+            </property>
+            <property name="ellipse6" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-8.0, 12.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.2,0.6,1.0}">
+                </property>
+            </property>
+            <property name="ellipse7" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[4.0, 12.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.2,0.6,1.0}">
+                </property>
+            </property>
+            <property name="ellipse11" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[10.0, 0.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,1.0,1,1.0}">
+                </property>
+            </property>
+            <property name="line3" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-9.0, -12.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line4" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[2.0, -13.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line5" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[17.0, -9.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line6" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-21.0, 12.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="-10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line8" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-8.0, 12.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="-10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line10" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[3.0, 13.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="-10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line11" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[16.0, 12.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="-10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={158, 438, 934, 634}, maximized=false}">
+            </property>
+            <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 524]">
+            </property>
+            <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="4.0">
+            </property>
+            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{12.5, 9.25}">
+            </property>
+            <property name="ellipse4" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[16.0, -11.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,0.2,0.2,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse12" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[22.0, 0.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,1.0,1,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse8" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[17.0, 12.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.2,0.6,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse10" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-2.0, 0.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,1.0,1,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse3" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[4.0, -11.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,0.2,0.2,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse9" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-14.0, 0.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,1.0,1,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse2" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-8.0, -11.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,0.2,0.2,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+        </property>
+        <property name="receiveType" class="ptolemy.data.expr.Parameter" value="application/json">
+            <property name="_stringMode" class="ptolemy.kernel.util.SingletonAttribute">
+            </property>
+        </property>
+        <property name="sendType" class="ptolemy.data.expr.Parameter" value="application/json">
+            <property name="_stringMode" class="ptolemy.kernel.util.SingletonAttribute">
+            </property>
+        </property>
+        <property name="connectTimeout" class="ptolemy.data.expr.Parameter" value="60000">
+        </property>
+        <property name="maxFrameSize" class="ptolemy.data.expr.Parameter" value="65536">
+        </property>
+        <property name="_expertMode" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <port name="toSend" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="connected" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="received" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+    </entity>
+    <entity name="ApplauseScore" class="ptolemy.actor.lib.jjs.JavaScript">
+        <property name="script" class="ptolemy.actor.parameters.PortParameter" value="// Put your JavaScript program here.&#10;// Add ports and parameters.&#10;// Define JavaScript functions initialize(), fire(), and/or wrapup().&#10;// Refer to parameters in scope using dollar-sign{parameterName}.&#10;// In the fire() function, use get(parameterName, channel) to read inputs.&#10;// Send to output ports using send(value, portName, channel).&#10;exports.setup = function() {&#10;  input('input');&#10;  output('output',{'type':'number'});&#10;  output('frame',{'type':'string'});&#10;} &#10;exports.fire = function() {&#10;  var token = get('input'); &#10; &#10;  token = token[0];&#10;  decoded_state = token.MPEvalue;&#10;  var hidden = decoded_state.startsWith(&quot;yesApplause&quot;)? 1.0:0.0;&#10;  //if (hidden == 1) {&#10;        send('output', parseFloat(hidden));&#10;        send('frame', parseInt(token.frame)); &#10;//}&#10;}">
+            <property name="style" class="ptolemy.actor.gui.style.NoteStyle">
+                <property name="note" class="ptolemy.kernel.util.StringAttribute" value="NOTE: To see the script, invoke Open Actor">
+                </property>
+            </property>
+        </property>
+        <property name="_tableauFactory" class="ptolemy.vergil.toolbox.TextEditorTableauFactory">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="script">
+            </property>
+            <property name="syntaxStyle" class="ptolemy.kernel.util.StringAttribute" value="text/javascript">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-105.0, -1055.0}">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.EditorIcon">
+            <property name="rectangle" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-1.0, -1.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="60">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="40">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0, 1.0, 1.0, 1.0}">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="rectangle2" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-1.0, -1.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="54.0">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="35.0">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.8,1.0,0.8,0.2}">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="Annotation" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+                <property name="textSize" class="ptolemy.data.expr.Parameter" value="24">
+                </property>
+                <property name="textColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.6,0.4,1.0}">
+                </property>
+                <property name="fontFamily" class="ptolemy.data.expr.StringParameter" value="Wingdings 2">
+                </property>
+                <property name="bold" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="text" class="ptolemy.kernel.util.StringAttribute" value="NN">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-25.0, -13.0]">
+                </property>
+            </property>
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="output" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="frame" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+    </entity>
+    <entity name="RecordedFeatures" class="ptolemy.actor.lib.Sequence">
+        <property name="values" class="ptolemy.data.expr.Parameter" value="{{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-5.0001, -4.8417, -4.9089, -5.0407, -5.0244, -5.0958, -5.0029, -5.0904, -5.0094, -5.0896}},&#10;{{-7.2985503720729, -6.566628194612, -6.1347013454395, -6.2258846243241, -6.0542397787735, -5.5919933629548, -5.5433806860474, -5.423724568349, -5.3500531022979, -5.3332801130288}},&#10;{{-4.9498402686459, -5.0351383748806, -4.9863478666311, -5.4929541039864, -5.6109842545375, -5.794428721591, -5.2696351835022, -5.0423565434574, -4.9767194968066, -5.0126470229039}},&#10;{{-5.0744468920285, -5.1120925596526, -4.7479346606985, -4.9100371509644, -4.8907588859339, -4.3904763225316, -4.2868619066971, -4.14936593713, -3.9953172024339, -3.8834717409546}},&#10;{{-5.4776453142828, -6.3618166097897, -5.0046187759862, -4.949540982576, -6.194810900581, -4.6733177971102, -4.7035793230812, -4.6025932805704, -4.3510962578284, -3.924214961041}},&#10;{{-3.7454918846726, -3.5663633228774, -3.8432581292096, -3.7868642861497, -4.1577386672967, -3.7174051938111, -4.2420485713413, -4.061993059393, -3.7492940518856, -4.0503861900029}},&#10;{{-2.8420040767073, -2.8554306963086, -2.7951479621468, -2.8859394415794, -3.5539623533886, -4.1224694428206, -3.4084637746234, -3.7419199227122, -3.0036433923881, -2.8017059407223}},&#10;{{-3.0087053961175, -3.0392136282964, -2.9768393613583, -2.8955187205842, -3.0100056827059, -2.5333020939268, -2.3350379825987, -2.3607732344096, -2.3018267449965, -2.4657706611142}},&#10;{{-3.0911465826157, -2.8574912387638, -3.1554044914322, -3.1892015429584, -3.0243596315275, -2.6912723561845, -2.7291104326305, -2.8794161590819, -3.0627551070194, -3.1641767358746}},&#10;{{-3.2635633548761, -3.0905562553422, -3.085428266381, -3.3768512455488, -3.1749744565283, -3.1610229995219, -2.9916814177685, -2.8963843493213, -2.9893527591353, -3.074922009237}},&#10;{{-2.8267149737922, -2.6471885760888, -2.9169889692095, -2.853545869485, -2.6899036674061, -2.5456624618407, -2.664952975735, -2.9848488596208, -2.3825358320659, -2.5035812523721}},&#10;{{-2.2232127200098, -2.304416764261, -2.7818517660601, -3.1733604437525, -2.2547488963957, -1.8791478518629, -1.726320747427, -2.0399670765743, -2.4409345028658, -3.0355299185766}},&#10;{{-2.1689745946817, -2.5642672784498, -3.0888072475188, -3.1195021669356, -2.8007685958382, -2.540726479379, -2.6605905014789, -2.944217286601, -3.409213848459, -2.4535547075228}},&#10;{{-2.05081025817, -2.2872728341082, -2.8017109324031, -2.5479006525096, -2.5444385821892, -1.9715274063832, -2.5498821209488, -2.9262329766809, -2.338552770167, -1.8552553470531}},&#10;{{-1.8501408322323, -3.0331825156245, -3.9527834888306, -2.976124396758, -1.8297573471733, -1.7755942144346, -1.9658992050896, -3.2706284470726, -1.9638772359173, -2.768853120534}},&#10;{{-2.1497884653058, -2.8492439588627, -3.3731435729709, -2.6386131837247, -1.870120680549, -3.1171003621721, -2.4088184439006, -3.988306596106, -2.677800237492, -2.1201538200515}},&#10;{{-2.8437512214256, -3.7844708805838, -3.5635821851815, -2.7713998256913, -2.6697743201895, -3.2290814365575, -2.3292594190916, -2.1432101747272, -3.2615104573612, -2.8478654163541}},&#10;{{-3.379577897878, -2.516769221669, -2.7068458140057, -3.5632063444296, -2.2248610816895, -3.6738009456938, -2.046564942851, -1.941866718616, -3.379457744487, -2.3525500441762}},&#10;{{-4.0811719544366, -3.1986223568381, -2.5504348970343, -3.3384253401385, -3.3821248504934, -2.2338144489861, -2.8441406275365, -2.4752970583278, -3.741970943453, -2.6920286615969}},&#10;{{-3.1551439798118, -2.66347556458, -3.3049742460705, -3.476827233232, -3.5924740369232, -2.5623366180486, -2.1559527590682, -2.2330105222559, -2.8744856278044, -3.1029817122166}},&#10;{{-2.5586913259058, -2.7559004586371, -2.7676632589344, -2.6330992227692, -2.6548681673403, -2.5962448040899, -2.1773891276729, -2.5107833143652, -2.6349710868628, -2.5095318862417}},&#10;{{-2.6643039497968, -2.7526228475428, -2.3449642089581, -2.4889325558508, -3.7388426969501, -4.6204802500136, -3.136974662595, -4.6235147979342, -3.6440615941138, -2.2476510751709}},&#10;{{-3.3559278779451, -2.9014527009441, -2.9466598734515, -2.8671493804338, -2.761820593531, -2.0684086923889, -1.9823809498274, -3.3964488673341, -2.2164752570404, -2.4272530246119}},&#10;{{-2.8288592052227, -2.6320594007685, -2.3302380915615, -2.688784009769, -3.0483417837899, -2.2565030794399, -5.4818076371813, -2.538196266845, -2.3870643432777, -2.2315427880935}},&#10;{{-3.0993759972789, -3.4912168042481, -2.2875211007256, -2.7355478792851, -2.7718913801516, -1.9919442564187, -2.1890888844693, -2.076752725188, -1.7161287897268, -1.821970104904}},&#10;{{-2.5298725593354, -3.1945426889877, -2.3433609493239, -3.0013206378199, -2.4066120371726, -2.6303646285488, -2.1272210325345, -2.3186665932438, -2.3969777351483, -2.8023035207837}},&#10;{{-2.5118828566766, -2.5555671151943, -2.913443858321, -2.6861087787061, -2.2778160081584, -2.5001759798172, -2.6017626218674, -3.4451615905623, -2.3339066270297, -2.0598565463202}},&#10;{{-3.4647410191951, -2.7883800095165, -2.417271045903, -2.7723166238031, -3.8051379880949, -2.8136797190605, -2.4481493117217, -2.6677821416637, -2.6118614225987, -3.233134701103}},&#10;{{-4.5721441311036, -2.108443082239, -2.9425578722987, -2.0798809818511, -2.6642279873115, -2.1576986057564, -3.0791626680129, -2.1125781408122, -2.2697579431191, -2.1842619664708}},&#10;{{-2.9311237057053, -2.1997182817353, -3.6558901854756, -3.3401404727926, -2.129534548145, -2.1714943582893, -1.5447564707616, -1.7385979650786, -2.4996281057756, -2.5851496142199}},&#10;{{-2.7430442221545, -4.109306825166, -2.723152013341, -4.496843331929, -2.7220232504298, -1.8985328841121, -1.4872151539923, -1.7836929011129, -3.119151184195, -2.3400062252555}},&#10;{{-2.3907647296982, -2.2702581190693, -2.5734456546447, -3.3875035677697, -3.3852590445661, -2.1906098946852, -1.6345334760852, -1.6983745681233, -3.2510594047132, -2.3750071707003}},&#10;{{-2.7450505768626, -2.5443737781438, -2.6649104474361, -4.0236738197238, -2.4782047841611, -2.1479931249869, -2.2919410171691, -1.9692970037217, -2.5181283245885, -3.1261377214778}},&#10;{{-3.0380774449764, -2.8698558022532, -2.5104447603323, -3.4675020012305, -1.9479617893173, -2.5382527415915, -1.965818167412, -2.0233202355192, -2.5074126988694, -5.4057912752338}},&#10;{{-4.2762611659018, -2.5623986309584, -3.3458234041851, -3.0323417622178, -2.6507305160166, -2.9736096756907, -2.7055195542686, -2.4135785442301, -2.7068806099317, -2.6315126985656}},&#10;{{-3.0896523486418, -2.8433564465835, -2.9075628265795, -2.5331369441276, -2.5761740412977, -4.0088111584487, -2.5734374229652, -2.7873050074873, -3.4680272435707, -2.7949334439485}},&#10;{{-2.4406769974407, -3.3686456217771, -2.1853568529601, -2.857172097083, -2.7907176974735, -2.5370024923417, -4.288628991442, -2.4130306724956, -2.5155826834365, -3.117382947492}},&#10;{{-2.7537967754517, -2.3095265342989, -3.2689484771378, -5.8990359096312, -2.99412945347, -2.7054772052975, -2.6993113865945, -2.756923131886, -2.0567036379911, -2.401152830303}},&#10;{{-2.844934498138, -2.1776097298003, -2.6382814349917, -3.4487381605867, -2.4873500005277, -2.4825466050914, -2.5552086519538, -1.8833999001876, -2.215116387726, -3.0090981256236}},&#10;{{-3.6696209620455, -2.6011337865857, -2.7350237995504, -3.4685095678701, -2.0601714237074, -2.2409064112782, -1.8431567059702, -2.0274498754031, -2.3991259576362, -2.5468886171718}},&#10;{{-2.9329486735184, -2.0492465299978, -2.9942311789746, -3.0714026791971, -2.5282504885256, -2.0027130556231, -1.9697006389936, -2.6555259373445, -2.532213896095, -2.9171332096552}},&#10;{{-3.0760281415775, -2.7252635310526, -3.8863998057401, -1.8273467010469, -2.5169000923041, -2.0017781014692, -2.0541467515385, -4.2731181852361, -2.1799524966646, -2.4764976287978}},&#10;{{-2.6699977528527, -2.3171665389423, -2.8833274266765, -2.0411084828407, -2.4374095528203, -1.9645959038368, -2.1648668318973, -2.9537730954954, -2.665725759503, -2.5366886613762}},&#10;{{-3.9904628923346, -2.4363974135608, -3.2346944771119, -2.5832218379512, -3.4164788979061, -2.4673982012028, -2.5095173883045, -2.5555568855068, -2.1540289200821, -2.016879084349}},&#10;{{-2.8428293608711, -2.548034101087, -2.6148276737255, -1.9362851285352, -2.4965149555724, -2.6027390556279, -3.686170418872, -2.2382413662572, -2.2195399550039, -4.3412651553874}},&#10;{{-2.1657575724052, -2.1749845112667, -2.4969837096453, -2.214329529033, -1.9038552691023, -4.3190595002116, -2.4768493301621, -3.141010210699, -2.2616914892413, -2.2564246621567}},&#10;{{-2.6101059207548, -2.6690998115778, -3.215492723404, -2.4705239113449, -3.4656786106946, -2.1620984338201, -2.3863550567072, -4.0082569426717, -2.5551755217784, -2.3016913838626}},&#10;{{-2.5414998680532, -2.0099489596488, -3.642417460307, -2.8888982760113, -3.0682658753427, -2.2763907251448, -3.2180680991347, -3.0609831354837, -2.2947207576298, -2.3920360775774}},&#10;{{-3.3052796113887, -3.8003323287097, -2.682800761498, -3.4957755583262, -3.5052565312017, -2.3505788122497, -2.3615280655619, -2.4267167665887, -2.4226539330475, -2.7924930515846}},&#10;{{-2.6762538302806, -2.3380499197343, -2.3091394505993, -2.4914063928679, -2.4706273252075, -3.4792034488671, -2.5138307595665, -1.858931999385, -2.0454839314771, -3.3779299415849}},&#10;{{-2.7995416473485, -3.3809971900962, -2.5766439707405, -2.3453576792416, -2.3843310087288, -3.4234725102953, -3.0264830649588, -3.2637939561891, -3.2983863557606, -2.7611522844938}},&#10;{{-2.1964176170118, -2.0635123840663, -2.4642272646125, -2.9108435811424, -3.1120611870149, -2.1832593176572, -1.6873741587069, -1.9132114914292, -3.2610564356662, -2.8960250941929}},&#10;{{-2.3551401890244, -2.5585889796224, -2.4712109917049, -2.9626781951335, -3.5311846753011, -1.9538871679114, -2.1568574194873, -4.424005122211, -2.4890332818658, -2.5913288607889}},&#10;{{-2.0266197186951, -1.8108698516105, -2.5462016854142, -2.8892105220567, -2.1941792892251, -2.1602458731898, -2.3390860989047, -1.9325021084656, -1.8537273975404, -2.2552910758333}},&#10;{{-1.9496307009338, -4.2225910142036, -2.9291434549851, -3.5571118818315, -2.137108167995, -2.6199373414844, -2.63013556497, -2.7429663517421, -2.4472669237991, -2.3278870145086}},&#10;{{-1.9459781127988, -2.2333506171067, -2.1815155656745, -2.798976404659, -2.8672948104108, -3.433593138212, -3.0683035789605, -3.0038226327956, -2.6813597453982, -2.9613224940688}},&#10;{{-2.4024101738076, -2.6484674178824, -2.6129490893469, -2.45059519865, -3.3513189949889, -3.2573457872679, -3.2175241128704, -2.3673154188633, -2.7214879446576, -3.5347766897791}},&#10;{{-2.2405166557227, -2.1070782970575, -2.9552598734459, -2.4457548610248, -3.7413138755777, -2.5776801009363, -2.7900807854358, -3.3700691424241, -4.0955009486773, -3.2477169140397}},&#10;{{-2.185483067571, -3.0173864170742, -2.3590669469053, -3.0203151393677, -2.7376637223252, -3.392312724, -2.9891986144626, -3.3677286051738, -3.2003496712327, -2.7099974763548}},&#10;{{-2.4344552327297, -3.6753640929074, -2.789075679016, -2.6863233953509, -3.3233685175619, -1.9244241985281, -2.3373511860105, -2.7105563426667, -2.3255136577071, -3.2312851745854}},&#10;{{-2.442636026745, -2.686571485805, -2.8478506327483, -3.4082924469764, -4.3328051782731, -2.0834609531087, -2.3558759267741, -2.6273505769517, -2.3558829213601, -2.7107678979158}},&#10;{{-2.5713796926039, -3.0300654719775, -3.0138745448713, -2.8284923063733, -3.5980736630823, -2.6477013977032, -2.5363943312888, -2.5011674957984, -2.8331301996807, -2.9613473754945}},&#10;{{-2.9282108219444, -2.7130365795561, -3.7339638968382, -2.8893179830989, -3.5713961269338, -2.2672174420031, -2.054584944236, -2.3466109737168, -3.871929425987, -2.8502044911072}},&#10;{{-2.9274423086429, -3.6689309689736, -3.8105208325447, -2.9732945575305, -3.1481622626404, -2.4026606548466, -2.0262969947078, -2.1143633397855, -3.2501051470901, -3.4640017020718}},&#10;{{-3.040382997476, -3.3063414363976, -3.4296339493839, -3.4960939172634, -3.3315031207571, -3.6438714624971, -2.7771467986077, -2.8054803991026, -3.6086659135395, -4.6431055577251}},&#10;{{-2.9702668571511, -3.1256513751481, -3.9255783058033, -3.5974580086539, -3.9398531672432, -3.9703211815122, -3.4564961520089, -2.6679552994534, -3.1418735232393, -3.0568045143387}},&#10;{{-2.6623663194515, -2.7185585437184, -3.4904549539861, -3.3256135778005, -2.912941601169, -3.1155155765584, -2.6748076177628, -2.7109175689133, -3.5925108566461, -3.1966580694552}},&#10;{{-3.080027908746, -3.1138023997489, -3.7538370825063, -3.2787453384158, -2.706382536367, -3.231346006839, -2.7912542613259, -2.9375811396038, -2.962325858706, -2.510796230324}},&#10;{{-2.8376831034412, -2.7550573009298, -3.9037317898074, -3.9881730036113, -2.5163296658726, -2.7576289627989, -2.5759190328233, -2.3060316447715, -2.3854297635157, -2.8617870917427}},&#10;{{-2.7141270318332, -3.4304144739752, -4.1793723251829, -3.9081942163215, -2.8895039313116, -3.0300879566633, -2.9294065580628, -3.0494658787306, -5.4364206909389, -4.6546461954293}},&#10;{{-4.0804249251425, -2.783605006405, -3.0812427791253, -3.3464872646284, -2.7910049484608, -2.8245530674061, -2.8276981917132, -2.7523177560043, -2.3055936309574, -3.2011752064234}},&#10;{{-4.2973561794849, -3.8707503773314, -3.3138239999257, -3.8014950049042, -3.1387130782023, -3.3919341401605, -3.343252910011, -3.73937546461, -3.3616649670147, -3.8698891547941}},&#10;{{-4.1769380061481, -2.9551368122806, -3.7287657360099, -3.7716770586822, -3.0044407645623, -3.9669967802812, -3.6399597266596, -3.9391140548573, -4.3419277538641, -4.0642176583027}},&#10;{{-4.551127698837, -4.4649820647583, -3.8117713020112, -3.13965673879, -3.3024064817121, -3.5312870697766, -3.5932778231067, -3.2542083228669, -3.5311230382367, -2.9962351969668}},&#10;{{-3.1226185374468, -2.7384450546919, -2.8699889896241, -2.9816458518398, -3.0983329441775, -3.5371385041958, -3.4582315505697, -3.5258844192861, -3.4889109651739, -3.3990938453203}},&#10;{{-3.1239568672442, -3.2214416422421, -2.8973995218493, -3.3299272440281, -4.0436246837506, -3.6633074080883, -4.7301521684125, -3.7897509272872, -3.2985597400442, -3.3259911354741}},&#10;{{-3.2805751226964, -3.3655703571506, -2.9551028052156, -3.509797366374, -4.4534877472289, -3.5258476237202, -3.3478742765208, -3.2278684494255, -2.7825477306282, -2.9614159766065}},&#10;{{-3.1455318199868, -4.6012260142016, -3.0006072372085, -2.8979420288375, -4.1671829064631, -2.786757779246, -2.7049739958941, -2.6433607594281, -3.2834689953227, -3.9248298462791}},&#10;{{-3.3817721638067, -3.9223179029939, -3.3433658470767, -3.0511352176506, -4.1809060621913, -3.6950934040499, -2.9311142172918, -2.7155496405759, -3.297176752623, -4.3799315543735}},&#10;{{-3.819329258373, -3.559019853037, -3.7247644169476, -4.0195896331238, -3.4948714776481, -3.3386481179351, -2.769581590528, -3.0256976148341, -4.6445463949423, -3.4344801773485}},&#10;{{-3.5505007522929, -2.8511356248284, -3.1003957136269, -3.1246705468832, -3.2751330794155, -3.0081674520196, -2.204931602328, -2.5259292292976, -3.5066687284677, -3.3738410810883}},&#10;{{-3.3585030898627, -4.2169034522852, -3.5987824648074, -3.7374424838275, -3.8109543425536, -2.8985755134206, -2.8593246405449, -3.3953161276465, -3.8591993440575, -4.580270100288}},&#10;{{-3.999460806938, -3.7926302521315, -3.9939162520043, -4.8767256463566, -4.1935394567096, -3.2872529370184, -3.1926262157712, -3.6624566556389, -5.9179554749665, -4.1756321550346}},&#10;{{-3.7984421569925, -4.3881706369103, -4.1264365830094, -3.955664139017, -3.4715559049688, -3.5924626978678, -3.2806694250328, -3.4469065610485, -3.8935039243063, -3.7112869463994}},&#10;{{-4.4252358206756, -4.4614579075996, -5.7975071279751, -5.9123597133861, -4.0986651636023, -4.6575331313659, -4.8237165086268, -4.4620527811524, -4.4279759286736, -4.6553727963169}},&#10;{{-5.4969455398945, -4.4581761643796, -3.8960788294811, -5.0678189367437, -4.6865957444658, -4.7125383022691, -4.8031875155612, -4.4680559241218, -5.7837634892466, -4.4703129073046}},&#10;{{-4.9984993167309, -5.8424257351205, -4.4422774860091, -5.7737454115667, -4.1282996720388, -4.8602954186392, -4.0575843592832, -5.1170897701981, -4.2799844312907, -4.1503513834183}},&#10;{{-5.0607828143148, -4.8170962169376, -4.7354671907337, -4.571278891762, -4.6501780300334, -4.1698548708743, -4.2720903418732, -4.5341887290753, -4.2641746515743, -4.0623062626586}},&#10;{{-5.1990209497265, -5.3702065135774, -4.6216715896742, -4.5428255436911, -4.8792018552788, -4.643905782974, -4.7575201128827, -4.9828475347319, -5.2611847765912, -5.6371966338504}},&#10;{{-5.1263856959154, -5.5823735161914, -5.1470256935698, -5.0453317809021, -5.207247847684, -5.0766765559058, -4.8404091768117, -4.8167100051905, -4.6553312460121, -4.4722067131078}},&#10;{{-6.3359317650042, -5.6776589243808, -5.8634352804351, -5.8254686946314, -6.3046885881987, -6.0443294193949, -6.3826908389325, -6.926264028148, -7.2644135536951, -6.7499124234936}},&#10;{{-6.7025101516188, -5.8850201608894, -6.7730389285672, -7.6936472950331, -6.4944998984709, -6.4889390711975, -6.477110090098, -7.1268064679255, -7.2658615174085, -7.1987783969571}},&#10;{{-7.3335992682916, -7.0146850780368, -7.5732818979271, -7.4660266330988, -7.2869008788063, -7.1413463496397, -7.3087413266038, -7.8144415636749, -7.9628659966248, -7.9342203071846}},&#10;{{-7.1284024263782, -7.0272021781285, -8.184234941075, -7.4646512084929, -7.079390065146, -7.4395132073354, -7.6890412516228, -8.2534775546783, -9.3019926912834, -9.7966072404803}},&#10;{{-7.4580557467131, -7.8427799562599, -7.9130572966087, -7.7017740962831, -7.784306583746, -7.6631667925859, -7.8190711933951, -8.336614811467, -8.6856960911859, -8.1291426544819}},&#10;{{-7.6894254275166, -7.7655908105352, -7.9669964538804, -7.9783942913474, -8.7193886434392, -8.4222931288383, -8.2939048828643, -8.5202575380158, -8.8142537049082, -9.311004079735}},&#10;{{-9.2846305425558, -9.4297800949064, -9.4428663231503, -9.2652739604457, -9.5432704557825, -9.2108742071187, -9.2978778606302, -9.8959708907409, -10.0300877093834, -10.2459506884711}},&#10;{{-11.1867341170259, -10.9414080929298, -10.4308386826099, -10.6796683809655, -10.7905600865839, -10.7727334756089, -11.3059580705404, -12.4975376599357, -12.7898010170502, -12.9836432703845}},&#10;{{-11.2227257551385, -10.6376034946761, -10.7659300439925, -13.0235836719378, -11.0432656007041, -10.9465290914001, -11.9481358852196, -11.6904365026159, -11.2672569140837, -11.5474913981544}},&#10;{{-10.0996654936877, -10.3645831273921, -10.5521001778915, -11.2876909844107, -10.4604262906529, -10.447886951327, -10.8771350821155, -10.6461430595382, -10.5080822924961, -11.3819592799788}},&#10;{{-9.1319550578341, -9.0213434102885, -9.4874576580715, -10.3728700666943, -9.1073985076514, -8.9789228169457, -8.8871299205979, -8.9001840184231, -8.8410569418914, -8.8085363109566}},&#10;{{-9.0718477967299, -9.5772534821141, -9.4993259317817, -9.4745563839587, -9.3454107505958, -10.57517228644, -9.8919020530039, -9.4395690159605, -9.1601950219067, -9.1628558038681}},&#10;{{-8.3900619181314, -8.5237341437925, -8.7717737574962, -8.7856326616705, -9.6122588442773, -9.8266900188206, -9.6139765395659, -8.8137007816503, -8.537810062011, -8.6281924277262}},&#10;{{-6.799608183918, -6.7623240877682, -6.6772644970871, -6.5469373448104, -6.3836056715659, -6.4744607020079, -6.5909809459178, -6.8828010544374, -7.124990188589, -7.5646358821482}},&#10;{{-6.6527937103128, -6.252180556753, -6.2215251321768, -6.2980606127546, -6.4930746422311, -6.1182797818934, -6.2093565308845, -6.3424744382656, -6.3834319206123, -6.6007139277696}},&#10;{{-5.5963766456286, -6.3280227851344, -5.7912148036941, -5.6001051942316, -5.7982715599394, -6.1518302020271, -5.6545363981424, -5.520627323928, -5.7574492849703, -6.3844117001723}},&#10;{{-6.1727620595671, -6.0249967379451, -5.8570416723592, -5.3013715014778, -5.6504344988513, -8.8797363723428, -5.814878409106, -5.5319343369985, -5.7986969439474, -6.2264014103547}},&#10;{{-4.0120886026235, -4.1408241126046, -4.3104055281136, -4.1013158819274, -3.8559485208373, -3.7746744406299, -3.7778552772172, -3.9719603631765, -3.9423314321773, -4.0154959630693}},&#10;{{-4.6383285094663, -4.6749597274249, -4.3187604308152, -4.5103357339284, -4.6347310525737, -4.1058546293892, -3.980211855052, -4.4501209316778, -4.9149132037001, -5.2967565643371}},&#10;{{-4.195835924994, -5.2865385471495, -3.8386975379959, -3.8182557892579, -4.2879683631234, -5.5993951444807, -4.3701461327719, -3.8801063527658, -4.0277138408107, -5.3617780792123}},&#10;{{-3.3955007766308, -4.6378560280626, -3.9392667925118, -4.6810468310137, -3.5697876967945, -4.4633979754894, -3.6173637095941, -3.6898141622716, -4.0105990481995, -4.7777449341488}},&#10;{{-3.5572499236595, -4.0656838432464, -4.1214813210744, -5.5617582742895, -3.2566195452783, -3.3023385176403, -3.4442456540928, -4.7843602685116, -3.7709796855194, -4.2985237412581}},&#10;{{-3.600993006167, -4.2796750801328, -3.7133544425736, -5.2816757640517, -4.694066084596, -3.3986432785624, -3.6617845513827, -6.2024258835086, -4.2921640882409, -4.784265031834}},&#10;{{-3.789270529921, -2.8702076824983, -3.408670103231, -3.4180232917841, -2.7460428133974, -3.5621983488365, -2.8361687967665, -2.8930280785367, -2.6961429245105, -3.0168396842793}},&#10;{{-3.6160315998848, -3.1117157416043, -3.7530614030311, -3.8622887415888, -2.6859046214038, -3.7691693999952, -2.7985354586518, -2.7305843475036, -3.4958634168444, -4.6867598937506}},&#10;{{-2.8512336292318, -2.8919117274427, -3.3750459018968, -3.2769390210252, -3.9393370750377, -3.8499851389119, -3.586685326883, -2.9599519444905, -2.6451622154983, -2.7131296968886}},&#10;{{-2.8221110399978, -3.1903186698442, -3.4502919435357, -3.2313822030585, -3.0137980049231, -2.9200114898261, -3.179076506735, -3.2403959956409, -2.8316252974377, -3.3208384331312}},&#10;{{-2.8328733837722, -2.8758948921707, -3.949594537654, -3.0245536845659, -2.5201486345657, -2.587044976337, -2.7369455108926, -3.5227169527847, -2.5887295408435, -2.9023753939699}},&#10;{{-2.7324521910959, -2.5069545545324, -2.3316446399274, -2.4598028482766, -3.2445209810854, -3.1697945091412, -2.9079006883215, -2.6059949300024, -2.4368256605058, -2.7070636080733}},&#10;{{-3.8930810924069, -3.825178543404, -2.0581656696697, -2.2440203964444, -2.6351366137372, -2.2651101434896, -2.8150414648724, -3.3654832611916, -2.3182112744423, -2.0589625771194}},&#10;{{-2.6974715123301, -2.553539471982, -2.4394470774725, -2.3344904339044, -2.8056345219491, -2.0538278334466, -2.6223758367111, -3.1826172066517, -2.6766425821062, -3.0525843657989}},&#10;{{-3.3431960982688, -2.5416389410372, -2.6536863967992, -2.082024295607, -2.2293378625223, -2.2440233986312, -2.5535807892514, -2.6022926542743, -2.3187254503193, -2.1841756120971}},&#10;{{-3.0654067393382, -2.1846635083605, -2.0082147372526, -2.2093990144544, -2.3116020666414, -2.0299138876878, -1.6739071176558, -2.5411321751368, -2.4191900757038, -2.2797344073653}},&#10;{{-2.1879823995511, -1.9250065091335, -2.2049825639564, -3.0417584570166, -2.9017357453276, -2.6753746894411, -2.6018932819307, -2.0949671467259, -3.6396423507924, -2.6459580065052}},&#10;{{-2.9631615075643, -2.859491534854, -1.7546278322879, -2.7029997966335, -3.0780848229449, -2.2594198338955, -2.6772576081948, -4.2758043806815, -2.842865997975, -2.253496423213}},&#10;{{-2.9262426303906, -2.0292008848485, -2.2544885334088, -2.9809496677918, -2.5643511811338, -3.7139312593262, -2.5796935294833, -2.1390270553831, -2.0849233823678, -2.2536106101764}},&#10;{{-2.9461567898945, -1.9708849514355, -2.1720478815265, -3.8417438043434, -2.7238457258184, -2.3781069429757, -2.8019153828902, -2.2635285657761, -2.2260304498909, -3.4050902213204}},&#10;{{-2.5121020439163, -2.7120330035472, -2.1295439203379, -3.6765537510668, -2.9700893885789, -3.118116527655, -3.0972898906823, -2.6499542874135, -1.8481859871224, -2.0241269234766}},&#10;{{-2.3061557497587, -2.0191214781278, -2.8509872910947, -4.3800558257681, -2.2532433407888, -2.3217460623082, -2.5143919612433, -2.3131214723759, -2.2734311314996, -3.0694093816303}},&#10;{{-4.3175372748494, -2.9903867631024, -2.5096805499789, -2.4079658196332, -2.637729064669, -2.5479811881048, -2.8675882888054, -2.5790076154007, -2.5138876778352, -3.7130736934033}},&#10;{{-3.1690071182709, -2.3035467454287, -2.0874519768681, -2.6884647717085, -2.3647497733117, -2.6040937016087, -3.2557101977425, -2.0464298093944, -1.7531950444358, -5.5245248011576}},&#10;{{-3.1317160834677, -4.5385613090431, -2.8822329454024, -2.8569224920501, -2.7345322922606, -2.2693438013707, -2.826527790179, -2.7148903896128, -2.7022928754491, -2.5283475824575}},&#10;{{-4.061994905449, -3.6195177100881, -2.8924676284973, -3.1758006393815, -2.374324688518, -2.7405826667196, -5.9172271127679, -2.8290890160047, -2.5059954476544, -2.2492409133428}},&#10;{{-2.6966785105266, -2.2684426223823, -2.6272483279065, -2.6268983705355, -2.1450332946826, -2.0743804352813, -2.0330830904595, -3.088198336274, -2.2106079453687, -2.7388046998253}},&#10;{{-3.1590999278181, -3.4495914895445, -4.36468572367, -2.581081368253, -2.1381506279379, -2.9033639007892, -2.5312538485011, -3.4473032744725, -2.3171744346319, -2.3805285918507}},&#10;{{-2.2173548869793, -2.1576627305847, -3.9759944898038, -2.340108684222, -2.3861671223662, -2.3857123374553, -2.060232257539, -3.2838230352715, -1.925417869651, -1.6726854159861}},&#10;{{-2.4423933856058, -2.5863054403283, -3.9527589770533, -3.2059953024034, -1.7424334472567, -1.9873875909488, -2.1753440630587, -3.1519537468472, -2.2237334935481, -2.446569352395}},&#10;{{-2.3956209947312, -1.5962648403928, -1.8704390909637, -2.3200563614555, -1.7926413520252, -2.4054159806474, -2.3823177814192, -3.9682078730358, -2.2624639389862, -1.7999031303156}},&#10;{{-2.7436271294443, -2.2629597743752, -1.7289712833931, -2.665085035318, -3.3638945503743, -1.7406247581863, -2.8043468015893, -2.0219334881285, -1.7289064766451, -2.1958609743894}},&#10;{{-3.0943721724864, -2.3614271781454, -2.0354896383316, -2.3541839524818, -2.8690376995002, -1.5949345767455, -2.4417541671907, -1.7790624388843, -1.9034481628386, -2.1062628127842}},&#10;{{-3.3441385735814, -2.4774521487865, -2.2855329181258, -2.0176416789978, -2.1523037444822, -1.5508658979706, -2.0854238665694, -2.9701760457164, -4.0771190313642, -2.161269429957}},&#10;{{-3.6488196097253, -2.6646875347214, -2.2805832103292, -1.9784977979745, -2.2935634093878, -1.7726212223199, -3.0106404223394, -3.8557374777699, -2.7265173415852, -2.7146355843231}},&#10;{{-2.5418142062585, -1.9382641485856, -2.1169469675295, -2.1294363171627, -3.1134302708645, -1.3107883460189, -2.0840916190966, -2.1957337999215, -1.8926441183623, -2.3988115141909}},&#10;{{-2.4041285912964, -2.3756707030956, -1.878648526963, -2.565341151794, -1.7720816554939, -1.8717959975381, -2.1880516930534, -2.5233084659043, -1.6183758241442, -2.2651869518787}},&#10;{{-2.3277702171272, -1.9883658101531, -2.0773274142829, -2.3295946476688, -1.4610948636243, -1.7006453006594, -2.5132104407171, -3.3947009890877, -2.8869148815267, -3.1955718121099}},&#10;{{-3.0055640620625, -2.2853281971122, -2.7628152378312, -3.4325610238246, -1.9793624321637, -2.1364478626387, -1.9284624626265, -1.79285621567, -2.029539957571, -3.0191944082385}},&#10;{{-2.10062555376, -2.5708163037337, -1.7935980938395, -2.4341541629082, -1.9865030581536, -2.4735821287193, -2.0072593021482, -3.3190401955544, -1.7224397885068, -2.0757039503674}},&#10;{{-2.5521036898531, -2.5709014027842, -1.9696327691946, -2.490406924886, -2.9767711492104, -1.9297775830592, -2.4700146826793, -2.6771331522817, -2.6518427249258, -1.6712237395433}},&#10;{{-2.9385302851427, -2.7209097843199, -2.1587941868892, -2.6920193963084, -2.969022052377, -2.6895176535612, -2.4644188585891, -2.1597727665035, -1.6649758241367, -1.7086914701898}},&#10;{{-2.2316298844769, -8.6254926212057, -2.4297136338759, -2.8215785309423, -2.2704519249316, -2.1927465946001, -2.163308413698, -1.9762489125134, -2.3511732031538, -3.5528426259695}},&#10;{{-2.2601763698526, -2.4360759388042, -2.1933628463079, -2.4911683334832, -2.6667950529161, -2.8937567826816, -2.53910418599, -2.9463375840448, -2.3904505987364, -1.6071726244865}},&#10;{{-2.6464429198336, -3.4887022176034, -2.199546563624, -2.7417525518921, -4.0746608128032, -3.0014095035725, -1.680969109507, -2.3641555917166, -1.9914154981094, -1.494123512059}},&#10;{{-2.2442124198046, -2.0593712019625, -2.7229364528975, -4.0075775753494, -3.3425202000213, -1.7879592986716, -1.8303921018414, -2.40967087813, -2.6755960113675, -3.7188000932992}},&#10;{{-2.67201344777, -3.7664621215403, -3.0746727591507, -4.610235172549, -2.3798802236385, -1.9820876852681, -2.4604297386521, -2.5266928033441, -2.221053307096, -1.9439371671803}},&#10;{{-3.0247836120152, -1.9356985846657, -2.3330248168877, -2.4116834400317, -3.0178897302342, -1.8285173743422, -2.4765894672706, -3.3452785487167, -3.1956411146559, -3.1724852785734}},&#10;{{-2.3809788863629, -2.5400609541428, -2.4841695116699, -2.8010612203852, -2.4019948586547, -1.7851723591252, -2.7759319461174, -2.7183201126789, -2.4114077706325, -3.1460878819419}},&#10;{{-2.4906349289074, -2.6083528983117, -2.2223008806519, -2.6941227714954, -2.1563842818586, -2.2010917323756, -1.9647401680043, -2.2321529834277, -2.8722616758812, -2.8914253615753}},&#10;{{-2.4706334940254, -2.7865686797769, -2.4842854223398, -2.7068564157945, -2.6795883188532, -3.108271110475, -3.3614326858789, -3.2944333765596, -3.0135885259665, -2.6677969013141}},&#10;{{-3.2018859505065, -3.05032454758, -2.9068672692915, -2.8362105008302, -4.4556689995967, -3.6688703799104, -3.1629041582099, -3.7623808840561, -3.0129003053675, -2.9460899788535}},&#10;{{-3.4677776435033, -3.3795676170042, -2.4015965820977, -2.960290616651, -2.8834654316497, -2.7179207989733, -2.876724442465, -2.819446937346, -2.8976211675565, -2.5148142933849}},&#10;{{-3.2555537274883, -2.8752421147911, -3.0918686660423, -2.978713975614, -2.1818456527268, -3.1847270948551, -3.1553541192045, -4.0643524051639, -2.6224034992183, -2.5229528455754}},&#10;{{-2.8687785719952, -2.630553042174, -5.5629695564168, -3.3322648516274, -2.4155716726247, -3.6113784959991, -3.7514700299037, -3.2662955860987, -3.8466039826457, -6.0197682152067}},&#10;{{-3.6373917187675, -4.4061237100738, -3.5748639369875, -3.5169743400348, -2.3717919828604, -3.3419839618575, -4.0162979845886, -3.9834070825401, -3.5705205773051, -3.421292630958}},&#10;{{-4.1544971966452, -2.8198449996692, -3.5987948686, -3.1645537385667, -2.9117571752984, -3.1212024161424, -2.8672300102487, -2.5221270584246, -4.2809389942179, -2.8378579275284}},&#10;{{-3.0635382436052, -2.6396670311817, -2.9344934993333, -3.1635183721111, -4.0713440465016, -3.638410979301, -3.8252128364258, -3.0584743849574, -3.236853379246, -3.1655490475738}},&#10;{{-3.4287789415912, -3.2698112082103, -3.6559963920478, -3.1353889483534, -3.6783666275303, -2.9086069480439, -3.3307150015911, -3.3604919632405, -3.0795677709854, -3.6140082740746}},&#10;{{-3.2667879290911, -2.9764969227587, -3.5937981123138, -3.3158770892502, -3.3334418569678, -2.9038394506061, -3.2642387962411, -3.818308539349, -3.7337922674585, -3.3998998678791}},&#10;{{-3.4778080555074, -3.1134673419467, -3.2945147955774, -2.8992399014345, -4.9360631065447, -3.8890850015689, -4.2690245014349, -3.6243868240029, -3.2275353390313, -2.819999071733}},&#10;{{-3.2082955624121, -2.9921799640461, -3.3989727311562, -3.0089838704402, -3.82461879504, -4.1986160724207, -2.8187211105897, -3.6539627266202, -3.1513940426708, -3.2715478138312}},&#10;{{-4.3181182794559, -4.2724767144439, -5.2281545021609, -4.0441774095649, -3.6220672202802, -3.1296623400066, -3.1696524356236, -3.4325653870205, -3.176125094025, -3.3984639139463}},&#10;{{-4.5201971097102, -3.9572662605928, -5.3882892594532, -4.8840068125552, -3.3650481475709, -2.883291284876, -2.9040595553757, -3.0843124914818, -3.4419075494757, -3.9246017919374}},&#10;{{-4.8141004431, -4.5120204774598, -4.7922230579319, -4.2896368565982, -3.7539471117548, -3.2057495369417, -3.7124039110946, -4.3595830083999, -5.0003107162938, -4.1925091717548}},&#10;{{-4.8312700891592, -4.4525900330002, -3.6569850899584, -4.1495001389764, -3.6487712748007, -3.0847274860688, -3.2775852031563, -3.4308946852033, -3.1327831595737, -3.7742039805375}},&#10;{{-3.9781813007686, -4.0100468790235, -3.894821895759, -4.7895352296937, -3.4897800723279, -3.5045060494112, -3.721826232824, -4.1676400615303, -3.4110902622931, -3.766447459835}},&#10;{{-5.4639598464217, -5.1201167335042, -5.0949738019858, -4.2479880808525, -4.5055262614477, -6.0029907195421, -4.9117516619758, -4.4286865140956, -5.3188402824606, -4.7981950613943}},&#10;{{-5.1234509627464, -5.4644002021724, -5.0630103088336, -4.2989564879104, -5.2597098166307, -5.4902530531011, -5.4108757232495, -4.0533722535826, -3.8367373280024, -4.447176629141}},&#10;{{-5.3836282552535, -5.4972783753791, -5.1051605025424, -4.7838077437662, -6.1132356490818, -5.6491028894871, -4.8318309965158, -4.6059081375716, -4.5159914977726, -4.9196008451933}},&#10;{{-6.0759216856476, -6.6608904844312, -5.436876792697, -4.9506037358284, -5.3971301514253, -4.7868339501518, -4.6423446924131, -4.5270803077494, -4.6867602103324, -6.2588152930369}},&#10;{{-5.2079371477122, -4.9043212786547, -4.790762040579, -4.9765017466425, -5.949388326336, -4.7729027520152, -4.5714430238468, -4.5563745533226, -4.6219634085396, -5.0507270060724}},&#10;{{-5.8297368874513, -5.6077258685901, -5.7763163180147, -6.1006819846188, -5.1166993540321, -7.1212790754002, -6.858185881728, -6.3587169391789, -5.8172313966416, -6.2432305376308}},&#10;{{-6.5976638202366, -6.0697589606128, -5.9378618128107, -6.1534699585923, -5.3266762500951, -6.4203503224674, -7.0556101737139, -6.8303319257487, -5.6800143413858, -5.133017010854}},&#10;{{-5.9599212858845, -5.8853412770146, -6.2298144815048, -7.7268537369799, -5.024887324401, -7.1016960084728, -5.9337643613024, -6.9846663561356, -5.8659315651733, -5.4793040811009}},&#10;{{-8.1214192227917, -7.1991291981575, -6.897671652193, -7.7093259654571, -5.6788480316252, -5.9038595272107, -6.4072167058266, -7.2571272520069, -7.852086740259, -7.6975275993703}},&#10;{{-6.5198192056412, -6.5936011656212, -8.3414104544173, -6.7359624203646, -5.7128101756319, -5.9314989198042, -7.1721007312156, -7.0801574610868, -6.2001800706591, -5.8686386102525}},&#10;{{-7.7753536707989, -7.5774410659941, -7.6961868687654, -8.5888460620917, -7.1105436011636, -6.7349080331424, -6.6328754976469, -7.3030230493586, -7.1497518081313, -7.1356734327602}},&#10;{{-8.3019246040013, -8.5211325211715, -7.7857883930647, -8.4346081016541, -7.935310049252, -7.4561793671234, -7.3020043924198, -8.0669078284259, -8.1275680251407, -7.2174719089147}},&#10;{{-8.4265652913788, -8.1927962595715, -8.2243628210948, -8.4371850063584, -8.7998469114824, -7.9010120533651, -7.7869271405733, -7.8489684715244, -7.9865099406278, -8.0942087811363}},&#10;{{-3.3417760176661, -3.3371958696689, -3.3443564571367, -3.3524040961809, -3.3754104523301, -3.3855796916684, -3.3775040899263, -3.3810978236608, -3.3933110141738, -3.377839437401}},&#10;{{-3.2638175787695, -3.1585179766845, -2.9329335199098, -2.8898101812768, -3.9792739450162, -2.9493004567682, -2.7486598820827, -2.6430302660271, -2.6066447226255, -2.6073454461292}},&#10;{{-2.7886652898744, -2.8637448947299, -3.8280971930559, -3.4310449716457, -3.2087101528327, -2.8205235682155, -2.6253786619363, -2.6357387874844, -2.8953483053175, -3.4814292227148}},&#10;{{-2.9771256594225, -3.3273286147725, -2.7660246757434, -2.5524400223533, -1.9100892067262, -2.5622009337437, -3.0488830204863, -1.9746814045196, -1.7195266509148, -1.9145480171391}},&#10;{{-2.7821567820078, -3.1928060788891, -2.3106607289523, -2.2706725717914, -1.9704315761323, -2.1122051534209, -2.3634330867488, -1.7982281067596, -2.1791670357299, -3.044165265628}},&#10;{{-3.2583607044731, -3.580380276758, -2.9300320810238, -3.1827195326136, -1.856466725554, -2.1385262124684, -2.8857952006101, -2.4318502139479, -2.1987625303313, -2.1070292909024}},&#10;{{-3.53383305489, -2.5228911587489, -4.4840799364214, -3.7180997790775, -2.0297253476015, -1.92277763984, -2.1070313468974, -2.6183571910762, -3.3966893474714, -2.6268240914901}},&#10;{{-4.1580849302537, -2.697495648032, -3.2428703591161, -3.3131505262386, -2.0017989262964, -1.6975854038323, -1.998613245307, -2.3737435539885, -1.9556302017786, -4.0929798264143}},&#10;{{-3.6399250341979, -2.899464214823, -3.192321724562, -3.5624502520217, -3.4081049349106, -2.7386947658656, -2.5096774021003, -3.2210012222283, -3.0119719315354, -2.9927001588647}},&#10;{{-3.6425884375539, -2.7045398234863, -3.7987057187986, -4.1089790566158, -2.3075428106616, -2.2426477061429, -2.8953904609025, -3.4844231096542, -3.2883136533809, -3.3222633473262}},&#10;{{-3.6406912477533, -3.533298067164, -2.7682618559541, -4.238141125111, -3.8331049230439, -2.296713247809, -3.0804777086603, -2.4551393369682, -2.2562717314089, -4.3536025246719}},&#10;{{-3.4722327488112, -2.474509692177, -3.6859902172535, -2.7418220837886, -4.6653534812004, -2.9300447075024, -3.8792325239045, -2.4627797049903, -2.8563335631818, -2.5834353122482}},&#10;{{-2.2908053823911, -2.1469087561928, -2.7246527622021, -3.7081209549128, -2.8743712548447, -2.4308232954075, -4.0700794693878, -3.0768788175267, -2.2107665822044, -2.0411007957961}},&#10;{{-2.263799838093, -2.4393956849766, -3.1404662753185, -3.6914871761117, -3.7111165320351, -3.8023108347618, -3.3682709709744, -2.7940764638087, -2.7208694382378, -3.5771031604669}},&#10;{{-2.1961573817879, -1.9533610783354, -2.626798487411, -3.0482262712104, -4.1382492371352, -2.4197119713978, -3.3780198562241, -2.3529288524801, -2.4263540824594, -2.1701607005303}},&#10;{{-2.5017000226001, -2.7108239441371, -4.2367500051662, -3.1078240175408, -4.8295050331534, -3.025313976656, -3.0457791922772, -3.4212858386284, -2.9210802756707, -2.7084750918025}},&#10;{{-2.8949627472287, -2.0471455636257, -2.7925756899719, -3.1138006489626, -5.095547665216, -3.3094127563416, -3.3632958197444, -3.1569113928721, -3.6123840803969, -2.6341770248999}},&#10;{{-3.7730839781934, -2.9563023864657, -2.4257994129439, -3.0855482887489, -3.2277540598449, -2.7789971463797, -3.4536568724645, -3.7510839628689, -4.3051794449144, -3.219127667495}},&#10;{{-3.0200345615003, -2.2380786845285, -2.6094942066, -3.2963769341325, -2.2753361000724, -3.1489769800403, -2.7921128690325, -4.0733855901878, -4.3031111918155, -2.5110755136909}},&#10;{{-2.7377797263023, -2.876882752332, -2.9659662846757, -2.041907680272, -1.9982618257485, -3.3803593472472, -2.8377251855804, -3.3478395161216, -2.8354428979771, -2.259026219721}},&#10;{{-2.6923025716949, -2.4727372503955, -3.11499913307, -2.0954239680571, -2.5358461398849, -4.0033547514275, -3.0568347765455, -3.7679739977342, -3.3231541697358, -4.6301133331785}},&#10;{{-4.0283625040477, -3.3587638676924, -2.8328976951327, -2.8240547078517, -2.7882876239128, -2.8453110614156, -2.5679760802754, -2.6803876724555, -3.3137914171809, -4.0127529204739}},&#10;{{-2.6733653274052, -3.020491785103, -2.5207029693908, -2.4407461512901, -2.6664175522085, -2.9132694577725, -2.1972028266576, -2.1075325453494, -6.2670429138852, -2.8794532299712}},&#10;{{-2.6083660965478, -2.0290661764349, -3.0340027486879, -3.9927143425275, -4.2115656457025, -2.3322933497192, -2.1398662536637, -2.1503789928698, -2.1079138729566, -2.3204487409857}},&#10;{{-2.7445376022895, -2.1594017042826, -2.5024046180534, -2.9692087393147, -2.1725357917629, -2.1458152082945, -1.9636418602205, -1.7113465775272, -2.3565281928626, -3.7867540099017}},&#10;{{-3.8135743173961, -2.1462413275291, -3.6436994375002, -2.5960504137335, -2.095075771437, -1.8287343725804, -1.5939523569447, -1.967816234312, -2.565771797199, -2.422080279486}},&#10;{{-2.7719328695639, -2.0473792496989, -4.7393297839861, -2.7797058502112, -2.6553360204206, -1.8276764874278, -1.8513537499476, -2.1230040184371, -2.5442334467388, -2.645284088531}},&#10;{{-2.4884957600914, -2.7874343760683, -2.4642564722779, -2.137678348244, -2.8062394407077, -1.6012897300815, -2.3821475639309, -2.5667801167556, -2.4260400177126, -3.5594645894837}},&#10;{{-2.5397081709619, -2.012121567871, -2.3855569436219, -2.0881345030669, -2.3334873260673, -1.8839223997875, -1.8841359621609, -2.7666715546554, -2.2566753672149, -2.2531231699325}},&#10;{{-4.2148320821065, -3.4309947121413, -2.3149209338865, -2.4674499857813, -4.3257143543746, -2.7169455092479, -2.3048110797528, -2.4819034957524, -2.3582438874251, -2.0930219562087}},&#10;{{-2.6653665371721, -2.1855524899915, -2.4158110382184, -1.8587817167586, -2.3756908383311, -2.3334751004469, -4.0974462151901, -2.1864906748023, -2.255804336901, -4.8673164828641}},&#10;{{-2.2592283758744, -2.7957619330084, -3.1448574648072, -2.0138002194469, -2.0248002272804, -3.8458917567305, -2.676954065926, -2.4353663779412, -2.1214724706021, -2.4437451694234}}}&#10;">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-420.0, -1160.0}">
+        </property>
+    </entity>
+    <entity name="GMTKOnline3" class="org.terraswarm.accessor.JSAccessor">
+        <property name="script" class="ptolemy.actor.parameters.PortParameter" value="// Copyright (c) 2014-2015 The Regents of the University of California.&#10;// All rights reserved.&#10;&#10;// Permission is hereby granted, without written agreement and without&#10;// license or royalty fees, to use, copy, modify, and distribute this&#10;// software and its documentation for any purpose, provided that the above&#10;// copyright notice and the following two paragraphs appear in all copies&#10;// of this software.&#10;&#10;// IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY&#10;// FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES&#10;// ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF&#10;// THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF&#10;// SUCH DAMAGE.&#10;&#10;// THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,&#10;// INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF&#10;// MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE&#10;// PROVIDED HEREUNDER IS ON AN &quot;AS IS&quot; BASIS, AND THE UNIVERSITY OF&#10;// CALIFORNIA HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES,&#10;// ENHANCEMENTS, OR MODIFICATIONS.&#10;&#10;/** This accessor sends and/or receives messages from a web socket at&#10; *  the specified host and port. In `initialize()`, it&#10; *  begins connecting to the web socket server.&#10; *  Once the connection is established, a `true` boolean is sent to&#10; *  the `connected` output.&#10; *  If connection is not established immediately, the accessor will attempt to&#10; *  reconnect (numberOfRetries) times at an interval of (reconnectInterval)&#10; *&#10; *  Whenever an input is received on the `toSend`&#10; *  input, the message is sent to the socket. If the socket is not yet open,&#10; *  this accessor will, by default, queue the message to send when the socket opens,&#10; *  unless the `discardMessagesBeforeOpen` parameter is true, in which case,&#10; *  input messages that are received before the socket is opened will be&#10; *  discarded. If messages are queued and `throttleFactor` is non-zero, then&#10; *  whenever a message is queued to be later sent, the accessor will stall&#10; *  by a number of milliseconds given by the queue size times the throttleFactor.&#10; *  The longer the queue, the longer the stall. Note that this will likely block&#10; *  the host from executing, so this feature should be used with caution.&#10; *&#10; *  Whenever a message is received from the socket, that message is&#10; *  produced on the `'received'` output. The maxFrameSize parameter limits the size&#10; *  of received messages, and any attempt to send to this client a larger message&#10; *  will cause an error.&#10; *&#10; *  When `wrapup()` is invoked, this accessor closes the&#10; *  connection.&#10; *  &#10; *  If the connection is dropped midway, the client will attempt to reconnect if &#10; *  (reconnectOnClose) is true. This does not apply when the accessor wraps up. &#10; *&#10; *  The default type for both sending and receiving&#10; *  is 'application/json', which allows sending and receiving anything that has&#10; *  a string representation in JSON. The types supported by this implementation&#10; *  include at least:&#10; *  * __application/json__: The send() function uses JSON.stringify() and sends the&#10; *    result with a UTF-8 encoding. An incoming byte stream will be parsed as JSON,&#10; *    and if the parsing fails, will be provided as a string interpretation of the byte&#10; *    stream.&#10; *  * __text/\*__: Any text type is sent as a string encoded in UTF-8.&#10; *  * __image/x__: Where __x__ is one of __json__, __png__, __gif__,&#10; *    and more.&#10; *    In this case, the data passed to send() is assumed to be an image, as encoded&#10; *    on the host, and the image will be encoded as a byte stream in the specified&#10; *    format before sending.  A received byte stream will be decoded as an image,&#10; *    if possible.&#10; *&#10; *  When a model with an instance of this accessor stops executing, there&#10; *  are two mechanisms by which data in transit can be lost. In both cases, warning&#10; *  messages or error messages will be issued to the host to be displayed or otherwise&#10; *  handled as the host sees fit.&#10; *  &#10; *  * First, there might be queued messages that were received on `toSend` but have not yet&#10; *    been sent, either because the socket has not yet been opened or because&#10; *    it was closed from the other side.&#10; *  * Second, a message might be received from the server after shutdown has commenced.&#10; *    In particular, received messages are handled asynchronously by a handler function&#10; *    that can be invoked at any time, and that handler might be invoked after it is no&#10; *    longer possible for this accessor to produce outputs (it has entered its wrapup&#10; *    phase of execution).&#10; *  &#10; *  The server might similarly lose messages by the same two mechanisms occurring&#10; *  on the server side. In that case, messages will presumably be displayed on the&#10; *  server side.&#10; *&#10; *  Accessors that extend this one can override the `toSendInputHandler` function&#10; *  to customize what is sent. See `RosPublisher.js` for an example.&#10; *&#10; *  This accessor requires the 'webSocket' module.&#10; *&#10; *  @accessor net/WebSocketClient&#10; *  @parameter {string} server The IP address or domain name of server. Defaults to 'localhost'.&#10; *  @parameter {int} port The port that the web socket listens to. Defaults to 8080.&#10; *  @parameter {string} receiveType The MIME type for incoming messages, which defaults to 'application/json'.&#10; *  @parameter {string} sendType The MIME type for outgoing messages, which defaults to 'application/json'.&#10; *  @parameter {int} connectTimeout The time in milliseconds to wait before giving up on a connection (default is 60000).&#10; *  @parameter {int} maxFrameSize The maximum frame size for a received message (default is 65536).&#10; *  @parameter {int} numberOfRetries The number of times to retry if a connection fails. Defaults to 5.&#10; *  @parameter {int} timeBetweenRetries The time between retries in milliseconds. Defaults to 100.&#10; *  @parameter {boolean} reconnectOnClose The option of whether or not to reconnect when disconnected.&#10; *  @parameter {boolean} discardMessagesBeforeOpen If true, then any messages received on `toSend` before the socket is open will be discarded. This defaults to false.&#10; *  @parameter {int} throttleFactor If non-zero, specifies a time (in milliseconds) to stall when a message is queued because the socket is not yet open. The time of the stall will be the queue size (after adding the message) times the throttleFactor. This defaults to 0.&#10; *  @input toSend The data to be sent over the socket.&#10; *  @output {boolean} connected Output `true` on connected and `false` on disconnected.&#10; *  @output received The data received from the web socket server.&#10; *  @author Hokeun Kim, Marcus Pan, Edward A. Lee, Matt Weber&#10; *  @version $$Id: WebSocketClient.js 292 2015-09-01 14:16:50Z eal $$&#10; */&#10;/* These are needed by JSLint, see https://chess.eecs.berkeley.edu/ptexternal/wiki/Main/JSLint */&#10;&quot;use strict&quot;;&#10;/*global addInputHandler, error, get, getParameter, input, onClose, output, parameter, removeInputHandler, send */&#10;&#10;var WebSocket = require('webSocket');&#10;var client = null;&#10;var inputHandle = null;&#10;&#10;/** Set up the accessor by defining the parameters, inputs, and outputs. */&#10;exports.setup = function () {&#10;    parameter('server', {&#10;        type : 'string',&#10;        value : 'localhost'&#10;    });&#10;    parameter('port', {&#10;        type : 'int',&#10;        value : 8080&#10;    });&#10;    parameter('receiveType', {&#10;        type : 'string',&#10;        value : 'application/json',&#10;        options : WebSocket.supportedReceiveTypes()&#10;    });&#10;    parameter('sendType', {&#10;        type : 'string',&#10;        value : 'application/json',&#10;        options : WebSocket.supportedSendTypes()&#10;    });&#10;    parameter('connectTimeout', {&#10;        value: 60000, &#10;        type: &quot;int&quot; &#10;    });&#10;    parameter('maxFrameSize', {&#10;        value: 65536, &#10;        type: &quot;int&quot; &#10;    });&#10;    parameter('numberOfRetries', {&#10;        type : 'int',&#10;        value : 5&#10;    });&#10;    parameter('timeBetweenRetries', {&#10;        type : 'int',&#10;        value : 100&#10;    });&#10;    parameter('reconnectOnClose', {&#10;        type : 'boolean',&#10;        value : true&#10;    });&#10;    parameter('discardMessagesBeforeOpen', {&#10;        type : 'boolean',&#10;        value : false&#10;    });&#10;    parameter('throttleFactor', {&#10;        type : 'int',&#10;        value : 0&#10;    });&#10;    input('toSend');&#10;    output('connected', {&#10;        type : 'boolean'&#10;    });&#10;    output('received');&#10;};&#10;&#10;/** Initializes accessor by attaching functions to inputs. */&#10;exports.initialize = function () {&#10;&#10;    //record the object that calls it (could be a derived accessor). &#10;    var callObj = this;&#10;&#10;    client = new WebSocket.Client(&#10;        {&#10;            'host' : getParameter('server'),&#10;            'port' : getParameter('port'),&#10;            'receiveType' : getParameter('receiveType'),&#10;            'sendType' : getParameter('sendType'),&#10;            'connectTimeout' : getParameter('connectTimeout'),&#10;            'maxFrameSize' : getParameter('maxFrameSize'),&#10;            'numberOfRetries' : getParameter('numberOfRetries'),&#10;            'timeBetweenRetries' : getParameter('timeBetweenRetries'),&#10;            'discardMessagesBeforeOpen' : getParameter('discardMessagesBeforeOpen'),&#10;            'throttleFactor' : getParameter('throttleFactor')&#10;        }&#10;    );&#10;&#10;    client.on('open', this.onOpen);&#10;    client.on('message', this.onMessage);&#10;&#10;    //bind onClose() to caller's object, &#10;    //so initialize() of caller's object is called if reconnect is true.&#10;    client.on('close', onClose.bind(callObj));&#10;    client.on('error', function (message) {&#10;        error(message);&#10;    });&#10;    //only execute once, and not when trying to reconnect. &#10;    if (inputHandle === null) {&#10;        inputHandle = addInputHandler('toSend', this.toSendInputHandler);&#10;    }&#10;};&#10;&#10;/** Handles input on 'toSend'. */&#10;exports.toSendInputHandler = function () {&#10;    exports.sendToWebSocket(get('toSend'));&#10;};&#10;&#10;/** Sends JSON data to the web socket. */&#10;exports.sendToWebSocket = function (data) {&#10;    if (client !== null) {&#10;        client.send(data);&#10;        //console.log(&quot;Sending to web socket: &quot; + data);&#10;    } else {&#10;        console.log(&quot;Client is null. Could not send message: &quot; + data);&#10;    }&#10;};&#10;&#10;/** Executes once  web socket establishes a connection.&#10; *   Sets 'connected' output to true.&#10; */&#10;exports.onOpen = function () {&#10;    console.log('Status: Connection established');&#10;    send('connected', true);&#10;};&#10;&#10;/** Send false to 'connected' output, and if 'reconnectOnClose'&#10; *  parameter evaluates to true and wrapup() has not been called,&#10; *  then invoke initialize().&#10; *  This will be called if either side closes the connection.&#10; *  @param message Possible message about the closure.&#10; */&#10;function onClose(message) {&#10;    console.log('Status: Connection closed: ' + message);&#10;    if (inputHandle) {&#10;        // wrapup() has not been called.&#10;        // Probably the server closed the connection.&#10;        send('connected', false);&#10;        // Reconnect if reconnectOnClose is true.&#10;        if (getParameter('reconnectOnClose')) {&#10;            // Use 'this' rather than 'export' so initialize() can be overridden.&#10;            this.initialize();&#10;        } else {&#10;            // Not set to reconnect on close.&#10;            // Close and unregister everything.&#10;            client.removeAllListeners('open');&#10;            client.removeAllListeners('message');&#10;            client.removeAllListeners('close');&#10;            client = null;&#10;        }&#10;    }&#10;}&#10;&#10;/** Send the message received from web socket to the 'received' output. */&#10;exports.onMessage = function (message) {&#10;    send('received', message);&#10;};&#10;&#10;/** Close the web socket connection. */&#10;exports.wrapup = function () {&#10;    if (inputHandle !== null) {&#10;        removeInputHandler(inputHandle);&#10;        inputHandle = null;&#10;    }&#10;    if (client) {&#10;        client.removeAllListeners('open');&#10;        client.removeAllListeners('message');&#10;        client.removeAllListeners('close');&#10;        client.close();&#10;        console.log('Status: Connection closed in wrapup.');&#10;        client = null;&#10;    }&#10;};&#10;">
+            <property name="style" class="ptolemy.actor.gui.style.NoteStyle">
+                <property name="note" class="ptolemy.kernel.util.StringAttribute" value="NOTE: To see the script, invoke Open Actor">
+                </property>
+            </property>
+        </property>
+        <property name="accessorSource" class="org.terraswarm.accessor.JSAccessor$ActionableAttribute" value="http://www.terraswarm.org/accessors/net/WebSocketClient.js">
+        </property>
+        <property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+            <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;This accessor sends and/or receives messages from a web socket at&#10; the specified host and port. In &lt;code&gt;initialize()&lt;/code&gt;, it&#10; begins connecting to the web socket server.&#10; Once the connection is established, a &lt;code&gt;true&lt;/code&gt; boolean is sent to&#10; the &lt;code&gt;connected&lt;/code&gt; output.&#10; If connection is not established immediately, the accessor will attempt to&#10; reconnect (numberOfRetries) times at an interval of (reconnectInterval)&lt;/p&gt;&#10;&lt;p&gt; Whenever an input is received on the &lt;code&gt;toSend&lt;/code&gt;&#10; input, the message is sent to the socket. If the socket is not yet open,&#10; this accessor will, by default, queue the message to send when the socket opens,&#10; unless the &lt;code&gt;discardMessagesBeforeOpen&lt;/code&gt; parameter is true, in which case,&#10; input messages that are received before the socket is opened will be&#10; discarded. If messages are queued and &lt;code&gt;throttleFactor&lt;/code&gt; is non-zero, then&#10; whenever a message is queued to be later sent, the accessor will stall&#10; by a number of milliseconds given by the queue size times the throttleFactor.&#10; The longer the queue, the longer the stall. Note that this will likely block&#10; the host from executing, so this feature should be used with caution.&lt;/p&gt;&#10;&lt;p&gt; Whenever a message is received from the socket, that message is&#10; produced on the &lt;code&gt;'received'&lt;/code&gt; output.&lt;/p&gt;&#10;&lt;p&gt; When &lt;code&gt;wrapup()&lt;/code&gt; is invoked, this accessor closes the&#10; connection.&lt;/p&gt;&#10;&lt;p&gt; If the connection is dropped midway, the client will attempt to reconnect if &#10; (reconnectOnClose) is true. This does not apply when the accessor wraps up. &lt;/p&gt;&#10;&lt;p&gt; The data can be any type that has a JSON representation.&#10; For incoming messages, this accessor assumes that the message is&#10; a string in UTF-8 that encodes a JSON object.&lt;/p&gt;&#10;&lt;p&gt; When a model with an instance of this accessor stops executing, there&#10; are two mechanisms by which data in transit can be lost. In both cases, warning&#10; messages or error messages will be issued to the host to be displayed or otherwise&#10; handled as the host sees fit.&lt;/p&gt;&#10;&lt;h1&gt;First, there might be queued messages that were received on &lt;code&gt;toSend&lt;/code&gt; but have not yet&lt;/h1&gt;&lt;p&gt;   been sent, either because the socket has not yet been opened or because&#10;   it was closed from the other side.&lt;/p&gt;&#10;&lt;h1&gt;Second, a message might be received from the server after shutdown has commenced.&lt;/h1&gt;&lt;p&gt;   In particular, received messages are handled asynchronously by a handler function&#10;   that can be invoked at any time, and that handler might be invoked after it is no&#10;   longer possible for this accessor to produce outputs (it has entered its wrapup&#10;   phase of execution).&lt;/p&gt;&#10;&lt;p&gt; The server might similarly lose messages by the same two mechanisms occurring&#10; on the server side. In that case, messages will presumably be displayed on the&#10; server side.&lt;/p&gt;&#10;&lt;p&gt; Accessors that extend this one can override the &lt;code&gt;toSendInputHandler&lt;/code&gt; function&#10; to customize what is sent. See &lt;code&gt;RosPublisher.js&lt;/code&gt; for an example.&lt;/p&gt;&#10;&lt;p&gt; This accessor requires the 'webSocket' module.&lt;/p&gt;">
+            </property>
+            <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Hokeun Kim, Marcus Pan, Edward A. Lee, Matt Weber">
+            </property>
+            <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$Id: WebSocketClient.js 255 2015-08-12 00:05:42Z cxh $">
+            </property>
+            <property name="toSend (port)" class="ptolemy.kernel.util.StringAttribute" value="undefined The data to be sent over the socket.">
+            </property>
+            <property name="connected (port)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;boolean&quot;]}) Output `true` on connected and `false` on disconnected.">
+            </property>
+            <property name="received (port)" class="ptolemy.kernel.util.StringAttribute" value="undefined The data received from the web socket server.">
+            </property>
+            <property name="server (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;string&quot;]}) The IP address or domain name of server. Defaults to 'localhost'.">
+            </property>
+            <property name="port (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) The port that the web socket listens to. Defaults to 8080.">
+            </property>
+            <property name="numberOfRetries (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) The number of times to retry if a connection fails. Defaults to 5.">
+            </property>
+            <property name="timeBetweenRetries (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) The time between retries in milliseconds. Defaults to 100.">
+            </property>
+            <property name="reconnectOnClose (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;boolean&quot;]}) The option of whether or not to reconnect when disconnected.">
+            </property>
+            <property name="discardMessagesBeforeOpen (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;boolean&quot;]}) If true, then any messages received on `toSend` before the socket is open will be discarded. This defaults to false.">
+            </property>
+            <property name="throttleFactor (parameter)" class="ptolemy.kernel.util.StringAttribute" value="({names:[&quot;int&quot;]}) If non-zero, specifies a time (in milliseconds) to stall when a message is queued because the socket is not yet open. The time of the stall will be the queue size (after adding the message) times the throttleFactor. This defaults to 0.">
+            </property>
+        </property>
+        <property name="_tableauFactory" class="ptolemy.vergil.toolbox.TextEditorTableauFactory">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="script">
+            </property>
+            <property name="syntaxStyle" class="ptolemy.kernel.util.StringAttribute" value="text/javascript">
+            </property>
+        </property>
+        <property name="server" class="ptolemy.data.expr.Parameter" value="localhost">
+            <property name="_stringMode" class="ptolemy.kernel.util.SingletonAttribute">
+            </property>
+        </property>
+        <property name="port" class="ptolemy.data.expr.Parameter" value="8084">
+        </property>
+        <property name="numberOfRetries" class="ptolemy.data.expr.Parameter" value="5">
+        </property>
+        <property name="timeBetweenRetries" class="ptolemy.data.expr.Parameter" value="100">
+        </property>
+        <property name="reconnectOnClose" class="ptolemy.data.expr.Parameter" value="true">
+        </property>
+        <property name="discardMessagesBeforeOpen" class="ptolemy.data.expr.Parameter" value="false">
+        </property>
+        <property name="throttleFactor" class="ptolemy.data.expr.Parameter" value="0">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-255.0, -945.0]">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.EditorIcon">
+            <property name="rectangle" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[0.0, 0.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="60">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="40">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0, 1.0, 1.0, 1.0}">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line2" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-21.0, -11.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-16.0, 0.0]">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="40.0">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="0.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-21.0, -11.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,0.2,0.2,1.0}">
+                </property>
+            </property>
+            <property name="ellipse5" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-20.0, 12.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.2,0.6,1.0}">
+                </property>
+            </property>
+            <property name="ellipse6" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-8.0, 12.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.2,0.6,1.0}">
+                </property>
+            </property>
+            <property name="ellipse7" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[4.0, 12.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.2,0.6,1.0}">
+                </property>
+            </property>
+            <property name="ellipse11" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[10.0, 0.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,1.0,1,1.0}">
+                </property>
+            </property>
+            <property name="line3" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-9.0, -12.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line4" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[2.0, -13.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line5" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[17.0, -9.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line6" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-21.0, 12.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="-10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line8" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-8.0, 12.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="-10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line10" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[3.0, 13.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="-10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="line11" class="ptolemy.vergil.kernel.attributes.LineAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[16.0, 12.0]">
+                </property>
+                <property name="lineColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.0,0.0,1.0}">
+                </property>
+                <property name="x" class="ptolemy.data.expr.Parameter" value="6">
+                </property>
+                <property name="y" class="ptolemy.data.expr.Parameter" value="-10.0">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={158, 438, 934, 634}, maximized=false}">
+            </property>
+            <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 524]">
+            </property>
+            <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="4.0">
+            </property>
+            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{12.5, 9.25}">
+            </property>
+            <property name="ellipse4" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[16.0, -11.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,0.2,0.2,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse12" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[22.0, 0.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,1.0,1,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse8" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[17.0, 12.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.2,0.6,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse10" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-2.0, 0.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,1.0,1,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse3" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[4.0, -11.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,0.2,0.2,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse9" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-14.0, 0.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,1.0,1,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="ellipse2" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-8.0, -11.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="7">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,0.2,0.2,1.0}">
+                </property>
+                <property name="_renderLast" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+        </property>
+        <property name="receiveType" class="ptolemy.data.expr.Parameter" value="application/json">
+            <property name="_stringMode" class="ptolemy.kernel.util.SingletonAttribute">
+            </property>
+        </property>
+        <property name="sendType" class="ptolemy.data.expr.Parameter" value="application/json">
+            <property name="_stringMode" class="ptolemy.kernel.util.SingletonAttribute">
+            </property>
+        </property>
+        <property name="connectTimeout" class="ptolemy.data.expr.Parameter" value="60000">
+        </property>
+        <property name="maxFrameSize" class="ptolemy.data.expr.Parameter" value="65536">
+        </property>
+        <property name="_expertMode" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <port name="toSend" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="connected" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="received" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+    </entity>
+    <entity name="ApplauseScore3" class="ptolemy.actor.lib.jjs.JavaScript">
+        <property name="script" class="ptolemy.actor.parameters.PortParameter" value="// Put your JavaScript program here.&#10;// Add ports and parameters.&#10;// Define JavaScript functions initialize(), fire(), and/or wrapup().&#10;// Refer to parameters in scope using dollar-sign{parameterName}.&#10;// In the fire() function, use get(parameterName, channel) to read inputs.&#10;// Send to output ports using send(value, portName, channel).&#10;exports.setup = function() {&#10;  input('input');&#10;  output('output',{'type':'number'});&#10;  output('frame',{'type':'string'});&#10;} &#10;exports.fire = function() {&#10;  var token = get('input'); &#10; &#10;  token = token[0];&#10;  decoded_state = token.MPEvalue;&#10;  var hidden = decoded_state.startsWith(&quot;yesApplause&quot;)? 1.0:0.0;&#10;  //if (hidden == 1) {&#10;        send('output', parseFloat(hidden));&#10;        send('frame', parseInt(token.frame)); &#10;//}&#10;}">
+            <property name="style" class="ptolemy.actor.gui.style.NoteStyle">
+                <property name="note" class="ptolemy.kernel.util.StringAttribute" value="NOTE: To see the script, invoke Open Actor">
+                </property>
+            </property>
+        </property>
+        <property name="_tableauFactory" class="ptolemy.vergil.toolbox.TextEditorTableauFactory">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="script">
+            </property>
+            <property name="syntaxStyle" class="ptolemy.kernel.util.StringAttribute" value="text/javascript">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-110.0, -935.0]">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.EditorIcon">
+            <property name="rectangle" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-1.0, -1.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="60">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="40">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0, 1.0, 1.0, 1.0}">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="rectangle2" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-1.0, -1.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="54.0">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="35.0">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.8,1.0,0.8,0.2}">
+                </property>
+                <property name="_renderFirst" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="Annotation" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+                <property name="textSize" class="ptolemy.data.expr.Parameter" value="24">
+                </property>
+                <property name="textColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0,0.6,0.4,1.0}">
+                </property>
+                <property name="fontFamily" class="ptolemy.data.expr.StringParameter" value="Wingdings 2">
+                </property>
+                <property name="bold" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="text" class="ptolemy.kernel.util.StringAttribute" value="NN">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-25.0, -13.0]">
+                </property>
+            </property>
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="output" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="frame" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+    </entity>
+    <relation name="relation8" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;GMTKOnline2.received&quot;,x=-250.0,y=-1160.0}, tail={id=&quot;ApplauseScore2.input&quot;,x=-105.0,y=-1150.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation3" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation5" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="{-325.0, -1160.0}">
+        </vertex>
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;relation5.vertex1&quot;,x=-325.0,y=-1160.0}, tail={id=&quot;RecordedFeatures.output&quot;,x=-420.0,y=-1160.0}, points={} },{ head={id=&quot;GMTKOnline.toSend&quot;,x=-250.0,y=-1065.0}, tail={id=&quot;relation5.vertex1&quot;,x=-325.0,y=-1160.0}, points={-325.0,-1065.0} },{ head={id=&quot;GMTKOnline2.toSend&quot;,x=-250.0,y=-1160.0}, tail={id=&quot;relation5.vertex1&quot;,x=-325.0,y=-1160.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation6" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;GMTKOnline2.received&quot;,x=-55.0,y=-1150.0}, tail={id=&quot;ApplauseScore2.input&quot;,x=90.0,y=-1140.0}, points={} },{ head={id=&quot;GMTKOnline.received&quot;,x=-250.0,y=-1065.0}, tail={id=&quot;ApplauseScore.input&quot;,x=-105.0,y=-1055.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation7" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;DiscreteClock.output&quot;,x=-530.0,y=-1160.0}, tail={id=&quot;RecordedFeatures.enable&quot;,x=-420.0,y=-1160.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;GMTKOnline2.received&quot;,x=-55.0,y=-1150.0}, tail={id=&quot;ApplauseScore2.input&quot;,x=90.0,y=-1140.0}, points={} },{ head={id=&quot;GMTKOnline.received&quot;,x=-250.0,y=-1065.0}, tail={id=&quot;ApplauseScore.input&quot;,x=-105.0,y=-1055.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation4" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <link port="DiscreteClock.output" relation="relation"/>
+    <link port="GMTKOnline2.toSend" relation="relation5"/>
+    <link port="GMTKOnline2.received" relation="relation8"/>
+    <link port="ApplauseScore2.input" relation="relation8"/>
+    <link port="ApplauseScore2.output" relation="relation3"/>
+    <link port="SequencePlotter.input" relation="relation3"/>
+    <link port="SequencePlotter.input" relation="relation7"/>
+    <link port="SequencePlotter.input" relation="relation4"/>
+    <link port="GMTKOnline.toSend" relation="relation5"/>
+    <link port="GMTKOnline.received" relation="relation6"/>
+    <link port="ApplauseScore.input" relation="relation6"/>
+    <link port="ApplauseScore.output" relation="relation7"/>
+    <link port="RecordedFeatures.enable" relation="relation"/>
+    <link port="RecordedFeatures.output" relation="relation5"/>
+    <link port="GMTKOnline3.toSend" relation="relation5"/>
+    <link port="GMTKOnline3.received" relation="relation2"/>
+    <link port="ApplauseScore3.input" relation="relation2"/>
+    <link port="ApplauseScore3.output" relation="relation4"/>
+</entity>
