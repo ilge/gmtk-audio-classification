@@ -6,5 +6,5 @@ gmtkOnline \
   -strFile applause_detector.str \
   -inputMasterFile applause_detector.mtr \
   -inputTrainable $2\
-  -numSmooth $1 -viterbi -mVitValsFile - | \
+  -numSmooth $1 -viterbi T -mVitValsFile - | \
 vit2json
