@@ -1,10 +1,10 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
     "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
-<entity name="ApplauseDetectionLive" class="ptolemy.actor.TypedCompositeActor">
+<entity name="StLouis" class="ptolemy.actor.TypedCompositeActor">
     <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.devel">
     </property>
-    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={238, 129, 1241, 634}, maximized=false}">
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={3, 22, 1241, 634}, maximized=false}">
     </property>
     <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1007, 524]">
     </property>
@@ -93,7 +93,7 @@
         <property name="_location" class="ptolemy.kernel.util.Location" value="[-70.0, -1275.0]">
         </property>
     </property>
-    <property name="oldState" class="ptolemy.data.expr.Parameter" value="&quot;no_applause&quot;">
+    <property name="oldState" class="ptolemy.data.expr.Parameter" value="&quot;max_applause&quot;">
         <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
         </property>
         <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -158,20 +158,20 @@
     <entity name="SequenceToArray3" class="ptolemy.domains.sdf.lib.SequenceToArray">
         <property name="arrayLength" class="ptolemy.actor.parameters.PortParameter" value="3200">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-300.0, -1150.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-300.0, -1110.0}">
         </property>
     </entity>
     <entity name="DiscreteClock" class="ptolemy.actor.lib.DiscreteClock">
         <property name="period" class="ptolemy.actor.parameters.PortParameter" value="1.0/48e3">
         </property>
         <doc>Create periodic timed events.</doc>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-530.0, -1160.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-510.0, -1120.0}">
         </property>
     </entity>
     <entity name="SingleEvent" class="ptolemy.actor.lib.SingleEvent">
         <property name="time" class="ptolemy.data.expr.Parameter" value="5.0">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-635.0, -1065.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-615.0, -1025.0}">
         </property>
     </entity>
     <entity name="GMTKOnline2" class="org.terraswarm.accessor.JSAccessor">
@@ -233,7 +233,7 @@
         </property>
         <property name="throttleFactor" class="ptolemy.data.expr.Parameter" value="0">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-25.0, -1150.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-35.0, -1110.0}">
         </property>
         <property name="_icon" class="ptolemy.vergil.icon.EditorIcon">
             <property name="rectangle" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
@@ -566,7 +566,7 @@
             <property name="syntaxStyle" class="ptolemy.kernel.util.StringAttribute" value="text/javascript">
             </property>
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{120.0, -1140.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{110.0, -1100.0}">
         </property>
         <property name="_icon" class="ptolemy.vergil.icon.EditorIcon">
             <property name="rectangle" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
@@ -629,7 +629,7 @@
         </port>
     </entity>
     <entity name="FeatureExtract3" class="ptolemy.actor.TypedCompositeActor">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-170.0, -1150.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-170.0, -1110.0}">
         </property>
         <property name="nOverlap" class="ptolemy.data.expr.Parameter" value="fs/frameRate">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -1202,12 +1202,6 @@
         <link port="Expression.output" relation="relation3"/>
         <link port="Expression.in" relation="relation2"/>
     </entity>
-    <entity name="AudioReader" class="ptolemy.actor.lib.javasound.AudioReader">
-        <property name="fileOrURL" class="ptolemy.data.expr.FileParameter" value="/Users/oldilge/Google Drive/Applause Detection/Applause Detection/samples/test-sequence-2.wav">
-        </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-400.0, -1160.0}">
-        </property>
-    </entity>
     <entity name="AudioCapture" class="ptolemy.actor.lib.javasound.AudioCapture">
         <property name="sampleRate" class="ptolemy.actor.parameters.SharedParameter" value="48000">
             <property name="style" class="ptolemy.actor.gui.style.ChoiceStyle">
@@ -1239,76 +1233,203 @@
                 </property>
             </property>
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-589.8323721163474, -941.3909090552909}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-400.0, -1120.0}">
         </property>
     </entity>
-    <entity name="TimedPlotter" class="ptolemy.actor.lib.gui.TimedPlotter">
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={470, 278, 500, 344}, maximized=false}">
+    <entity name="ProcessOutput" class="ptolemy.actor.TypedCompositeActor">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{225.0, -1110.0}">
         </property>
-        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[500, 300]">
+        <property name="_icon" class="ptolemy.vergil.icon.EditorIcon">
+            <property name="rectangle" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[0.0, 0.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="60">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="40">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0, 1.0, 1.0, 1.0}">
+                </property>
+            </property>
+            <property name="Annotation" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+                <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Café">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-18.0, -9.0]">
+                </property>
+            </property>
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{225.0, -1150.0}">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={231, 106, 934, 634}, maximized=false}">
         </property>
-        <configure>
-<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
-"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
-<plot>
-<title>TimedPlotter</title>
-<xLabel>time (s)</xLabel>
-<yLabel>Applause</yLabel>
-<xRange min="0.0" max="40.4012766912"/>
-<yRange min="0.0" max="1.0"/>
-<yTicks>
-  <tick label="NoApplause" position="0.0"/>
-  <tick label="Applause" position="1.0"/>
-</yTicks>
-</plot>?>
-        </configure>
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 524]">
+        </property>
+        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.9316835375057108">
+        </property>
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{327.2974090576172, -817.6240133976592}">
+        </property>
+        <port name="port_5" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{-30.0, -895.0}">
+            </property>
+        </port>
+        <entity name="RefineApplauseState" class="ptolemy.actor.lib.jjs.JavaScript">
+            <property name="script" class="ptolemy.actor.parameters.PortParameter" value="// Put your JavaScript program here.&#10;// Add ports and parameters.&#10;// Define JavaScript functions initialize(), fire(), and/or wrapup().&#10;// Refer to parameters in scope using dollar-sign{parameterName}.&#10;// In the fire() function, use get(parameterName, channel) to read inputs.&#10;// Send to output ports using send(value, portName, channel).&#10;exports.setup = function() {&#10;  input('input');&#10;  parameter('someApplauseThreshold');&#10;  parameter('maxApplauseThreshold');&#10;  output('status',{'type':'string'}); &#10;}  &#10;exports.fire = function() {&#10;  var token = get('input'); &#10;  var thresh = getParameter('someApplauseThreshold');&#10;  var maxThresh = getParameter('maxApplauseThreshold');&#10;  var outputStatus = &quot;no_applause&quot;; &#10;  if ( token &gt;= maxThresh) {&#10;  	outputStatus = &quot;max_applause&quot;;   &#10;  } else if (token &gt;= thresh) {&#10;  	outputStatus = &quot;some_applause&quot;;&#10;  } &#10;  &#10;  send('status', outputStatus);&#10;  &#10;}">
+                <property name="style" class="ptolemy.actor.gui.style.NoteStyle">
+                    <property name="note" class="ptolemy.kernel.util.StringAttribute" value="NOTE: To see the script, invoke Open Actor">
+                    </property>
+                </property>
+            </property>
+            <property name="_tableauFactory" class="ptolemy.vergil.toolbox.TextEditorTableauFactory">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="script">
+                </property>
+                <property name="syntaxStyle" class="ptolemy.kernel.util.StringAttribute" value="text/javascript">
+                </property>
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{60.0, -895.0}">
+            </property>
+            <property name="someApplauseThreshold" class="ptolemy.data.expr.Parameter" value="someApplauseThreshold">
+            </property>
+            <property name="maxApplauseThreshold" class="ptolemy.data.expr.Parameter" value="maxApplauseThreshold">
+            </property>
+            <port name="input" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="status" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="MonitorValue" class="ptolemy.actor.lib.gui.MonitorValue">
+            <doc>Monitor and display values</doc>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="15">
+            </property>
+            <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+                </property>
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+                </property>
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{250.0, -1000.0}">
+            </property>
+            <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </entity>
+        <entity name="Expression" class="ptolemy.actor.lib.Expression">
+            <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="sending.equals(oldState)">
+            </property>
+            <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="expression">
+                </property>
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+                </property>
+                <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
+                </property>
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{275.0, -895.0}">
+            </property>
+            <port name="sending" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+            </port>
+        </entity>
+        <entity name="SetVariable" class="ptolemy.actor.lib.SetVariable">
+            <property name="variableName" class="ptolemy.kernel.util.StringAttribute" value="oldState">
+            </property>
+            <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="variableName">
+                </property>
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="40">
+                </property>
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{230.0, -950.0}">
+            </property>
+        </entity>
+        <entity name="BooleanSwitch" class="ptolemy.actor.lib.BooleanSwitch">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{400.0, -1060.0}">
+            </property>
+        </entity>
+        <entity name="Display" class="ptolemy.actor.lib.gui.Display">
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={69, 594, 499, 208}, maximized=false}">
+            </property>
+            <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[499, 164]">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{515.0, -1050.0}">
+            </property>
+        </entity>
+        <relation name="relation5" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+            </property>
+            <vertex name="vertex1" value="{180.0, -895.0}">
+            </vertex>
+            <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Expression.sending&quot;,x=275.0,y=-895.0}, tail={id=&quot;relation5.vertex1&quot;,x=180.0,y=-895.0}, points={} },{ head={id=&quot;MonitorValue.input&quot;,x=250.0,y=-1000.0}, tail={id=&quot;relation5.vertex1&quot;,x=180.0,y=-895.0}, points={180.0,-1000.0} },{ head={id=&quot;SetVariable.input&quot;,x=230.0,y=-950.0}, tail={id=&quot;relation5.vertex1&quot;,x=180.0,y=-895.0}, points={180.0,-950.0} },{ head={id=&quot;BooleanSwitch.input&quot;,x=400.0,y=-1060.0}, tail={id=&quot;relation5.vertex1&quot;,x=180.0,y=-895.0}, points={180.0,-1060.0} },{ head={id=&quot;RefineApplauseState.status&quot;,x=60.0,y=-895.0}, tail={id=&quot;relation5.vertex1&quot;,x=180.0,y=-895.0}, points={} } }">
+            </property>
+        </relation>
+        <relation name="relation6" class="ptolemy.actor.TypedIORelation">
+            <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Expression.output&quot;,x=275.0,y=-895.0}, tail={id=&quot;BooleanSwitch.control&quot;,x=400.0,y=-1060.0}, points={400.0,-895.0} } }">
+            </property>
+        </relation>
+        <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation3" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+            </property>
+            <vertex name="vertex1" value="[460.0, -1050.0]">
+            </vertex>
+        </relation>
+        <link port="port_5" relation="relation2"/>
+        <link port="RefineApplauseState.input" relation="relation2"/>
+        <link port="RefineApplauseState.status" relation="relation5"/>
+        <link port="MonitorValue.input" relation="relation5"/>
+        <link port="Expression.output" relation="relation6"/>
+        <link port="Expression.sending" relation="relation5"/>
+        <link port="SetVariable.input" relation="relation5"/>
+        <link port="BooleanSwitch.input" relation="relation5"/>
+        <link port="BooleanSwitch.control" relation="relation6"/>
+        <link port="BooleanSwitch.falseOutput" relation="relation3"/>
+        <link port="Display.input" relation="relation3"/>
     </entity>
     <relation name="relation11" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;DiscreteClock.start&quot;,x=-530.0,y=-1160.0}, tail={id=&quot;SingleEvent.output&quot;,x=-635.0,y=-1065.0}, points={-540.0,-1065.0} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;DiscreteClock.start&quot;,x=-510.0,y=-1120.0}, tail={id=&quot;SingleEvent.output&quot;,x=-615.0,y=-1025.0}, points={-520.0,-1025.0} } }">
         </property>
     </relation>
     <relation name="relation8" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;GMTKOnline2.received&quot;,x=-25.0,y=-1150.0}, tail={id=&quot;ApplauseScore2.input&quot;,x=120.0,y=-1140.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;GMTKOnline2.received&quot;,x=-35.0,y=-1110.0}, tail={id=&quot;ApplauseScore2.input&quot;,x=110.0,y=-1100.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SequenceToArray3.output&quot;,x=-300.0,y=-1150.0}, tail={id=&quot;FeatureExtract3.in&quot;,x=-170.0,y=-1150.0}, points={} } }">
-        </property>
-    </relation>
-    <relation name="relation5" class="ptolemy.actor.TypedIORelation">
-        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
-        </property>
-        <vertex name="vertex1" value="{-110.0, -1150.0}">
-        </vertex>
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;GMTKOnline2.toSend&quot;,x=-25.0,y=-1150.0}, tail={id=&quot;relation5.vertex1&quot;,x=-110.0,y=-1150.0}, points={} },{ head={id=&quot;FeatureExtract3.port_7&quot;,x=-170.0,y=-1150.0}, tail={id=&quot;relation5.vertex1&quot;,x=-110.0,y=-1150.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SequenceToArray3.output&quot;,x=-300.0,y=-1110.0}, tail={id=&quot;FeatureExtract3.in&quot;,x=-170.0,y=-1110.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation2" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;DiscreteClock.output&quot;,x=-530.0,y=-1160.0}, tail={id=&quot;AudioReader.trigger&quot;,x=-400.0,y=-1160.0}, points={} } }">
-        </property>
-    </relation>
-    <relation name="relation4" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SequenceToArray3.input&quot;,x=-300.0,y=-1150.0}, tail={id=&quot;AudioReader.output&quot;,x=-400.0,y=-1160.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;DiscreteClock.output&quot;,x=-510.0,y=-1120.0}, tail={id=&quot;AudioCapture.trigger&quot;,x=-400.0,y=-1120.0}, points={} } }">
         </property>
     </relation>
     <relation name="relation3" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ApplauseScore2.output&quot;,x=120.0,y=-1140.0}, tail={id=&quot;TimedPlotter.input&quot;,x=225.0,y=-1150.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SequenceToArray3.input&quot;,x=-300.0,y=-1110.0}, tail={id=&quot;AudioCapture.output&quot;,x=-400.0,y=-1120.0}, points={} } }">
         </property>
     </relation>
-    <link port="SequenceToArray3.input" relation="relation4"/>
+    <relation name="relation4" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;GMTKOnline2.toSend&quot;,x=-35.0,y=-1110.0}, tail={id=&quot;FeatureExtract3.port_7&quot;,x=-170.0,y=-1110.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation5" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ProcessOutput.port_5&quot;,x=225.0,y=-1110.0}, tail={id=&quot;ApplauseScore2.output&quot;,x=110.0,y=-1100.0}, points={} } }">
+        </property>
+    </relation>
+    <link port="SequenceToArray3.input" relation="relation3"/>
     <link port="SequenceToArray3.output" relation="relation"/>
     <link port="DiscreteClock.output" relation="relation2"/>
     <link port="DiscreteClock.start" relation="relation11"/>
     <link port="SingleEvent.output" relation="relation11"/>
-    <link port="GMTKOnline2.toSend" relation="relation5"/>
+    <link port="GMTKOnline2.toSend" relation="relation4"/>
     <link port="GMTKOnline2.received" relation="relation8"/>
     <link port="ApplauseScore2.input" relation="relation8"/>
-    <link port="ApplauseScore2.output" relation="relation3"/>
-    <link port="FeatureExtract3.port_7" relation="relation5"/>
+    <link port="ApplauseScore2.output" relation="relation5"/>
+    <link port="FeatureExtract3.port_7" relation="relation4"/>
     <link port="FeatureExtract3.in" relation="relation"/>
-    <link port="AudioReader.output" relation="relation4"/>
-    <link port="AudioReader.trigger" relation="relation2"/>
-    <link port="TimedPlotter.input" relation="relation3"/>
+    <link port="AudioCapture.trigger" relation="relation2"/>
+    <link port="AudioCapture.output" relation="relation3"/>
+    <link port="ProcessOutput.port_5" relation="relation5"/>
 </entity>

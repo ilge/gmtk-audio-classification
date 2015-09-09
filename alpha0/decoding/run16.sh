@@ -1,0 +1,1 @@
+websocketd --port=8080 ./online.sh 10 16comp-frame-tenstate.gmp
