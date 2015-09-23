@@ -4,7 +4,7 @@
 <entity name="ApplauseDetectionLive" class="ptolemy.actor.TypedCompositeActor">
     <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.devel">
     </property>
-    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={238, 129, 1241, 634}, maximized=false}">
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={199, 129, 1241, 634}, maximized=false}">
     </property>
     <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1007, 524]">
     </property>
@@ -1202,11 +1202,28 @@
         <link port="Expression.output" relation="relation3"/>
         <link port="Expression.in" relation="relation2"/>
     </entity>
-    <entity name="AudioReader" class="ptolemy.actor.lib.javasound.AudioReader">
-        <property name="fileOrURL" class="ptolemy.data.expr.FileParameter" value="/Users/oldilge/Google Drive/Applause Detection/Applause Detection/samples/test-sequence-2.wav">
+    <entity name="TimedPlotter" class="ptolemy.actor.lib.gui.TimedPlotter">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={470, 278, 500, 344}, maximized=false}">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-400.0, -1160.0}">
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[500, 300]">
         </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{225.0, -1150.0}">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>TimedPlotter</title>
+<xLabel>time (s)</xLabel>
+<yLabel>Applause</yLabel>
+<xRange min="0.14600000000000002" max="5.1348747842"/>
+<yRange min="0.0" max="1.0"/>
+<yTicks>
+  <tick label="NoApplause" position="0.0"/>
+  <tick label="Applause" position="1.0"/>
+</yTicks>
+</plot>?>
+        </configure>
     </entity>
     <entity name="AudioCapture" class="ptolemy.actor.lib.javasound.AudioCapture">
         <property name="sampleRate" class="ptolemy.actor.parameters.SharedParameter" value="48000">
@@ -1239,31 +1256,14 @@
                 </property>
             </property>
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-589.8323721163474, -941.3909090552909}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-410.0, -1160.0]">
         </property>
     </entity>
-    <entity name="TimedPlotter" class="ptolemy.actor.lib.gui.TimedPlotter">
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={470, 278, 500, 344}, maximized=false}">
+    <entity name="AudioReader" class="ptolemy.actor.lib.javasound.AudioReader">
+        <property name="fileOrURL" class="ptolemy.data.expr.FileParameter" value="/Users/oldilge/Google Drive/Applause Detection/Applause Detection/samples/test-sequence-2.wav">
         </property>
-        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[500, 300]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-509.71055353560513, -979.4976276485706}">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{225.0, -1150.0}">
-        </property>
-        <configure>
-<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
-"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
-<plot>
-<title>TimedPlotter</title>
-<xLabel>time (s)</xLabel>
-<yLabel>Applause</yLabel>
-<xRange min="0.0" max="40.4012766912"/>
-<yRange min="0.0" max="1.0"/>
-<yTicks>
-  <tick label="NoApplause" position="0.0"/>
-  <tick label="Applause" position="1.0"/>
-</yTicks>
-</plot>?>
-        </configure>
     </entity>
     <relation name="relation11" class="ptolemy.actor.TypedIORelation">
         <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;DiscreteClock.start&quot;,x=-530.0,y=-1160.0}, tail={id=&quot;SingleEvent.output&quot;,x=-635.0,y=-1065.0}, points={-540.0,-1065.0} } }">
@@ -1285,17 +1285,13 @@
         <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;GMTKOnline2.toSend&quot;,x=-25.0,y=-1150.0}, tail={id=&quot;relation5.vertex1&quot;,x=-110.0,y=-1150.0}, points={} },{ head={id=&quot;FeatureExtract3.port_7&quot;,x=-170.0,y=-1150.0}, tail={id=&quot;relation5.vertex1&quot;,x=-110.0,y=-1150.0}, points={} } }">
         </property>
     </relation>
-    <relation name="relation2" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;DiscreteClock.output&quot;,x=-530.0,y=-1160.0}, tail={id=&quot;AudioReader.trigger&quot;,x=-400.0,y=-1160.0}, points={} } }">
-        </property>
-    </relation>
-    <relation name="relation4" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SequenceToArray3.input&quot;,x=-300.0,y=-1150.0}, tail={id=&quot;AudioReader.output&quot;,x=-400.0,y=-1160.0}, points={} } }">
-        </property>
-    </relation>
     <relation name="relation3" class="ptolemy.actor.TypedIORelation">
         <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ApplauseScore2.output&quot;,x=120.0,y=-1140.0}, tail={id=&quot;TimedPlotter.input&quot;,x=225.0,y=-1150.0}, points={} } }">
         </property>
+    </relation>
+    <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation4" class="ptolemy.actor.TypedIORelation">
     </relation>
     <link port="SequenceToArray3.input" relation="relation4"/>
     <link port="SequenceToArray3.output" relation="relation"/>
@@ -1308,7 +1304,7 @@
     <link port="ApplauseScore2.output" relation="relation3"/>
     <link port="FeatureExtract3.port_7" relation="relation5"/>
     <link port="FeatureExtract3.in" relation="relation"/>
-    <link port="AudioReader.output" relation="relation4"/>
-    <link port="AudioReader.trigger" relation="relation2"/>
     <link port="TimedPlotter.input" relation="relation3"/>
+    <link port="AudioCapture.trigger" relation="relation2"/>
+    <link port="AudioCapture.output" relation="relation4"/>
 </entity>

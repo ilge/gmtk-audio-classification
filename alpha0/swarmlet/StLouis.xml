@@ -4,13 +4,13 @@
 <entity name="StLouis" class="ptolemy.actor.TypedCompositeActor">
     <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.devel">
     </property>
-    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={3, 22, 1241, 634}, maximized=false}">
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={33, 22, 1393, 878}, maximized=false}">
     </property>
-    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1007, 524]">
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1159, 768]">
     </property>
-    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0234415725020651">
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.8549680201823531">
     </property>
-    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{-180.91796874999835, -1080.1384485487713}">
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{-112.07352183503644, -971.7652900106568}">
     </property>
     <property name="enableBackwardTypeInference" class="ptolemy.data.expr.Parameter" value="true">
     </property>
@@ -23,7 +23,7 @@
         </property>
         <property name="enforceMicrostepSemantics" class="ptolemy.data.expr.Parameter" value="false">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[-595.0, -1260.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-595.0, -1260.0}">
         </property>
     </property>
     <property name="_defaultInferredWidthTo1" class="ptolemy.data.expr.Parameter" value="true">
@@ -74,7 +74,7 @@
         <property name="_location" class="ptolemy.kernel.util.Location" value="[-70.0, -1295.0]">
         </property>
     </property>
-    <property name="maxApplauseThreshold" class="ptolemy.data.expr.Parameter" value="1.0">
+    <property name="maxApplauseThreshold" class="ptolemy.data.expr.Parameter" value="1.2">
         <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
         </property>
         <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -93,7 +93,7 @@
         <property name="_location" class="ptolemy.kernel.util.Location" value="[-70.0, -1275.0]">
         </property>
     </property>
-    <property name="oldState" class="ptolemy.data.expr.Parameter" value="&quot;max_applause&quot;">
+    <property name="oldState" class="ptolemy.data.expr.Parameter" value="&quot;no_applause&quot;">
         <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
         </property>
         <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -1237,7 +1237,7 @@
         </property>
     </entity>
     <entity name="ProcessOutput" class="ptolemy.actor.TypedCompositeActor">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{225.0, -1110.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[230.0, -1110.0]">
         </property>
         <property name="_icon" class="ptolemy.vergil.icon.EditorIcon">
             <property name="rectangle" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
@@ -1259,17 +1259,41 @@
                 </property>
             </property>
         </property>
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={231, 106, 934, 634}, maximized=false}">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={402, 266, 934, 634}, maximized=false}">
         </property>
         <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 524]">
         </property>
-        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.9316835375057108">
+        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.8909143613322255">
         </property>
-        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{327.2974090576172, -817.6240133976592}">
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{344.2426071166992, -757.7842718815459}">
+        </property>
+        <property name="maLength" class="ptolemy.data.expr.Parameter" value="2">
+            <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+            </property>
+            <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+                <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+                </property>
+            </property>
+            <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+                <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+            </property>
+            <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{-35.0, -1040.0}">
+            </property>
         </property>
         <port name="port_5" class="ptolemy.actor.TypedIOPort">
             <property name="input"/>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="{-30.0, -895.0}">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{-30.0, -805.0}">
+            </property>
+        </port>
+        <port name="out" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{300.0, -995.0}">
             </property>
         </port>
         <entity name="RefineApplauseState" class="ptolemy.actor.lib.jjs.JavaScript">
@@ -1285,7 +1309,7 @@
                 <property name="syntaxStyle" class="ptolemy.kernel.util.StringAttribute" value="text/javascript">
                 </property>
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="{60.0, -895.0}">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{160.0, -805.0}">
             </property>
             <property name="someApplauseThreshold" class="ptolemy.data.expr.Parameter" value="someApplauseThreshold">
             </property>
@@ -1302,21 +1326,6 @@
                 </property>
             </port>
         </entity>
-        <entity name="MonitorValue" class="ptolemy.actor.lib.gui.MonitorValue">
-            <doc>Monitor and display values</doc>
-            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="15">
-            </property>
-            <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
-                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
-                </property>
-                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
-                </property>
-            </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="{250.0, -1000.0}">
-            </property>
-            <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-            </property>
-        </entity>
         <entity name="Expression" class="ptolemy.actor.lib.Expression">
             <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="sending.equals(oldState)">
             </property>
@@ -1328,7 +1337,7 @@
                 <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
                 </property>
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="{275.0, -895.0}">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{375.0, -805.0}">
             </property>
             <port name="sending" class="ptolemy.actor.TypedIOPort">
                 <property name="input"/>
@@ -1343,57 +1352,131 @@
                 <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="40">
                 </property>
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="{230.0, -950.0}">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{325.0, -865.0}">
             </property>
         </entity>
         <entity name="BooleanSwitch" class="ptolemy.actor.lib.BooleanSwitch">
-            <property name="_location" class="ptolemy.kernel.util.Location" value="{400.0, -1060.0}">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{495.0, -930.0}">
             </property>
         </entity>
-        <entity name="Display" class="ptolemy.actor.lib.gui.Display">
-            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={69, 594, 499, 208}, maximized=false}">
+        <entity name="MovingAverage" class="ptolemy.actor.lib.MovingAverage">
+            <property name="maxPastInputsToAverage" class="ptolemy.data.expr.Parameter" value="2">
             </property>
-            <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[499, 164]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{45.0, -805.0}">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="{515.0, -1050.0}">
+        </entity>
+        <entity name="WebSocketClient" class="org.terraswarm.accessor.JSAccessor">
+            <property name="script" class="ptolemy.actor.parameters.PortParameter" value="// Copyright (c) 2014-2015 The Regents of the University of California.&#10;// All rights reserved.&#10;&#10;// Permission is hereby granted, without written agreement and without&#10;// license or royalty fees, to use, copy, modify, and distribute this&#10;// software and its documentation for any purpose, provided that the above&#10;// copyright notice and the following two paragraphs appear in all copies&#10;// of this software.&#10;&#10;// IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY&#10;// FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES&#10;// ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF&#10;// THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF&#10;// SUCH DAMAGE.&#10;&#10;// THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,&#10;// INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF&#10;// MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE&#10;// PROVIDED HEREUNDER IS ON AN &quot;AS IS&quot; BASIS, AND THE UNIVERSITY OF&#10;// CALIFORNIA HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES,&#10;// ENHANCEMENTS, OR MODIFICATIONS.&#10;&#10;/** This accessor sends and/or receives messages from a web socket at&#10; *  the specified host and port. In `initialize()`, it&#10; *  begins connecting to the web socket server.&#10; *  Once the connection is established, a `true` boolean is sent to&#10; *  the `connected` output.&#10; *  If connection is not established immediately, the accessor will attempt to&#10; *  reconnect (numberOfRetries) times at an interval of (reconnectInterval)&#10; *&#10; *  Whenever an input is received on the `toSend`&#10; *  input, the message is sent to the socket. If the socket is not yet open,&#10; *  this accessor will, by default, queue the message to send when the socket opens,&#10; *  unless the `discardMessagesBeforeOpen` parameter is true, in which case,&#10; *  input messages that are received before the socket is opened will be&#10; *  discarded. If messages are queued and `throttleFactor` is non-zero, then&#10; *  whenever a message is queued to be later sent, the accessor will stall&#10; *  by a number of milliseconds given by the queue size times the throttleFactor.&#10; *  The longer the queue, the longer the stall. Note that this will likely block&#10; *  the host from executing, so this feature should be used with caution.&#10; *&#10; *  Whenever a message is received from the socket, that message is&#10; *  produced on the `'received'` output. The maxFrameSize parameter limits the size&#10; *  of received messages, and any attempt to send to this client a larger message&#10; *  will cause an error.&#10; *&#10; *  When `wrapup()` is invoked, this accessor closes the&#10; *  connection.&#10; *  &#10; *  If the connection is dropped midway, the client will attempt to reconnect if &#10; *  (reconnectOnClose) is true. This does not apply when the accessor wraps up. &#10; *&#10; *  The default type for both sending and receiving&#10; *  is 'application/json', which allows sending and receiving anything that has&#10; *  a string representation in JSON. The types supported by this implementation&#10; *  include at least:&#10; *  * __application/json__: The send() function uses JSON.stringify() and sends the&#10; *    result with a UTF-8 encoding. An incoming byte stream will be parsed as JSON,&#10; *    and if the parsing fails, will be provided as a string interpretation of the byte&#10; *    stream.&#10; *  * __text/\*__: Any text type is sent as a string encoded in UTF-8.&#10; *  * __image/x__: Where __x__ is one of __json__, __png__, __gif__,&#10; *    and more.&#10; *    In this case, the data passed to send() is assumed to be an image, as encoded&#10; *    on the host, and the image will be encoded as a byte stream in the specified&#10; *    format before sending.  A received byte stream will be decoded as an image,&#10; *    if possible.&#10; *&#10; *  When a model with an instance of this accessor stops executing, there&#10; *  are two mechanisms by which data in transit can be lost. In both cases, warning&#10; *  messages or error messages will be issued to the host to be displayed or otherwise&#10; *  handled as the host sees fit.&#10; *  &#10; *  * First, there might be queued messages that were received on `toSend` but have not yet&#10; *    been sent, either because the socket has not yet been opened or because&#10; *    it was closed from the other side.&#10; *  * Second, a message might be received from the server after shutdown has commenced.&#10; *    In particular, received messages are handled asynchronously by a handler function&#10; *    that can be invoked at any time, and that handler might be invoked after it is no&#10; *    longer possible for this accessor to produce outputs (it has entered its wrapup&#10; *    phase of execution).&#10; *  &#10; *  The server might similarly lose messages by the same two mechanisms occurring&#10; *  on the server side. In that case, messages will presumably be displayed on the&#10; *  server side.&#10; *&#10; *  Accessors that extend this one can override the `toSendInputHandler` function&#10; *  to customize what is sent. See `RosPublisher.js` for an example.&#10; *&#10; *  This accessor requires the 'webSocket' module.&#10; *&#10; *  @accessor net/WebSocketClient&#10; *  @parameter {string} server The IP address or domain name of server. Defaults to 'localhost'.&#10; *  @parameter {int} port The port that the web socket listens to. Defaults to 8080.&#10; *  @parameter {string} receiveType The MIME type for incoming messages, which defaults to 'application/json'.&#10; *  @parameter {string} sendType The MIME type for outgoing messages, which defaults to 'application/json'.&#10; *  @parameter {int} connectTimeout The time in milliseconds to wait before giving up on a connection (default is 60000).&#10; *  @parameter {int} maxFrameSize The maximum frame size for a received message (default is 65536).&#10; *  @parameter {int} numberOfRetries The number of times to retry if a connection fails. Defaults to 5.&#10; *  @parameter {int} timeBetweenRetries The time between retries in milliseconds. Defaults to 100.&#10; *  @parameter {boolean} reconnectOnClose The option of whether or not to reconnect when disconnected.&#10; *  @parameter {boolean} discardMessagesBeforeOpen If true, then any messages received on `toSend` before the socket is open will be discarded. This defaults to false.&#10; *  @parameter {int} throttleFactor If non-zero, specifies a time (in milliseconds) to stall when a message is queued because the socket is not yet open. The time of the stall will be the queue size (after adding the message) times the throttleFactor. This defaults to 0.&#10; *  @input toSend The data to be sent over the socket.&#10; *  @output {boolean} connected Output `true` on connected and `false` on disconnected.&#10; *  @output received The data received from the web socket server.&#10; *  @author Hokeun Kim, Marcus Pan, Edward A. Lee, Matt Weber&#10; *  @version $$$$Id: WebSocketClient.js 292 2015-09-01 14:16:50Z eal $$$$&#10; */&#10;/* These are needed by JSLint, see https://chess.eecs.berkeley.edu/ptexternal/wiki/Main/JSLint */&#10;&quot;use strict&quot;;&#10;/*global addInputHandler, error, get, getParameter, input, onClose, output, parameter, removeInputHandler, send */&#10;&#10;var WebSocket = require('webSocket');&#10;var client = null;&#10;var inputHandle = null;&#10;&#10;/** Set up the accessor by defining the parameters, inputs, and outputs. */&#10;exports.setup = function () {&#10;    parameter('server', {&#10;        type : 'string',&#10;        value : 'localhost'&#10;    });&#10;    parameter('port', {&#10;        type : 'int',&#10;        value : 8080&#10;    });&#10;    parameter('receiveType', {&#10;        type : 'string',&#10;        value : 'application/json',&#10;        options : WebSocket.supportedReceiveTypes()&#10;    });&#10;    parameter('sendType', {&#10;        type : 'string',&#10;        value : 'application/json',&#10;        options : WebSocket.supportedSendTypes()&#10;    });&#10;    parameter('connectTimeout', {&#10;        value: 60000, &#10;        type: &quot;int&quot; &#10;    });&#10;    parameter('maxFrameSize', {&#10;        value: 65536, &#10;        type: &quot;int&quot; &#10;    });&#10;    parameter('numberOfRetries', {&#10;        type : 'int',&#10;        value : 5&#10;    });&#10;    parameter('timeBetweenRetries', {&#10;        type : 'int',&#10;        value : 100&#10;    });&#10;    parameter('reconnectOnClose', {&#10;        type : 'boolean',&#10;        value : true&#10;    });&#10;    parameter('discardMessagesBeforeOpen', {&#10;        type : 'boolean',&#10;        value : false&#10;    });&#10;    parameter('throttleFactor', {&#10;        type : 'int',&#10;        value : 0&#10;    });&#10;    input('toSend');&#10;    output('connected', {&#10;        type : 'boolean'&#10;    });&#10;    output('received');&#10;};&#10;&#10;/** Initializes accessor by attaching functions to inputs. */&#10;exports.initialize = function () {&#10;&#10;    //record the object that calls it (could be a derived accessor). &#10;    var callObj = this;&#10;&#10;    client = new WebSocket.Client(&#10;        {&#10;            'host' : getParameter('server'),&#10;            'port' : getParameter('port'),&#10;            'receiveType' : getParameter('receiveType'),&#10;            'sendType' : getParameter('sendType'),&#10;            'connectTimeout' : getParameter('connectTimeout'),&#10;            'maxFrameSize' : getParameter('maxFrameSize'),&#10;            'numberOfRetries' : getParameter('numberOfRetries'),&#10;            'timeBetweenRetries' : getParameter('timeBetweenRetries'),&#10;            'discardMessagesBeforeOpen' : getParameter('discardMessagesBeforeOpen'),&#10;            'throttleFactor' : getParameter('throttleFactor')&#10;        }&#10;    );&#10;&#10;    client.on('open', this.onOpen);&#10;    client.on('message', this.onMessage);&#10;&#10;    //bind onClose() to caller's object, &#10;    //so initialize() of caller's object is called if reconnect is true.&#10;    client.on('close', onClose.bind(callObj));&#10;    client.on('error', function (message) {&#10;        error(message);&#10;    });&#10;    //only execute once, and not when trying to reconnect. &#10;    if (inputHandle === null) {&#10;        inputHandle = addInputHandler('toSend', this.toSendInputHandler);&#10;    }&#10;};&#10;&#10;/** Handles input on 'toSend'. */&#10;exports.toSendInputHandler = function () {&#10;    exports.sendToWebSocket(get('toSend'));&#10;};&#10;&#10;/** Sends JSON data to the web socket. */&#10;exports.sendToWebSocket = function (data) {&#10;    if (client !== null) {&#10;        client.send(data);&#10;        //console.log(&quot;Sending to web socket: &quot; + data);&#10;    } else {&#10;        console.log(&quot;Client is null. Could not send message: &quot; + data);&#10;    }&#10;};&#10;&#10;/** Executes once  web socket establishes a connection.&#10; *   Sets 'connected' output to true.&#10; */&#10;exports.onOpen = function () {&#10;    console.log('Status: Connection established');&#10;    send('connected', true);&#10;};&#10;&#10;/** Send false to 'connected' output, and if 'reconnectOnClose'&#10; *  parameter evaluates to true and wrapup() has not been called,&#10; *  then invoke initialize().&#10; *  This will be called if either side closes the connection.&#10; *  @param message Possible message about the closure.&#10; */&#10;function onClose(message) {&#10;    console.log('Status: Connection closed: ' + message);&#10;    if (inputHandle) {&#10;        // wrapup() has not been called.&#10;        // Probably the server closed the connection.&#10;        send('connected', false);&#10;        // Reconnect if reconnectOnClose is true.&#10;        if (getParameter('reconnectOnClose')) {&#10;            // Use 'this' rather than 'export' so initialize() can be overridden.&#10;            this.initialize();&#10;        } else {&#10;            // Not set to reconnect on close.&#10;            // Close and unregister everything.&#10;            client.removeAllListeners('open');&#10;            client.removeAllListeners('message');&#10;            client.removeAllListeners('close');&#10;            client = null;&#10;        }&#10;    }&#10;}&#10;&#10;/** Send the message received from web socket to the 'received' output. */&#10;exports.onMessage = function (message) {&#10;    send('received', message);&#10;};&#10;&#10;/** Close the web socket connection. */&#10;exports.wrapup = function () {&#10;    if (inputHandle !== null) {&#10;        removeInputHandler(inputHandle);&#10;        inputHandle = null;&#10;    }&#10;    if (client) {&#10;        client.removeAllListeners('open');&#10;        client.removeAllListeners('message');&#10;        client.removeAllListeners('close');&#10;        client.close();&#10;        console.log('Status: Connection closed in wrapup.');&#10;        client = null;&#10;    }&#10;};&#10;">
+                <property name="style" class="ptolemy.actor.gui.style.NoteStyle">
+                    <property name="note" class="ptolemy.kernel.util.StringAttribute" value="NOTE: To see the script, invoke Open Actor">
+                    </property>
+                </property>
             </property>
+            <property name="accessorSource" class="org.terraswarm.accessor.JSAccessor$ActionableAttribute" value="http://www.terraswarm.org/accessors/net/WebSocketClient.js">
+            </property>
+            <property name="checkoutOrUpdateAccessorsRepository" class="ptolemy.actor.parameters.SharedParameter" value="true">
+            </property>
+            <property name="_tableauFactory" class="ptolemy.vergil.toolbox.TextEditorTableauFactory">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="script">
+                </property>
+                <property name="syntaxStyle" class="ptolemy.kernel.util.StringAttribute" value="text/javascript">
+                </property>
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[625.0, -925.0]">
+            </property>
+            <property name="server" class="ptolemy.data.expr.Parameter" value="192.168.11.108">
+                <property name="_stringMode" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="port" class="ptolemy.data.expr.Parameter" value="8084">
+            </property>
+            <property name="receiveType" class="ptolemy.data.expr.Parameter" value="application/json">
+                <property name="_stringMode" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="sendType" class="ptolemy.data.expr.Parameter" value="application/json">
+                <property name="_stringMode" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+            </property>
+            <property name="connectTimeout" class="ptolemy.data.expr.Parameter" value="60000">
+            </property>
+            <property name="maxFrameSize" class="ptolemy.data.expr.Parameter" value="65536">
+            </property>
+            <property name="numberOfRetries" class="ptolemy.data.expr.Parameter" value="5">
+            </property>
+            <property name="timeBetweenRetries" class="ptolemy.data.expr.Parameter" value="100">
+            </property>
+            <property name="reconnectOnClose" class="ptolemy.data.expr.Parameter" value="true">
+            </property>
+            <property name="discardMessagesBeforeOpen" class="ptolemy.data.expr.Parameter" value="false">
+            </property>
+            <property name="throttleFactor" class="ptolemy.data.expr.Parameter" value="0">
+            </property>
+            <port name="toSend" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="connected" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="received" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
         </entity>
         <relation name="relation5" class="ptolemy.actor.TypedIORelation">
             <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
             </property>
-            <vertex name="vertex1" value="{180.0, -895.0}">
+            <vertex name="vertex1" value="{275.0, -805.0}">
             </vertex>
-            <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Expression.sending&quot;,x=275.0,y=-895.0}, tail={id=&quot;relation5.vertex1&quot;,x=180.0,y=-895.0}, points={} },{ head={id=&quot;MonitorValue.input&quot;,x=250.0,y=-1000.0}, tail={id=&quot;relation5.vertex1&quot;,x=180.0,y=-895.0}, points={180.0,-1000.0} },{ head={id=&quot;SetVariable.input&quot;,x=230.0,y=-950.0}, tail={id=&quot;relation5.vertex1&quot;,x=180.0,y=-895.0}, points={180.0,-950.0} },{ head={id=&quot;BooleanSwitch.input&quot;,x=400.0,y=-1060.0}, tail={id=&quot;relation5.vertex1&quot;,x=180.0,y=-895.0}, points={180.0,-1060.0} },{ head={id=&quot;RefineApplauseState.status&quot;,x=60.0,y=-895.0}, tail={id=&quot;relation5.vertex1&quot;,x=180.0,y=-895.0}, points={} } }">
-            </property>
-        </relation>
-        <relation name="relation6" class="ptolemy.actor.TypedIORelation">
-            <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Expression.output&quot;,x=275.0,y=-895.0}, tail={id=&quot;BooleanSwitch.control&quot;,x=400.0,y=-1060.0}, points={400.0,-895.0} } }">
+            <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Expression.sending&quot;,x=375.0,y=-805.0}, tail={id=&quot;relation5.vertex1&quot;,x=275.0,y=-805.0}, points={} },{ head={id=&quot;BooleanSwitch.input&quot;,x=495.0,y=-930.0}, tail={id=&quot;relation5.vertex1&quot;,x=275.0,y=-805.0}, points={275.0,-930.0} },{ head={id=&quot;RefineApplauseState.status&quot;,x=160.0,y=-805.0}, tail={id=&quot;relation5.vertex1&quot;,x=275.0,y=-805.0}, points={} },{ head={id=&quot;SetVariable.input&quot;,x=325.0,y=-865.0}, tail={id=&quot;relation5.vertex1&quot;,x=275.0,y=-805.0}, points={275.0,-865.0} },{ head={id=&quot;out._location&quot;,x=300.0,y=-995.0}, tail={id=&quot;relation5.vertex1&quot;,x=275.0,y=-805.0}, points={275.0,-995.0} } }">
             </property>
         </relation>
         <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+            <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;port_5._location&quot;,x=-30.0,y=-805.0}, tail={id=&quot;MovingAverage.input&quot;,x=45.0,y=-805.0}, points={} } }">
+            </property>
+        </relation>
+        <relation name="relation" class="ptolemy.actor.TypedIORelation">
+            <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;RefineApplauseState.input&quot;,x=160.0,y=-805.0}, tail={id=&quot;MovingAverage.output&quot;,x=45.0,y=-805.0}, points={} } }">
+            </property>
+        </relation>
+        <relation name="relation6" class="ptolemy.actor.TypedIORelation">
+            <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Expression.output&quot;,x=375.0,y=-805.0}, tail={id=&quot;BooleanSwitch.control&quot;,x=495.0,y=-930.0}, points={495.0,-805.0} } }">
+            </property>
         </relation>
         <relation name="relation3" class="ptolemy.actor.TypedIORelation">
-            <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
-            </property>
-            <vertex name="vertex1" value="[460.0, -1050.0]">
-            </vertex>
         </relation>
         <link port="port_5" relation="relation2"/>
-        <link port="RefineApplauseState.input" relation="relation2"/>
+        <link port="out" relation="relation5"/>
+        <link port="RefineApplauseState.input" relation="relation"/>
         <link port="RefineApplauseState.status" relation="relation5"/>
-        <link port="MonitorValue.input" relation="relation5"/>
         <link port="Expression.output" relation="relation6"/>
         <link port="Expression.sending" relation="relation5"/>
         <link port="SetVariable.input" relation="relation5"/>
         <link port="BooleanSwitch.input" relation="relation5"/>
         <link port="BooleanSwitch.control" relation="relation6"/>
         <link port="BooleanSwitch.falseOutput" relation="relation3"/>
-        <link port="Display.input" relation="relation3"/>
+        <link port="MovingAverage.input" relation="relation2"/>
+        <link port="MovingAverage.output" relation="relation"/>
+        <link port="WebSocketClient.toSend" relation="relation3"/>
     </entity>
-    <relation name="relation11" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;DiscreteClock.start&quot;,x=-510.0,y=-1120.0}, tail={id=&quot;SingleEvent.output&quot;,x=-615.0,y=-1025.0}, points={-520.0,-1025.0} } }">
+    <entity name="MonitorValue" class="ptolemy.actor.lib.gui.MonitorValue">
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="20">
         </property>
-    </relation>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{170, -980}">
+        </property>
+    </entity>
     <relation name="relation8" class="ptolemy.actor.TypedIORelation">
         <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;GMTKOnline2.received&quot;,x=-35.0,y=-1110.0}, tail={id=&quot;ApplauseScore2.input&quot;,x=110.0,y=-1100.0}, points={} } }">
         </property>
@@ -1415,21 +1498,27 @@
         </property>
     </relation>
     <relation name="relation5" class="ptolemy.actor.TypedIORelation">
-        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ProcessOutput.port_5&quot;,x=225.0,y=-1110.0}, tail={id=&quot;ApplauseScore2.output&quot;,x=110.0,y=-1100.0}, points={} } }">
+        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SingleEvent.output&quot;,x=-615.0,y=-1025.0}, tail={id=&quot;DiscreteClock.start&quot;,x=-510.0,y=-1120.0}, points={-520.0,-1025.0} } }">
         </property>
+    </relation>
+    <relation name="relation6" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation7" class="ptolemy.actor.TypedIORelation">
     </relation>
     <link port="SequenceToArray3.input" relation="relation3"/>
     <link port="SequenceToArray3.output" relation="relation"/>
     <link port="DiscreteClock.output" relation="relation2"/>
-    <link port="DiscreteClock.start" relation="relation11"/>
-    <link port="SingleEvent.output" relation="relation11"/>
+    <link port="DiscreteClock.start" relation="relation5"/>
+    <link port="SingleEvent.output" relation="relation5"/>
     <link port="GMTKOnline2.toSend" relation="relation4"/>
     <link port="GMTKOnline2.received" relation="relation8"/>
     <link port="ApplauseScore2.input" relation="relation8"/>
-    <link port="ApplauseScore2.output" relation="relation5"/>
+    <link port="ApplauseScore2.output" relation="relation6"/>
     <link port="FeatureExtract3.port_7" relation="relation4"/>
     <link port="FeatureExtract3.in" relation="relation"/>
     <link port="AudioCapture.trigger" relation="relation2"/>
     <link port="AudioCapture.output" relation="relation3"/>
-    <link port="ProcessOutput.port_5" relation="relation5"/>
+    <link port="ProcessOutput.port_5" relation="relation6"/>
+    <link port="ProcessOutput.out" relation="relation7"/>
+    <link port="MonitorValue.input" relation="relation7"/>
 </entity>
